@@ -702,7 +702,16 @@
 							}
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "PauseText",
+							"sid": 670703816925911,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
 					"sid": 227293230118666,
 					"children": [
 						{

@@ -60,6 +60,46 @@
 			"sid": 376876006522731
 		},
 		{
+			"eventType": "variable",
+			"name": "enemyCanSpawn",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 725423439698802
+		},
+		{
+			"eventType": "variable",
+			"name": "enemySpawnCount",
+			"type": "number",
+			"initialValue": "10",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 236221327279656
+		},
+		{
+			"eventType": "variable",
+			"name": "enemySpawnTracker",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 687895131292430
+		},
+		{
+			"eventType": "variable",
+			"name": "enemySpawnRate",
+			"type": "number",
+			"initialValue": "750",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 383287947870941
+		},
+		{
 			"eventType": "comment",
 			"text": "Boss stats"
 		},
