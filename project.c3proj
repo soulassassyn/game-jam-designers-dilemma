@@ -5,10 +5,20 @@
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
-	"usedAddons": [],
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
 	"uniqueId": "76w2t0ipciv",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"SecretMenu"
+		],
 		"subfolders": []
 	},
 	"autosaveData": null,
