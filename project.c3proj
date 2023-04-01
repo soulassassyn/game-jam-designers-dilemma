@@ -20,7 +20,17 @@
 			"SecretMenu",
 			"Foreground_UI",
 			"Character_MG",
-			"Enemies_MG"
+			"Enemies_MG",
+			"StatNameText",
+			"StatValueText",
+			"Sprite",
+			"DEBUG",
+			"Mouse",
+			"Touch",
+			"Keyboard",
+			"Audio",
+			"Gamepad",
+			"AJAX"
 		],
 		"subfolders": []
 	},
