@@ -19,13 +19,16 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"PauseMenu",
+			"MiniGame"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Globals",
+			"ESMiniGame",
+			"ESPauseMenu"
 		],
 		"subfolders": []
 	},

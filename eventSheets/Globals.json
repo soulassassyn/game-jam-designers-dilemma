@@ -1,0 +1,112 @@
+{
+	"name": "Globals",
+	"events": [
+		{
+			"eventType": "comment",
+			"text": "Player stats"
+		},
+		{
+			"eventType": "variable",
+			"name": "CharacterHP",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 908515681705505
+		},
+		{
+			"eventType": "variable",
+			"name": "BulletDamage",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 682011435531805
+		},
+		{
+			"eventType": "comment",
+			"text": "Enemy stats"
+		},
+		{
+			"eventType": "variable",
+			"name": "EnemyHP",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 140302200509128
+		},
+		{
+			"eventType": "variable",
+			"name": "EnemyDamage",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 445471438195819
+		},
+		{
+			"eventType": "variable",
+			"name": "EnemySpeed",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 993239598594947
+		},
+		{
+			"eventType": "comment",
+			"text": "Boss stats"
+		},
+		{
+			"eventType": "variable",
+			"name": "BossHP",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 901966977641175
+		},
+		{
+			"eventType": "variable",
+			"name": "BossDamage",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 793515845069564
+		},
+		{
+			"eventType": "variable",
+			"name": "BossSpeed",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 230068536712955
+		},
+		{
+			"eventType": "comment",
+			"text": "Can be used for the current level of the MG as well as dictating how much duct tape is on the screen"
+		},
+		{
+			"eventType": "variable",
+			"name": "CurrentLevel",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 682664210907373
+		}
+	],
+	"sid": 216066046600063
+}
