@@ -83,7 +83,8 @@
 			"Keyboard",
 			"Audio",
 			"Gamepad",
-			"AJAX"
+			"AJAX",
+			"Foreground_UI"
 		],
 		"subfolders": []
 	},
