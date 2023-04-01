@@ -1,0 +1,65 @@
+{
+	"name": "Turret",
+	"plugin-id": "Sprite",
+	"sid": 254899828087400,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "CharacterHP",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 396427889276795
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 87,
+						"height": 80,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6738607,
+						"collisionPoly": {
+							"points": [
+								0.09195402298850575,
+								0.1,
+								0.5,
+								0.1,
+								0.8275862068965517,
+								0.1875,
+								0.6896551724137931,
+								0.5,
+								0.8160919540229885,
+								0.8,
+								0.5,
+								0.9375,
+								0.05747126436781609,
+								0.9375,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 392530951301133,
+				"name": "Turret01",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

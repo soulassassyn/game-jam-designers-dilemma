@@ -85,6 +85,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "DragnDrop",
 			"name": "Drag & Drop",
 			"author": "Scirra",
@@ -118,7 +125,10 @@
 				"items": [
 					"PauseText",
 					"PMWindow",
-					"StatValue"
+					"StatValue",
+					"Enemy",
+					"Turret",
+					"Bullets"
 				],
 				"subfolders": [],
 				"name": "Sprites"
@@ -284,7 +294,7 @@
 		"scriptsType": "module",
 		"framerateMode": "vsync",
 		"compositingMode": "standard",
-		"sampling": "trilinear",
+		"sampling": "nearest",
 		"downscaling": "medium",
 		"renderingMode": "auto",
 		"anisotropicFiltering": "auto",
