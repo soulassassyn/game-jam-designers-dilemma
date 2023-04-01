@@ -10,24 +10,10 @@
 	"objectTypes": {
 <<<<<<< HEAD
 		"items": [
-<<<<<<< HEAD
 			"SecretMenu",
 			"Foreground_UI",
 			"Character_MG",
-			"Enemies_MG",
-			"StatNameText",
-			"StatValueText",
-			"Sprite",
-			"DEBUG",
-			"Mouse",
-			"Touch",
-			"Keyboard",
-			"Audio",
-			"Gamepad",
-			"AJAX"
-=======
-			"SecretMenu"
->>>>>>> parent of 03b1d56 (Added Input Objects)
+			"Enemies_MG"
 		],
 =======
 		"items": [],
