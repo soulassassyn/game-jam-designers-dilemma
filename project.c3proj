@@ -5,17 +5,10 @@
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
-	"usedAddons": [
-		{
-			"type": "plugin",
-			"id": "Sprite",
-			"name": "Sprite",
-			"author": "Scirra",
-			"bundled": false
-		}
-	],
+	"usedAddons": [],
 	"uniqueId": "76w2t0ipciv",
 	"objectTypes": {
+<<<<<<< HEAD
 		"items": [
 <<<<<<< HEAD
 			"SecretMenu",
@@ -36,6 +29,9 @@
 			"SecretMenu"
 >>>>>>> parent of 03b1d56 (Added Input Objects)
 		],
+=======
+		"items": [],
+>>>>>>> parent of 21fcf11 (Merge branch 'main' of https://github.com/soulassassyn/game-jam-designers-dilemma)
 		"subfolders": []
 	},
 	"autosaveData": null,
