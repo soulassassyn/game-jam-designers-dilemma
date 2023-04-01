@@ -1,5 +1,501 @@
 {
 	"name": "ESMinigame",
-	"events": [],
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Globals"
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Misc",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 855666603792606
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "InitializeGame",
+							"sid": 296645187208892
+						}
+					],
+					"sid": 879136404718591
+				}
+			],
+			"sid": 383708383589947
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "PlayerControls",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-click",
+							"objectClass": "Mouse",
+							"sid": 182446678609259,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Turret",
+							"sid": 830227828275861,
+							"parameters": {
+								"object": "Bullets",
+								"layer": "\"GameSpace\"",
+								"image-point": "1",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 273037701393155
+				}
+			],
+			"sid": 232120205014659
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "TurretControls",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-visible",
+							"objectClass": "Turret",
+							"sid": 443559423585881
+						}
+					],
+					"actions": [],
+					"sid": 287447025752684,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-angle-toward-position",
+									"objectClass": "Turret",
+									"sid": 867413035150313,
+									"parameters": {
+										"x": "Mouse.X",
+										"y": "Mouse.Y"
+									}
+								}
+							],
+							"sid": 233783750538493
+						}
+					]
+				}
+			],
+			"sid": 747003642816758
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "BulletControls",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "Bullets",
+							"sid": 849715333419579
+						}
+					],
+					"actions": [],
+					"sid": 489258971211634,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-speed",
+									"objectClass": "Bullets",
+									"sid": 257878007513613,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"speed": "bulletSpeed"
+									}
+								}
+							],
+							"sid": 313072351506557
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Bullets",
+							"sid": 902485579181393,
+							"parameters": {
+								"object": "Enemy"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 878323827950644,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Bullets",
+									"sid": 386427037364375
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Enemy",
+									"sid": 978854116339273,
+									"parameters": {
+										"instance-variable": "EnemyHP",
+										"value": "bulletDamage"
+									}
+								}
+							],
+							"sid": 128548630911284
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Enemy",
+									"sid": 832978238872103,
+									"parameters": {
+										"instance-variable": "EnemyHP",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 434247386372599,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Enemy",
+											"sid": 440362612657877
+										}
+									],
+									"sid": 298452920980853
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 916467377671609
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "EnemyControls",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "Enemy",
+							"sid": 812945917603108
+						}
+					],
+					"actions": [],
+					"sid": 628783332532335,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-angle-toward-position",
+									"objectClass": "Enemy",
+									"sid": 994329782763389,
+									"parameters": {
+										"x": "Turret.X",
+										"y": "Turret.Y"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Enemy",
+									"sid": 882350284757164,
+									"parameters": {
+										"instance-variable": "EnemyHP",
+										"value": "enemyHP"
+									}
+								},
+								{
+									"id": "set-speed",
+									"objectClass": "Enemy",
+									"sid": 942987311065691,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"speed": "enemySpeed"
+									}
+								}
+							],
+							"sid": 181175412671055
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Enemy",
+							"sid": 435827872666774,
+							"parameters": {
+								"object": "Turret"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 957122007958148,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Enemy",
+									"sid": 328452732382744
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Turret",
+									"sid": 986225430645907,
+									"parameters": {
+										"instance-variable": "TurretHP",
+										"value": "enemyDamage"
+									}
+								}
+							],
+							"sid": 200444523639188
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Turret",
+									"sid": 916132209390961,
+									"parameters": {
+										"instance-variable": "TurretHP",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 686001929799722,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Turret",
+											"sid": 302011483928779
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 364226555956621,
+											"parameters": {
+												"seconds": "1.0"
+											}
+										},
+										{
+											"id": "restart-layout",
+											"objectClass": "System",
+											"sid": 374588219249001
+										}
+									],
+									"sid": 115586281344927
+								}
+							]
+						}
+					]
+				},
+				{
+					"functionName": "BeginSpawningEnemies",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 592253865892730,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 497938863306232
+								}
+							],
+							"actions": [],
+							"sid": 129583558806619,
+							"children": [
+								{
+									"eventType": "script",
+									"script": "let enemySpawnRate = runtime.globalVars.enemySpawnRate;\n\nlet runTrig = setInterval(trigger,enemySpawnRate);\n\nruntime.callFunction(\"SpawnEnemies\");\n\nfunction trigger(){\n\t\n\tif(runtime.globalVars.enemySpawnTracker < runtime.globalVars.enemySpawnCount){\n\t\truntime.globalVars.enemySpawnTracker += 1;\n\t\tconsole.log(runtime.globalVars.enemySpawnTracker)\n\t\t//we want to clear the interval to allow updated data\n\t\tclearInterval(runTrig);\n\t\truntime.callFunction(\"SpawnEnemies\");\n\t\tenemySpawnRate = runtime.globalVars.enemySpawnRate;\n\n\t\t//reset the trigger with updated timing if any\n\t\trunTrig = setInterval(trigger, enemySpawnRate);\n\t} else {\n\t\tclearInterval(runTrig);\n\t\tconsole.log('Finished Spawning');\n\t}\n\t\t\n\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"functionName": "SpawnEnemies",
+					"functionDescription": "",
+					"functionCategory": "Enemies",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 521627540658004,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 809515009590441
+								}
+							],
+							"actions": [],
+							"sid": 133762868038393,
+							"children": [
+								{
+									"eventType": "script",
+									"script": "console.log('spawn');"
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Spawner",
+											"sid": 432302118940259,
+											"parameters": {
+												"object": "Enemy",
+												"layer": "\"GameSpace\"",
+												"image-point": "floor(random(1,Spawner.ImagePointCount))",
+												"create-hierarchy": false
+											}
+										}
+									],
+									"sid": 857744091050170
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 268833944046659
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Minigame Functions",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "InitializeGame",
+					"functionDescription": "",
+					"functionCategory": "MiniGame Gameplay",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 100942670905264,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"callFunction": "BeginSpawningEnemies",
+									"sid": 647268851139889
+								},
+								{
+									"id": "set-cursor-style",
+									"objectClass": "Mouse",
+									"sid": 440292492857018,
+									"parameters": {
+										"cursor-style": "crosshair"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Turret",
+									"sid": 883044776438414,
+									"parameters": {
+										"instance-variable": "TurretHP",
+										"value": "turretHP"
+									}
+								}
+							],
+							"sid": 495433398831717
+						}
+					]
+				}
+			],
+			"sid": 712008036959544
+		}
+	],
 	"sid": 935205680961548
 }

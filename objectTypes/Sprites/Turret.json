@@ -5,7 +5,7 @@
 	"isGlobal": false,
 	"instanceVariables": [
 		{
-			"name": "CharacterHP",
+			"name": "TurretHP",
 			"type": "number",
 			"desc": "",
 			"show": true,
@@ -48,6 +48,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.8390804597701149,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					}
 				],

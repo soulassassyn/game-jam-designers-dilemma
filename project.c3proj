@@ -128,7 +128,8 @@
 					"StatValue",
 					"Enemy",
 					"Turret",
-					"Bullets"
+					"Bullets",
+					"Spawner"
 				],
 				"subfolders": [],
 				"name": "Sprites"

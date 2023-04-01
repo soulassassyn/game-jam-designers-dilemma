@@ -10,16 +10,14 @@
 					"type": "Enemy",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "SourceEnemy",
+						"initial-animation": "Manta",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
 					"uid": 23,
 					"instanceVariables": {
-						"EnemyHP": 100,
-						"EnemyDamage": 25,
-						"EnemySpeed": 50
+						"EnemyHP": 100
 					},
 					"behaviors": {
 						"Bullet": {
@@ -62,7 +60,7 @@
 					},
 					"uid": 22,
 					"instanceVariables": {
-						"CharacterHP": 100
+						"TurretHP": 100
 					},
 					"behaviors": {},
 					"world": {
@@ -92,10 +90,20 @@
 						"live-preview": false
 					},
 					"uid": 24,
-					"instanceVariables": {
-						"BulletDamage": 50
+					"instanceVariables": {},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": 400,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						}
 					},
-					"behaviors": {},
 					"world": {
 						"x": 507,
 						"y": 206,

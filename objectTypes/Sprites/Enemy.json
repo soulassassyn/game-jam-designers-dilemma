@@ -10,20 +10,6 @@
 			"desc": "",
 			"show": true,
 			"sid": 720549958219505
-		},
-		{
-			"name": "EnemyDamage",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 353015122846350
-		},
-		{
-			"name": "EnemySpeed",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 500486292619190
 		}
 	],
 	"behaviorTypes": [
