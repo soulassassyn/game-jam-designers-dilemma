@@ -8,8 +8,64 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "AJAX",
+			"name": "AJAX",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "gamepad",
+			"name": "Gamepad",
 			"author": "Scirra",
 			"bundled": false
 		}
@@ -17,14 +73,26 @@
 	"uniqueId": "76w2t0ipciv",
 	"objectTypes": {
 		"items": [
-			"SecretMenu"
+			"SecretMenu",
+			"StatNameText",
+			"StatValueText",
+			"Sprite",
+			"DEBUG",
+			"Mouse",
+			"Touch",
+			"Keyboard",
+			"Audio",
+			"Gamepad",
+			"AJAX"
 		],
 		"subfolders": []
 	},
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"FamSecretMenu"
+		],
 		"subfolders": []
 	},
 	"layouts": {
