@@ -118,7 +118,8 @@
 			"AJAX",
 			"StatSlider",
 			"StatNameText",
-			"StatValueText"
+			"StatValueText",
+			"StartMenuText"
 		],
 		"subfolders": [
 			{
@@ -147,7 +148,8 @@
 		"items": [
 			"PauseMenu",
 			"Minigame",
-			"Assets"
+			"Assets",
+			"StartMenu"
 		],
 		"subfolders": []
 	},
@@ -155,7 +157,8 @@
 		"items": [
 			"ESPauseMenu",
 			"ESMinigame",
-			"Globals"
+			"Globals",
+			"ESStartMenu"
 		],
 		"subfolders": []
 	},
@@ -250,7 +253,16 @@
 			"subfolders": []
 		},
 		"font": {
-			"items": [],
+			"items": [
+				{
+					"name": "Minecraft.ttf",
+					"type": "application/font-sfnt",
+					"sid": 206708432942405,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"icon": {

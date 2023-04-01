@@ -1,0 +1,38 @@
+{
+	"name": "StartMenuText",
+	"plugin-id": "Text",
+	"sid": 546974204676786,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "State",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 567232929851045
+		},
+		{
+			"name": "OriginalX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 489261428268923
+		},
+		{
+			"name": "OriginalY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 952391996337662
+		},
+		{
+			"name": "MenuItem",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 525980225291409
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

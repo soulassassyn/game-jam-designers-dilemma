@@ -1,0 +1,185 @@
+{
+	"name": "ESStartMenu",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 556438754184232
+				}
+			],
+			"actions": [
+				{
+					"id": "log",
+					"objectClass": "DEBUG",
+					"sid": 954669542509921,
+					"parameters": {
+						"type": "log",
+						"message": "\"Layout Loaded\""
+					}
+				}
+			],
+			"sid": 618638055364980,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 603082580777609,
+							"parameters": {
+								"object": "StartMenuText"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "StartMenuText",
+							"sid": 467789280605830,
+							"parameters": {
+								"instance-variable": "OriginalX",
+								"value": "Self.X"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "StartMenuText",
+							"sid": 188845025733480,
+							"parameters": {
+								"instance-variable": "OriginalY",
+								"value": "Self.Y"
+							}
+						},
+						{
+							"id": "log",
+							"objectClass": "DEBUG",
+							"sid": 913362939274511,
+							"parameters": {
+								"type": "log",
+								"message": "\"SMT Loop Running\""
+							}
+						}
+					],
+					"sid": 304460592100793
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 735218236536812,
+					"parameters": {
+						"object": "StartMenuText"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "StartMenuText",
+					"sid": 572920727852441,
+					"parameters": {
+						"instance-variable": "MenuItem"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 212593490797144,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 900519562153842,
+							"parameters": {
+								"interval-seconds": "0.05"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "StartMenuText",
+							"sid": 154860807486175,
+							"parameters": {
+								"x": "Self.X + random(-2, 2)",
+								"y": "Self.Y + random(-2, 2)"
+							}
+						}
+					],
+					"sid": 899187966693868
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 650299680011669,
+					"parameters": {
+						"object": "StartMenuText"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "StartMenuText",
+					"sid": 996577602585059,
+					"parameters": {
+						"x": "Self.OriginalX",
+						"y": "Self.OriginalY"
+					}
+				}
+			],
+			"sid": 901411801413462
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 237382369972634,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "StartMenuText"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "StartMenuText",
+					"sid": 452585117186805,
+					"parameters": {
+						"instance-variable": "State",
+						"comparison": 0,
+						"value": "\"Start\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 822054245956712,
+					"parameters": {
+						"layout": "Minigame"
+					}
+				}
+			],
+			"sid": 957174845195678
+		}
+	],
+	"sid": 886224912920595
+}

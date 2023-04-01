@@ -2,6 +2,18 @@
 	"name": "Globals",
 	"events": [
 		{
+			"eventType": "include",
+			"includeSheet": "ESMinigame"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "ESPauseMenu"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "ESStartMenu"
+		},
+		{
 			"eventType": "comment",
 			"text": "Player stats"
 		},

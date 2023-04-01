@@ -32,6 +32,18 @@
 						"variable": "isPaused",
 						"value": "true"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 587672030899598,
+					"parameters": {
+						"audio-file": "randomError3",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 175969753559616

@@ -1,0 +1,241 @@
+{
+	"name": "StartMenu",
+	"layers": [
+		{
+			"name": "Layer 0",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "StartMenuText",
+					"properties": {
+						"text": "Designer's Dilemma",
+						"enable-bbcode": true,
+						"font": "Minecraft",
+						"size": 100,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 27,
+					"instanceVariables": {
+						"State": "Title",
+						"OriginalX": 0,
+						"OriginalY": 0,
+						"MenuItem": false
+					},
+					"behaviors": {},
+					"world": {
+						"x": 960,
+						"y": 391,
+						"width": 1028,
+						"height": 339,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "StartMenuText",
+					"properties": {
+						"text": "Start",
+						"enable-bbcode": true,
+						"font": "Minecraft",
+						"size": 35,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 28,
+					"instanceVariables": {
+						"State": "Start",
+						"OriginalX": 0,
+						"OriginalY": 0,
+						"MenuItem": true
+					},
+					"behaviors": {},
+					"world": {
+						"x": 960,
+						"y": 630,
+						"width": 143,
+						"height": 74,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "StartMenuText",
+					"properties": {
+						"text": "Options",
+						"enable-bbcode": true,
+						"font": "Minecraft",
+						"size": 35,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.25098039215686274,
+							0.25098039215686274,
+							0.25098039215686274,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 29,
+					"instanceVariables": {
+						"State": "Options",
+						"OriginalX": 0,
+						"OriginalY": 0,
+						"MenuItem": true
+					},
+					"behaviors": {},
+					"world": {
+						"x": 960,
+						"y": 720,
+						"width": 217,
+						"height": 74,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "StartMenuText",
+					"properties": {
+						"text": "Credits",
+						"enable-bbcode": true,
+						"font": "Minecraft",
+						"size": 35,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.25098039215686274,
+							0.25098039215686274,
+							0.25098039215686274,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 30,
+					"instanceVariables": {
+						"State": "Credits",
+						"OriginalX": 0,
+						"OriginalY": 0,
+						"MenuItem": true
+					},
+					"behaviors": {},
+					"world": {
+						"x": 960,
+						"y": 818,
+						"width": 198,
+						"height": 74,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 935716438700885,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		}
+	],
+	"sid": 807079489148219,
+	"nonworld-instances": [],
+	"effectTypes": [],
+	"width": 3840,
+	"height": 2160,
+	"unboundedScrolling": false,
+	"vpX": 0.5,
+	"vpY": 0.5,
+	"projection": "orthographic",
+	"eventSheet": "ESStartMenu"
+}
