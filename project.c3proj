@@ -50,6 +50,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Touch",
 			"name": "Touch",
 			"author": "Scirra",
@@ -73,7 +80,8 @@
 			"Audio",
 			"DEBUG",
 			"PlatformInfo",
-			"AJAX"
+			"AJAX",
+			"Sprite"
 		],
 		"subfolders": []
 	},
