@@ -1,5 +1,748 @@
 {
 	"name": "ESPauseMenu",
-	"events": [],
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "IsPaused",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 778579446701764
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 236671590099893,
+					"parameters": {
+						"key": 70
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 243671968196950,
+					"parameters": {
+						"variable": "IsPaused",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 175969753559616
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 324009576349939
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "ResetMenu",
+					"sid": 297226977312590
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 887450260496755,
+					"parameters": {
+						"seconds": "0.2"
+					}
+				},
+				{
+					"callFunction": "CreateMenu",
+					"sid": 260170900878271
+				}
+			],
+			"sid": 468272965839274
+		},
+		{
+			"functionName": "ResetMenu",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 378506521979292,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 140706872296442,
+							"parameters": {
+								"object": "StatNameText"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "StatNameText",
+							"sid": 523508290528993
+						}
+					],
+					"sid": 203918294227186
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 618188817245946,
+							"parameters": {
+								"object": "StatValueText"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "StatValueText",
+							"sid": 488766120238121
+						}
+					],
+					"sid": 468236644464936
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 288193590255944,
+							"parameters": {
+								"object": "StatSlider"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "StatSlider",
+							"sid": 311012540762332
+						}
+					],
+					"sid": 327734657542209
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 327002100993310,
+							"parameters": {
+								"object": "StatValue"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "StatValue",
+							"sid": 840572045983186
+						}
+					],
+					"sid": 404714392831755
+				}
+			]
+		},
+		{
+			"functionName": "CreateMenu",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 627348518066266,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "MenuStartX",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 423745917952257
+				},
+				{
+					"eventType": "variable",
+					"name": "MenuStartY",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 593574238309200
+				},
+				{
+					"eventType": "variable",
+					"name": "CurrentMenuItemX",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 312651262376632
+				},
+				{
+					"eventType": "variable",
+					"name": "CurrentMenuItemY",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 366974962133739
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 703366360729965,
+							"parameters": {
+								"object": "PMWindow"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 504952362686528,
+							"parameters": {
+								"variable": "MenuStartX",
+								"value": "PMWindow.X"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 369317920908507,
+							"parameters": {
+								"variable": "MenuStartY",
+								"value": "PMWindow.Y"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 215254386466323,
+							"parameters": {
+								"variable": "CurrentMenuItemX",
+								"value": "MenuStartX -210"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 985283227551686,
+							"parameters": {
+								"variable": "CurrentMenuItemY",
+								"value": "MenuStartY - 175"
+							}
+						}
+					],
+					"sid": 458430227541905,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 492004924199228,
+									"parameters": {
+										"name": "\"menuFill\"",
+										"start-index": "0",
+										"end-index": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 169328923424194,
+									"parameters": {
+										"object-to-create": "StatValue",
+										"layer": "0",
+										"x": "CurrentMenuItemX",
+										"y": "CurrentMenuItemY",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "StatValue",
+									"sid": 980004484787847,
+									"parameters": {
+										"width": "224",
+										"height": "73"
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "StatValue",
+									"sid": 800237744144900,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "PMWindow",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 562301359520402,
+									"parameters": {
+										"object-to-create": "StatNameText",
+										"layer": "0",
+										"x": "CurrentMenuItemX",
+										"y": "CurrentMenuItemY",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "StatNameText",
+									"sid": 598810353537872,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "PMWindow",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 573897972956535,
+									"parameters": {
+										"variable": "CurrentMenuItemX",
+										"value": "CurrentMenuItemX + 470"
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 588311195052515,
+									"parameters": {
+										"object-to-create": "StatValue",
+										"layer": "0",
+										"x": "CurrentMenuItemX",
+										"y": "CurrentMenuItemY",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "StatValue",
+									"sid": 632117010824073,
+									"parameters": {
+										"width": "95",
+										"height": "66"
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "StatValue",
+									"sid": 993858415102129,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "PMWindow",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 621135435491368,
+									"parameters": {
+										"object-to-create": "StatValueText",
+										"layer": "0",
+										"x": "CurrentMenuItemX",
+										"y": "CurrentMenuItemY",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "StatValueText",
+									"sid": 665543907967931,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "PMWindow",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 658521514846542,
+									"parameters": {
+										"variable": "CurrentMenuItemY",
+										"value": "CurrentMenuItemY - 10"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 688324520146243,
+									"parameters": {
+										"variable": "CurrentMenuItemX",
+										"value": "CurrentMenuItemX - 340"
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 462999404284171,
+									"parameters": {
+										"object-to-create": "StatSlider",
+										"layer": "0",
+										"x": "CurrentMenuItemX",
+										"y": "CurrentMenuItemY",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "StatSlider",
+									"sid": 759754376297725,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "PMWindow",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								}
+							],
+							"sid": 236985329734262,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 518900717436128,
+											"parameters": {
+												"variable": "CurrentMenuItemX",
+												"value": "MenuStartX -210"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 921284835892601,
+											"parameters": {
+												"variable": "CurrentMenuItemY",
+												"value": "MenuStartY - 175 + (100 * (loopindex + 1))"
+											}
+										}
+									],
+									"sid": 891811241643928
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 459048885826273,
+					"parameters": {
+						"variable": "IsPaused"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [],
+			"sid": 721328253469702,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 919044929340207
+						}
+					],
+					"actions": [
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 256532066934746,
+							"parameters": {
+								"group-name": "\"PauseControls\"",
+								"state": "deactivated"
+							}
+						}
+					],
+					"sid": 949044283793487
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 662049347278439,
+					"parameters": {
+						"variable": "IsPaused"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 257114073156067,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 174058829265296
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-speed",
+							"objectClass": "PauseText",
+							"sid": 331416209137808,
+							"parameters": {
+								"speed": "6"
+							}
+						},
+						{
+							"id": "start-animation",
+							"objectClass": "PauseText",
+							"sid": 638767400665591,
+							"parameters": {
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 714620002092106
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "PauseText",
+							"sid": 913543746157309,
+							"parameters": {
+								"animation": "\"PauseText\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 596801870059464,
+							"parameters": {
+								"group-name": "\"PauseControls\"",
+								"state": "activated"
+							}
+						}
+					],
+					"sid": 572158915984688
+				}
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "PauseControls",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 629294271046291,
+							"parameters": {
+								"object": "PauseText"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "PauseText",
+							"sid": 232775891270305,
+							"parameters": {
+								"animation": "\"SecretHighlight\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 614734983055247
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 237073852570277,
+							"parameters": {
+								"object": "PauseText"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "PauseText",
+							"sid": 780750504574735,
+							"parameters": {
+								"animation": "\"PauseText\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "PauseText",
+							"sid": 117309425574352,
+							"parameters": {
+								"frame-number": "10"
+							}
+						},
+						{
+							"id": "set-animation-speed",
+							"objectClass": "PauseText",
+							"sid": 358166008303169,
+							"parameters": {
+								"speed": "0"
+							}
+						}
+					],
+					"sid": 431329553571686
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 542146638257770,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "PauseText"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 227293230118666,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-all",
+									"objectClass": "System",
+									"sid": 628449476568783,
+									"parameters": {
+										"object": "PMWindow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "PMWindow",
+									"sid": 568779585823512,
+									"parameters": {
+										"x": "ViewportWidth(\"pauseMenu\") / 2",
+										"y": "ViewportHeight(\"pauseMenu\") / 2"
+									}
+								}
+							],
+							"sid": 178247055210509,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [],
+									"sid": 986835548193439
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 602082154028709
+		}
+	],
 	"sid": 445668045540167
 }

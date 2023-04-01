@@ -1,14 +1,14 @@
 {
-	"name": "StatNameText",
+	"name": "StatValueText",
 	"plugin-id": "Text",
-	"sid": 678078555470753,
+	"sid": 305033240465528,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Pin",
 			"name": "Pin",
-			"sid": 971012560193602
+			"sid": 671223013247246
 		}
 	],
 	"effectTypes": []

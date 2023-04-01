@@ -82,6 +82,20 @@
 			"name": "Slider bar",
 			"author": "Scirra",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"bundled": false
 		}
 	],
 	"uniqueId": "pncnqv9uuf6",
@@ -95,14 +109,21 @@
 			"DEBUG",
 			"PlatformInfo",
 			"AJAX",
-			"Sprite",
 			"StatSlider",
-			"StatValue",
 			"StatNameText",
-			"Text",
-			"PauseText"
+			"StatValueText"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"PauseText",
+					"PMWindow",
+					"StatValue"
+				],
+				"subfolders": [],
+				"name": "Sprites"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],

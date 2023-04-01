@@ -1,10 +1,16 @@
 {
-	"name": "Sprite",
+	"name": "PMWindow",
 	"plugin-id": "Sprite",
 	"sid": 327524455244429,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 596149942550571
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
