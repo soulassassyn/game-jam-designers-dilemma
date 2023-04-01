@@ -20,7 +20,8 @@
 	"layouts": {
 		"items": [
 			"PauseMenu",
-			"MiniGame"
+			"MiniGame",
+			"Intro"
 		],
 		"subfolders": []
 	},
@@ -28,7 +29,8 @@
 		"items": [
 			"Globals",
 			"ESMiniGame",
-			"ESPauseMenu"
+			"ESPauseMenu",
+			"ESIntro"
 		],
 		"subfolders": []
 	},
