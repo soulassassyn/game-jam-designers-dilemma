@@ -1,0 +1,100 @@
+{
+	"name": "DuctTape",
+	"plugin-id": "Sprite",
+	"sid": 780352820604020,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1869,
+						"height": 309,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7908265,
+						"collisionPoly": {
+							"points": [
+								0.021936864633493848,
+								0.13268608414239483,
+								0.5,
+								0.016181229773462782,
+								0.9732477260567148,
+								0.16181229773462782,
+								0.9898341359015517,
+								0.5,
+								0.9989299090422686,
+								0.9935275080906149,
+								0.5,
+								0.9805825242718447,
+								0.005885500267522739,
+								0.9644012944983819,
+								0.01765650080256822,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 659449567485849,
+				"name": "DuctTape",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 974,
+						"height": 298,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7393916,
+						"collisionPoly": {
+							"points": [
+								0.015400410677618069,
+								0.050335570469798654,
+								0.5,
+								0,
+								0.9691991786447639,
+								0.10067114093959731,
+								0.9897330595482546,
+								0.5,
+								0.997946611909651,
+								0.9932885906040269,
+								0.5,
+								1,
+								0.001026694045174538,
+								0.9966442953020134,
+								0.03285420944558522,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 434688097932704,
+				"name": "DuctTapeSmall",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -129,7 +129,8 @@
 					"Enemy",
 					"Turret",
 					"Bullets",
-					"Spawner"
+					"Spawner",
+					"DuctTape"
 				],
 				"subfolders": [],
 				"name": "Sprites"
