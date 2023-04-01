@@ -1,0 +1,112 @@
+{
+	"name": "Globals",
+	"events": [
+		{
+			"eventType": "comment",
+			"text": "Player stats"
+		},
+		{
+			"eventType": "variable",
+			"name": "playerHP",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 139279859993969
+		},
+		{
+			"eventType": "variable",
+			"name": "bulletDamage",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 748949805587046
+		},
+		{
+			"eventType": "comment",
+			"text": "Enemy stats"
+		},
+		{
+			"eventType": "variable",
+			"name": "enemyHP",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 450585407122077
+		},
+		{
+			"eventType": "variable",
+			"name": "enemyDamage",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 942227981250739
+		},
+		{
+			"eventType": "variable",
+			"name": "enemySpeed",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 376876006522731
+		},
+		{
+			"eventType": "comment",
+			"text": "Boss stats"
+		},
+		{
+			"eventType": "variable",
+			"name": "bossHP",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 347703779820998
+		},
+		{
+			"eventType": "variable",
+			"name": "bossDamage",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 259015202985583
+		},
+		{
+			"eventType": "variable",
+			"name": "bossSpeed",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 191498849482809
+		},
+		{
+			"eventType": "comment",
+			"text": "Current level is used for minigame level and duct tape difficulty"
+		},
+		{
+			"eventType": "variable",
+			"name": "currentLevel",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 529581794870097
+		}
+	],
+	"sid": 239138212706475
+}

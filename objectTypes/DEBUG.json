@@ -1,0 +1,10 @@
+{
+	"name": "DEBUG",
+	"plugin-id": "Browser",
+	"sid": 656725386433663,
+	"singleglobal-inst": {
+		"type": "DEBUG",
+		"properties": {},
+		"uid": 7
+	}
+}

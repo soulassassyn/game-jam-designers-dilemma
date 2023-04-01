@@ -5,10 +5,76 @@
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
-	"usedAddons": [],
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "AJAX",
+			"name": "AJAX",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "PlatformInfo",
+			"name": "Platform info",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "gamepad",
+			"name": "Gamepad",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
 	"uniqueId": "pncnqv9uuf6",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"Touch",
+			"Mouse",
+			"Keyboard",
+			"Gamepad",
+			"Audio",
+			"DEBUG",
+			"PlatformInfo",
+			"AJAX"
+		],
 		"subfolders": []
 	},
 	"autosaveData": null,
@@ -19,13 +85,16 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"PauseMenu",
+			"Minigame"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"ESPauseMenu",
+			"ESMinigame",
+			"Globals"
 		],
 		"subfolders": []
 	},
