@@ -17,7 +17,8 @@
 	"uniqueId": "76w2t0ipciv",
 	"objectTypes": {
 		"items": [
-			"SecretMenu"
+			"SecretMenu",
+			"Foreground_UI"
 		],
 		"subfolders": []
 	},
