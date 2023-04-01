@@ -1,0 +1,57 @@
+{
+	"name": "Character_MG",
+	"plugin-id": "Sprite",
+	"sid": 329885527643682,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 87,
+						"height": 80,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7317618,
+						"collisionPoly": {
+							"points": [
+								0.09195402298850575,
+								0.1,
+								0.5,
+								0.1,
+								0.8275862068965517,
+								0.1875,
+								0.6896551724137931,
+								0.5,
+								0.8160919540229885,
+								0.8,
+								0.5,
+								0.9375,
+								0.05747126436781609,
+								0.9375,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 418900855843309,
+				"name": "Turret1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

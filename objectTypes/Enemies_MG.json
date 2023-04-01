@@ -1,0 +1,175 @@
+{
+	"name": "Enemies_MG",
+	"plugin-id": "Sprite",
+	"sid": 981761411998108,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 113,
+						"height": 91,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6298682,
+						"collisionPoly": {
+							"points": [
+								0.336283185840708,
+								0.4175824175824176,
+								0.5,
+								0.16483516483516483,
+								1,
+								0,
+								0.8672566371681416,
+								0.5,
+								0.9557522123893806,
+								0.945054945054945,
+								0.5,
+								0.7802197802197802,
+								0.3008849557522124,
+								0.6263736263736264,
+								0.035398230088495575,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 128,
+						"height": 125,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2559391,
+						"collisionPoly": {
+							"points": [
+								0.3203125,
+								0.328,
+								0.5,
+								0,
+								0.734375,
+								0.272,
+								0.90625,
+								0.5,
+								0.7578125,
+								0.752,
+								0.5,
+								0.904,
+								0.2421875,
+								0.752,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 890639645805844,
+				"name": "SourceEnemy",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 113,
+						"height": 91,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5209776,
+						"collisionPoly": {
+							"points": [
+								0.336283185840708,
+								0.4175824175824176,
+								0.5,
+								0.16483516483516483,
+								1,
+								0,
+								0.8672566371681416,
+								0.5,
+								0.9557522123893806,
+								0.945054945054945,
+								0.5,
+								0.7802197802197802,
+								0.3008849557522124,
+								0.6263736263736264,
+								0.035398230088495575,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 741288248608974,
+				"name": "EnemyManta",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 128,
+						"height": 125,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9096512,
+						"collisionPoly": {
+							"points": [
+								0.3203125,
+								0.328,
+								0.5,
+								0,
+								0.734375,
+								0.272,
+								0.90625,
+								0.5,
+								0.7578125,
+								0.752,
+								0.5,
+								0.904,
+								0.2421875,
+								0.752,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 100555322948280,
+				"name": "EnemyBrain",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

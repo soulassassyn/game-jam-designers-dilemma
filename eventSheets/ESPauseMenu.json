@@ -23,24 +23,7 @@
 					}
 				}
 			],
-			"actions": [
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 254003891033791,
-					"parameters": {
-						"seconds": "1.0"
-					}
-				},
-				{
-					"id": "start-animation",
-					"objectClass": "Sprite",
-					"sid": 383977847358580,
-					"parameters": {
-						"from": "beginning"
-					}
-				}
-			],
+			"actions": [],
 			"sid": 919248685722875
 		}
 	],
