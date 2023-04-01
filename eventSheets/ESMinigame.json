@@ -25,6 +25,18 @@
 						{
 							"callFunction": "InitializeGame",
 							"sid": 296645187208892
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 395452172091609,
+							"parameters": {
+								"audio-file": "minigameSong",
+								"loop": "looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 879136404718591
@@ -62,6 +74,18 @@
 								"layer": "\"GameSpace\"",
 								"image-point": "1",
 								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 532179228287817,
+							"parameters": {
+								"audio-file": "laserShoot",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -159,7 +183,20 @@
 							}
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 487791193079873,
+							"parameters": {
+								"audio-file": "hitHurt",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
 					"sid": 878323827950644,
 					"children": [
 						{

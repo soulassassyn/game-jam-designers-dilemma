@@ -165,7 +165,80 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "blipSelect.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 215916313221791,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "explosion.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 225229561736151,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "hitHurt.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 441206898093624,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "laserShoot.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 120744608761507,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "minigameSong.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 140889296476979,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "randomError.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 347736790234409,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "randomError2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 454359029424663,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "randomError3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 169118286641674,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "synthError.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 740216084001322,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {

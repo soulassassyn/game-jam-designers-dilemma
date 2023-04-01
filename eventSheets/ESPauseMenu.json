@@ -3,7 +3,7 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "IsPaused",
+			"name": "isPaused",
 			"type": "boolean",
 			"initialValue": "false",
 			"comment": "",
@@ -29,7 +29,7 @@
 					"objectClass": "System",
 					"sid": 243671968196950,
 					"parameters": {
-						"variable": "IsPaused",
+						"variable": "isPaused",
 						"value": "true"
 					}
 				}
@@ -179,7 +179,7 @@
 			"children": [
 				{
 					"eventType": "variable",
-					"name": "MenuStartX",
+					"name": "menuStartX",
 					"type": "number",
 					"initialValue": "0",
 					"comment": "",
@@ -189,7 +189,7 @@
 				},
 				{
 					"eventType": "variable",
-					"name": "MenuStartY",
+					"name": "menuStartY",
 					"type": "number",
 					"initialValue": "0",
 					"comment": "",
@@ -199,7 +199,7 @@
 				},
 				{
 					"eventType": "variable",
-					"name": "CurrentMenuItemX",
+					"name": "currentMenuItemX",
 					"type": "number",
 					"initialValue": "0",
 					"comment": "",
@@ -209,7 +209,7 @@
 				},
 				{
 					"eventType": "variable",
-					"name": "CurrentMenuItemY",
+					"name": "currentMenuItemY",
 					"type": "number",
 					"initialValue": "0",
 					"comment": "",
@@ -235,7 +235,7 @@
 							"objectClass": "System",
 							"sid": 504952362686528,
 							"parameters": {
-								"variable": "MenuStartX",
+								"variable": "menuStartX",
 								"value": "PMWindow.X"
 							}
 						},
@@ -244,7 +244,7 @@
 							"objectClass": "System",
 							"sid": 369317920908507,
 							"parameters": {
-								"variable": "MenuStartY",
+								"variable": "menuStartY",
 								"value": "PMWindow.Y"
 							}
 						},
@@ -253,7 +253,7 @@
 							"objectClass": "System",
 							"sid": 215254386466323,
 							"parameters": {
-								"variable": "CurrentMenuItemX",
+								"variable": "currentMenuItemX",
 								"value": "MenuStartX -210"
 							}
 						},
@@ -262,7 +262,7 @@
 							"objectClass": "System",
 							"sid": 985283227551686,
 							"parameters": {
-								"variable": "CurrentMenuItemY",
+								"variable": "currentMenuItemY",
 								"value": "MenuStartY - 175"
 							}
 						}
@@ -354,7 +354,7 @@
 									"objectClass": "System",
 									"sid": 573897972956535,
 									"parameters": {
-										"variable": "CurrentMenuItemX",
+										"variable": "currentMenuItemX",
 										"value": "CurrentMenuItemX + 470"
 									}
 								},
@@ -428,7 +428,7 @@
 									"objectClass": "System",
 									"sid": 658521514846542,
 									"parameters": {
-										"variable": "CurrentMenuItemY",
+										"variable": "currentMenuItemY",
 										"value": "CurrentMenuItemY - 10"
 									}
 								},
@@ -437,7 +437,7 @@
 									"objectClass": "System",
 									"sid": 688324520146243,
 									"parameters": {
-										"variable": "CurrentMenuItemX",
+										"variable": "currentMenuItemX",
 										"value": "CurrentMenuItemX - 340"
 									}
 								},
@@ -481,7 +481,7 @@
 											"objectClass": "System",
 											"sid": 518900717436128,
 											"parameters": {
-												"variable": "CurrentMenuItemX",
+												"variable": "currentMenuItemX",
 												"value": "MenuStartX -210"
 											}
 										},
@@ -490,7 +490,7 @@
 											"objectClass": "System",
 											"sid": 921284835892601,
 											"parameters": {
-												"variable": "CurrentMenuItemY",
+												"variable": "currentMenuItemY",
 												"value": "MenuStartY - 175 + (100 * (loopindex + 1))"
 											}
 										}
@@ -511,7 +511,7 @@
 					"objectClass": "System",
 					"sid": 459048885826273,
 					"parameters": {
-						"variable": "IsPaused"
+						"variable": "isPaused"
 					},
 					"isInverted": true
 				}
@@ -551,7 +551,7 @@
 					"objectClass": "System",
 					"sid": 662049347278439,
 					"parameters": {
-						"variable": "IsPaused"
+						"variable": "isPaused"
 					}
 				}
 			],
@@ -737,15 +737,7 @@
 									}
 								}
 							],
-							"sid": 178247055210509,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [],
-									"actions": [],
-									"sid": 986835548193439
-								}
-							]
+							"sid": 178247055210509
 						}
 					]
 				}
