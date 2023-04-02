@@ -605,15 +605,6 @@
 										"variable": "enemySpawnTracker",
 										"value": "spawnTrackerWhenPaused"
 									}
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 475834797892834,
-									"parameters": {
-										"variable": "ductTape01",
-										"value": "true"
-									}
 								}
 							],
 							"sid": 411537117879493

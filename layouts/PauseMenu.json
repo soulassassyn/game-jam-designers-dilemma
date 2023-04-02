@@ -225,35 +225,6 @@
 					}
 				},
 				{
-					"type": "DuctTape",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "DuctTapeSmall",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 43,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 254,
-						"y": 238,
-						"width": 974,
-						"height": 298,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 5.82939970166106,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "StatValue",
 					"properties": {
 						"initially-visible": true,
@@ -625,6 +596,259 @@
 			"blendMode": "normal",
 			"zElevation": 0,
 			"global": false
+		},
+		{
+			"name": "Monitor",
+			"overriden": 1,
+			"subLayers": [],
+			"instances": [],
+			"sid": 754865880525586,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "DuctTape",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "DuctTape",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "DuctTapeSmall",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 43,
+					"instanceVariables": {
+						"Order": 1
+					},
+					"behaviors": {},
+					"world": {
+						"x": 178,
+						"y": 421,
+						"width": 1053.5210140642698,
+						"height": 326.38502041073457,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 5.349572097973885,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DuctTape",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "DuctTapeSmall",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 48,
+					"instanceVariables": {
+						"Order": 2
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1537,
+						"y": 890,
+						"width": 1052.675668957011,
+						"height": 448.46108162230433,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 3.669617577167561,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DuctTape",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "DuctTape",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 52,
+					"instanceVariables": {
+						"Order": 3
+					},
+					"behaviors": {},
+					"world": {
+						"x": 534,
+						"y": 346,
+						"width": 1851.9857723577236,
+						"height": 307.71454626069743,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 5.752989432142461,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DuctTape",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "DuctTape",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 49,
+					"instanceVariables": {
+						"Order": 1
+					},
+					"behaviors": {},
+					"world": {
+						"x": 617,
+						"y": 933,
+						"width": 1851.9857723577236,
+						"height": 307.71454626069743,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.32418654708027006,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DuctTape",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "DuctTapeSmall",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 51,
+					"instanceVariables": {
+						"Order": 3
+					},
+					"behaviors": {},
+					"world": {
+						"x": 417,
+						"y": 994,
+						"width": 1053.5210140642698,
+						"height": 423.34517674702124,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 5.349572097973885,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DuctTape",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "DuctTapeSmall",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 50,
+					"instanceVariables": {
+						"Order": 2
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1539,
+						"y": 285,
+						"width": 974,
+						"height": 298.00000000000006,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 3.830250835290262,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 776430059377646,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": true
 		}
 	],
 	"sid": 223996521102911,
