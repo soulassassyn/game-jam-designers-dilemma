@@ -185,6 +185,75 @@
 					}
 				},
 				{
+					"type": "Camera",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Camera",
+						"initial-frame": 0,
+						"enable-collisions": false,
+						"live-preview": false
+					},
+					"uid": 42,
+					"instanceVariables": {},
+					"behaviors": {
+						"ScrollTo": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 960,
+						"y": 540,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DuctTape",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "DuctTapeSmall",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 43,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 254,
+						"y": 238,
+						"width": 974,
+						"height": 298,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 5.82939970166106,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "StatValue",
 					"properties": {
 						"initially-visible": true,

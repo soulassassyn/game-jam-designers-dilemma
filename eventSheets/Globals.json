@@ -198,6 +198,94 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 611201087170663
+		},
+		{
+			"eventType": "comment",
+			"text": "Duct tape position and angles"
+		},
+		{
+			"eventType": "variable",
+			"name": "ductTape01",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 605939220279309
+		},
+		{
+			"eventType": "variable",
+			"name": "ductTape01X",
+			"type": "number",
+			"initialValue": "254",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 549881156544633
+		},
+		{
+			"eventType": "variable",
+			"name": "ductTape01Y",
+			"type": "number",
+			"initialValue": "238",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 158535743048480
+		},
+		{
+			"eventType": "variable",
+			"name": "ductTape01A",
+			"type": "number",
+			"initialValue": "334",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 521754173939542
+		},
+		{
+			"functionName": "DuctTape",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 858826451684763,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 603247974235033,
+							"parameters": {
+								"variable": "ductTape01"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 731878806774159,
+							"parameters": {
+								"object-to-create": "DuctTape",
+								"layer": "0",
+								"x": "0",
+								"y": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 765242072808779
+				}
+			]
 		}
 	],
 	"sid": 239138212706475

@@ -571,6 +571,25 @@
 							"conditions": [],
 							"actions": [
 								{
+									"id": "shake",
+									"objectClass": "Camera",
+									"sid": 466425174141273,
+									"behaviorType": "ScrollTo",
+									"parameters": {
+										"magnitude": "20",
+										"duration": "0.4",
+										"mode": "reducing-magnitude"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 177616694631332,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
 									"id": "go-to-layout",
 									"objectClass": "System",
 									"sid": 842386519563851,
@@ -585,6 +604,15 @@
 									"parameters": {
 										"variable": "enemySpawnTracker",
 										"value": "spawnTrackerWhenPaused"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 475834797892834,
+									"parameters": {
+										"variable": "ductTape01",
+										"value": "true"
 									}
 								}
 							],
