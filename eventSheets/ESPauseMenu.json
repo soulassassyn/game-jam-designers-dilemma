@@ -351,44 +351,6 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 236671590099893,
-					"parameters": {
-						"key": 70
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 243671968196950,
-					"parameters": {
-						"variable": "isPaused",
-						"value": "true"
-					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 587672030899598,
-					"parameters": {
-						"audio-file": "randomError3",
-						"loop": "not-looping",
-						"volume": "0",
-						"stereo-pan": "0",
-						"tag-optional": "\"\""
-					}
-				}
-			],
-			"sid": 175969753559616,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
 					"id": "cursor-is-over-object",
 					"objectClass": "Mouse",
 					"sid": 328916812211934,
@@ -1068,15 +1030,50 @@
 							]
 						},
 						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 732200487771413,
+							"parameters": {
+								"layer": "\"Narrative\"",
+								"visibility": "visible"
+							}
+						},
+						{
 							"id": "set-text",
 							"objectClass": "NarrativeText",
 							"sid": 930694415637678,
 							"parameters": {
 								"text": "\"ugggghh.. sorry, seriously. It’s my boss, I have no idea why he keeps calling me every second. I have to take this. You're about to get crushed though!\""
 							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PauseText",
+							"sid": 407839438833981,
+							"parameters": {
+								"visibility": "visible"
+							}
 						}
 					],
-					"sid": 155163155014553
+					"sid": 155163155014553,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "PMWindow",
+									"sid": 737432732615110,
+									"parameters": {
+										"x": "3000",
+										"y": "3000"
+									}
+								}
+							],
+							"sid": 451565400513241
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -1187,6 +1184,22 @@
 									"parameters": {
 										"seconds": "1.0"
 									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "GlassCrack",
+									"sid": 839804153928815,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 870174464744749,
+									"parameters": {
+										"seconds": "2"
+									}
 								}
 							],
 							"sid": 411537117879493,
@@ -1223,25 +1236,25 @@
 												}
 											],
 											"sid": 747836680287311
+										},
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "NarrativeText",
+													"sid": 765412987517727,
+													"parameters": {
+														"text": "\"Game Dev Randolph: Ok... He sounded really weird... almost like someone was making him say weird stuff. OH SHOOT?? what happened to the monitor, this is the third one this week. We really need to look into a different Manufacturer. Anyways continue.\""
+													}
+												}
+											],
+											"sid": 509699490851565
 										}
 									]
 								}
 							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [],
-							"actions": [
-								{
-									"id": "set-text",
-									"objectClass": "NarrativeText",
-									"sid": 670431170041772,
-									"parameters": {
-										"text": "\"Game Dev Randolph: Ok... He sounded really weird... almost like someone was making him say weird stuff. OH SHOOT?? what happened to the monitor, this is the third one this week. We really need to look into a different Manufacturer. Anyways continue.\""
-									}
-								}
-							],
-							"sid": 804672712074123
 						}
 					]
 				},
@@ -1328,12 +1341,7 @@
 							}
 						}
 					],
-					"actions": [
-						{
-							"callFunction": "DeleteNarrative",
-							"sid": 303665304797229
-						}
-					],
+					"actions": [],
 					"sid": 219422680017885,
 					"children": [
 						{
@@ -1408,9 +1416,52 @@
 								"bulletSize",
 								"bulletSizeMax"
 							]
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 139951895296636,
+							"parameters": {
+								"layer": "\"Narrative\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "NarrativeText",
+							"sid": 571440305145642,
+							"parameters": {
+								"text": "\"Game Dev Randolph: ARE YOU SERIOUS.... I’m not going to pick it up this time... okay, fine, sorry, just gimme one sec to deal with this lunatic boss!\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PauseText",
+							"sid": 540179612620381,
+							"parameters": {
+								"visibility": "visible"
+							}
 						}
 					],
-					"sid": 229539780668851
+					"sid": 229539780668851,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "PMWindow",
+									"sid": 786458029949615,
+									"parameters": {
+										"x": "3000",
+										"y": "3000"
+									}
+								}
+							],
+							"sid": 517378280295259
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -1437,25 +1488,8 @@
 					],
 					"actions": [
 						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 347373597114088,
-							"parameters": {
-								"variable": "isPaused",
-								"value": "false"
-							}
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 995099263237762,
-							"parameters": {
-								"audio-file": "pauseMenuCheat",
-								"loop": "not-looping",
-								"volume": "0",
-								"stereo-pan": "0",
-								"tag-optional": "\"\""
-							}
+							"callFunction": "CheatButtonClicked",
+							"sid": 817386054538654
 						}
 					],
 					"sid": 717061641773457,
@@ -1560,6 +1594,14 @@
 									}
 								},
 								{
+									"id": "set-animation-frame",
+									"objectClass": "GlassCrack",
+									"sid": 403877747448192,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
 									"id": "wait",
 									"objectClass": "System",
 									"sid": 293726982273044,
@@ -1611,34 +1653,137 @@
 												}
 											],
 											"sid": 289202236970414
-										}
-									]
-								},
-								{
-									"eventType": "block",
-									"conditions": [],
-									"actions": [
-										{
-											"id": "go-to-layout",
-											"objectClass": "System",
-											"sid": 575995389190163,
-											"parameters": {
-												"layout": "Minigame"
-											}
 										},
 										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 724630503368666,
-											"parameters": {
-												"variable": "enemySpawnTracker",
-												"value": "spawnTrackerWhenPaused"
-											}
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "NarrativeText",
+													"sid": 511857055167740,
+													"parameters": {
+														"text": "\"Game Dev Randolph: something’s wrong... my boss... he sounds possessed or something. AHHH Geez these monitors.. what the heck! I am not sure what’s going on, but E3 is next month and we need some build to show investors, so we must continue.\""
+													}
+												}
+											],
+											"sid": 935209083994202
 										}
-									],
-									"sid": 680358021130969
+									]
 								}
 							]
+						}
+					]
+				},
+				{
+					"eventType": "variable",
+					"name": "Page",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 872672608116716
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 672537120707011,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "ClickArrowNext"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 807149163356437,
+							"parameters": {
+								"variable": "Page",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "PauseGlitchStart",
+							"sid": 168696794782324
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 680014149380668,
+							"parameters": {
+								"seconds": "0.2"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 410755085112974,
+							"parameters": {
+								"variable": "Page",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 361703705276559
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 831353927027372,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "ClickArrowNext"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 954611541661382,
+							"parameters": {
+								"variable": "Page",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 892396849026147,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 523347511079941,
+									"parameters": {
+										"layout": "Minigame"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 304212032417540,
+									"parameters": {
+										"variable": "enemySpawnTracker",
+										"value": "spawnTrackerWhenPaused"
+									}
+								}
+							],
+							"sid": 814446968107629
 						}
 					]
 				}
@@ -1661,7 +1806,33 @@
 							"sid": 459975856951340
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 570901251228708,
+							"parameters": {
+								"layer": "\"Narrative\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "NarrativeText",
+							"sid": 141283180676661,
+							"parameters": {
+								"text": "\"Game Dev Randolph: WHAT IS HAPPENING? WHAT DID YOU DO?!?!?! HAVE YOU BEEN CHEATING?!?!?!??!?\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PauseText",
+							"sid": 614164249188603,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
 					"sid": 965549899326136,
 					"children": [
 						{
@@ -1717,9 +1888,16 @@
 									}
 								}
 							],
-							"sid": 626833628208081
+							"sid": 626833628208081,
+							"disabled": true
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 806200776864209
 				},
 				{
 					"eventType": "block",
@@ -1768,6 +1946,44 @@
 						}
 					],
 					"sid": 314378296947715,
+					"disabled": true
+				},
+				{
+					"eventType": "variable",
+					"name": "Page",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 881823130005699
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 377044057264015,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "ClickArrowNext"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 813493440091876,
+							"parameters": {
+								"variable": "Page",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 319834557795274,
 					"children": [
 						{
 							"eventType": "block",
@@ -1776,18 +1992,34 @@
 								{
 									"id": "shake",
 									"objectClass": "Camera",
-									"sid": 250220575480485,
+									"sid": 585849611040272,
 									"behaviorType": "ScrollTo",
 									"parameters": {
 										"magnitude": "75",
-										"duration": "3",
+										"duration": "6",
 										"mode": "reducing-magnitude"
 									}
 								},
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 233978642969711,
+									"sid": 243552981327594,
+									"parameters": {
+										"seconds": "3"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "GlassCrack",
+									"sid": 394229636921602,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 146070423394866,
 									"parameters": {
 										"seconds": "3"
 									}
@@ -1795,13 +2027,13 @@
 								{
 									"id": "go-to-layout",
 									"objectClass": "System",
-									"sid": 502847588935670,
+									"sid": 107217121573684,
 									"parameters": {
-										"layout": "EndGame"
+										"layout": "Cthulu"
 									}
 								}
 							],
-							"sid": 412866596031000
+							"sid": 537159069791131
 						}
 					]
 				}

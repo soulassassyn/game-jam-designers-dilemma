@@ -340,7 +340,7 @@
 			"children": [
 				{
 					"eventType": "variable",
-					"name": "Page",
+					"name": "NarrativePage",
 					"type": "number",
 					"initialValue": "0",
 					"comment": "",
@@ -366,10 +366,15 @@
 							"objectClass": "System",
 							"sid": 918234249549329,
 							"parameters": {
-								"variable": "Page",
+								"variable": "NarrativePage",
 								"comparison": 0,
 								"value": "0"
 							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "ClickArrowNext",
+							"sid": 343603487914862
 						}
 					],
 					"actions": [
@@ -406,7 +411,7 @@
 							"objectClass": "System",
 							"sid": 446628828028087,
 							"parameters": {
-								"variable": "Page",
+								"variable": "NarrativePage",
 								"value": "1"
 							}
 						},
@@ -448,10 +453,15 @@
 							"objectClass": "System",
 							"sid": 651700268091767,
 							"parameters": {
-								"variable": "Page",
+								"variable": "NarrativePage",
 								"comparison": 0,
 								"value": "1"
 							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "ClickArrowNext",
+							"sid": 272864059235601
 						}
 					],
 					"actions": [
@@ -488,7 +498,7 @@
 							"objectClass": "System",
 							"sid": 592210558649615,
 							"parameters": {
-								"variable": "Page",
+								"variable": "NarrativePage",
 								"value": "1"
 							}
 						}
@@ -513,13 +523,27 @@
 							"objectClass": "System",
 							"sid": 515227249888844,
 							"parameters": {
-								"variable": "Page",
+								"variable": "NarrativePage",
 								"comparison": 0,
 								"value": "2"
 							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "ClickArrowNext",
+							"sid": 932427924343614
 						}
 					],
 					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 530955353363332,
+							"parameters": {
+								"layer": "\"Narrative\"",
+								"visibility": "invisible"
+							}
+						},
 						{
 							"id": "play",
 							"objectClass": "Audio",
@@ -537,7 +561,7 @@
 							"objectClass": "System",
 							"sid": 973420775623026,
 							"parameters": {
-								"variable": "Page",
+								"variable": "NarrativePage",
 								"value": "1"
 							}
 						},
@@ -551,8 +575,12 @@
 							}
 						},
 						{
-							"callFunction": "DeleteNarrative",
-							"sid": 522119791114145
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 577953742932210,
+							"parameters": {
+								"seconds": "0.2"
+							}
 						},
 						{
 							"id": "restart-layout",
@@ -1015,17 +1043,7 @@
 							"isInverted": true
 						}
 					],
-					"actions": [
-						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 152674798254377,
-							"parameters": {
-								"layer": "\"Narrative\"",
-								"visibility": "invisible"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 787568248063310,
 					"children": [
 						{
@@ -1403,16 +1421,14 @@
 									"children": [
 										{
 											"eventType": "block",
-											"conditions": [],
-											"actions": [
+											"conditions": [
 												{
-													"callFunction": "CreateNarrative",
-													"sid": 624238277884750,
-													"disabled": true,
-													"parameters": [
-														"\"Game Dev Randolph:  WHAT?!?!? How in the world did you do that? That was incredible. Okay, I guess we need to crank up the difficulty. Good luck on this next round!\""
-													]
-												},
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 349341395252860
+												}
+											],
+											"actions": [
 												{
 													"id": "set-layer-visible",
 													"objectClass": "System",
@@ -1550,13 +1566,23 @@
 								"click-type": "clicked",
 								"object-clicked": "ClickArrowNext"
 							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 960210064110969,
+							"parameters": {
+								"variable": "tutorialMode"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "ClickArrowNext",
+							"sid": 610751427851379
 						}
 					],
 					"actions": [
-						{
-							"callFunction": "DeleteNarrative",
-							"sid": 431665225160789
-						},
 						{
 							"id": "tween-one-property",
 							"objectClass": "IntroScreenBG",
@@ -1575,15 +1601,12 @@
 							}
 						},
 						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 904150017149101,
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 760279610034473,
 							"parameters": {
-								"audio-file": "metalDoorUp",
-								"loop": "not-looping",
-								"volume": "0",
-								"stereo-pan": "0",
-								"tag-optional": "\"\""
+								"layer": "\"Narrative\"",
+								"visibility": "invisible"
 							}
 						},
 						{
@@ -1858,45 +1881,199 @@
 									"sid": 925002079724388
 								},
 								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 299395008519138,
-									"parameters": {
-										"variable": "currentLevel",
-										"value": "2"
-									}
-								},
-								{
 									"id": "stop",
 									"objectClass": "Audio",
 									"sid": 988352009266540,
 									"parameters": {
 										"tag": "\"minigameSong\""
 									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "VictoryText",
-									"sid": 977105446707795,
-									"parameters": {
-										"visibility": "visible"
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 741813055976224,
-									"parameters": {
-										"seconds": "2"
-									}
-								},
-								{
-									"id": "restart-layout",
-									"objectClass": "System",
-									"sid": 500530990753944
 								}
 							],
-							"sid": 388684627866882
+							"sid": 388684627866882,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 185778166901162
+										}
+									],
+									"actions": [
+										{
+											"id": "set-cursor-style",
+											"objectClass": "Mouse",
+											"sid": 720710318763251,
+											"parameters": {
+												"cursor-style": "normal"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "VictoryText",
+											"sid": 225212903751712,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "IntroScreenBG",
+											"sid": 482623134108749,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "200",
+												"time": "1",
+												"ease": "easeinexpo",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 372545477521627,
+											"parameters": {
+												"seconds": ".5"
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 281721572258195,
+											"parameters": {
+												"audio-file": "ShutDoorSound",
+												"loop": "not-looping",
+												"volume": "0",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 335129792033839,
+											"parameters": {
+												"seconds": ".5"
+											}
+										},
+										{
+											"id": "shake",
+											"objectClass": "Camera",
+											"sid": 395915060848441,
+											"behaviorType": "ScrollTo",
+											"parameters": {
+												"magnitude": "30",
+												"duration": "0.3",
+												"mode": "reducing-magnitude"
+											}
+										}
+									],
+									"sid": 733841293390197,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "set-layer-visible",
+													"objectClass": "System",
+													"sid": 281344718553916,
+													"parameters": {
+														"layer": "\"Narrative\"",
+														"visibility": "visible"
+													}
+												},
+												{
+													"id": "set-text",
+													"objectClass": "NarrativeText",
+													"sid": 899486064328127,
+													"parameters": {
+														"text": "\"Game Dev Randolph: Hrmm. Interesting... I think it's time to throw even more your way! Get ready!\""
+													}
+												}
+											],
+											"sid": 248723082345411
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-object-clicked",
+											"objectClass": "Mouse",
+											"sid": 671347387167820,
+											"parameters": {
+												"mouse-button": "left",
+												"click-type": "clicked",
+												"object-clicked": "ClickArrowNext"
+											}
+										},
+										{
+											"id": "is-visible",
+											"objectClass": "ClickArrowNext",
+											"sid": 592189738162190
+										}
+									],
+									"actions": [
+										{
+											"id": "tween-one-property",
+											"objectClass": "IntroScreenBG",
+											"sid": 309722713504459,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "-900",
+												"time": "1",
+												"ease": "easeinexpo",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 584913532085411,
+											"parameters": {
+												"layer": "\"Narrative\"",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 776165423095075,
+											"parameters": {
+												"seconds": "1.0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 225768507049907,
+											"parameters": {
+												"variable": "currentLevel",
+												"value": "2"
+											}
+										},
+										{
+											"id": "restart-layout",
+											"objectClass": "System",
+											"sid": 146967728388874
+										}
+									],
+									"sid": 428063254399163
+								}
+							]
 						}
 					]
 				}

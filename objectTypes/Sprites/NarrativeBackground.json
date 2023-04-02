@@ -2,7 +2,7 @@
 	"name": "NarrativeBackground",
 	"plugin-id": "Sprite",
 	"sid": 147374158785383,
-	"isGlobal": true,
+	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],

@@ -2,7 +2,7 @@
 	"name": "ClickArrowNext",
 	"plugin-id": "Sprite",
 	"sid": 652347776931838,
-	"isGlobal": true,
+	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
