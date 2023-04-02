@@ -91,13 +91,6 @@
 			"bundled": false
 		},
 		{
-			"type": "plugin",
-			"id": "video",
-			"name": "Video",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
 			"type": "behavior",
 			"id": "Bullet",
 			"name": "Bullet",
@@ -207,8 +200,7 @@
 			"Sprite",
 			"PauseMenuCheatText",
 			"NarrativeText",
-			"ClickArrowNext",
-			"Video"
+			"ClickArrowNext"
 		],
 		"subfolders": [
 			{
@@ -234,8 +226,7 @@
 					"Particles2",
 					"IntroScreenBG",
 					"Warp",
-					"GlassCrack",
-					"Credits"
+					"GlassCrack"
 				],
 				"subfolders": [],
 				"name": "Sprites"
@@ -256,8 +247,7 @@
 			"StartMenu",
 			"MainGame",
 			"EndGame",
-			"Storyline",
-			"Cthulu"
+			"Storyline"
 		],
 		"subfolders": []
 	},
@@ -268,8 +258,7 @@
 			"Globals",
 			"ESStartMenu",
 			"ESEndGame",
-			"ESStoryline",
-			"ESCthulu"
+			"ESStoryline"
 		],
 		"subfolders": []
 	},
@@ -425,16 +414,7 @@
 			"subfolders": []
 		},
 		"video": {
-			"items": [
-				{
-					"name": "Cthulu.mp4",
-					"type": "video/mp4",
-					"sid": 486514274702139,
-					"file-info": {
-						"purpose": "none"
-					}
-				}
-			],
+			"items": [],
 			"subfolders": []
 		},
 		"font": {
