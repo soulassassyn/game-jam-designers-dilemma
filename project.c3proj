@@ -236,7 +236,8 @@
 					"Warp",
 					"GlassCrack",
 					"ClickArrowNext",
-					"Credits"
+					"Credits",
+					"NarrativeBackground"
 				],
 				"subfolders": [],
 				"name": "Sprites"

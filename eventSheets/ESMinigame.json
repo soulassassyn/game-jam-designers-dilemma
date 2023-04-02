@@ -27,22 +27,38 @@
 							"sid": 855666603792606
 						}
 					],
-					"actions": [
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 951307469159899,
-							"parameters": {
-								"audio-file": "Dark Synthwave Music - Devour",
-								"loop": "looping",
-								"volume": "0",
-								"stereo-pan": "0",
-								"tag-optional": "\"minigameSong\""
-							}
-						}
-					],
+					"actions": [],
 					"sid": 879136404718591,
 					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 701386183059352,
+									"parameters": {
+										"tag": "\"minigameSong\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 697881854144416,
+									"parameters": {
+										"audio-file": "Dark Synthwave Music - Devour",
+										"loop": "looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"minigameSong\""
+									}
+								}
+							],
+							"sid": 744703630334144
+						},
 						{
 							"eventType": "block",
 							"conditions": [
@@ -1025,34 +1041,6 @@
 							],
 							"actions": [
 								{
-									"id": "create-object",
-									"objectClass": "System",
-									"sid": 274780515726280,
-									"disabled": true,
-									"parameters": {
-										"object-to-create": "Enemy",
-										"layer": "\"GameSpace\"",
-										"x": "engagePauseX",
-										"y": "500",
-										"create-hierarchy": false,
-										"template-name": "\"Boss\""
-									}
-								},
-								{
-									"id": "create-object",
-									"objectClass": "System",
-									"sid": 667618451488762,
-									"disabled": true,
-									"parameters": {
-										"object-to-create": "HPBarEnemy",
-										"layer": "\"GameSpace\"",
-										"x": "Enemy.X - 100",
-										"y": "Enemy.Y - 150",
-										"create-hierarchy": false,
-										"template-name": "\"\""
-									}
-								},
-								{
 									"id": "pin-to-object-properties",
 									"objectClass": "HPBarEnemy",
 									"sid": 668394936143023,
@@ -1099,12 +1087,6 @@
 								}
 							],
 							"sid": 867806085053647
-						},
-						{
-							"eventType": "block",
-							"conditions": [],
-							"actions": [],
-							"sid": 721673941294540
 						}
 					]
 				},
@@ -1347,11 +1329,11 @@
 									],
 									"actions": [
 										{
-											"id": "stop",
-											"objectClass": "Audio",
-											"sid": 669225048917478,
+											"id": "set-cursor-style",
+											"objectClass": "Mouse",
+											"sid": 820251389728069,
 											"parameters": {
-												"tag": "\"minigameSong\""
+												"cursor-style": "normal"
 											}
 										},
 										{
@@ -1363,29 +1345,68 @@
 											}
 										},
 										{
+											"id": "tween-one-property",
+											"objectClass": "IntroScreenBG",
+											"sid": 971418178544118,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"\"",
+												"property": "offsetY",
+												"end-value": "200",
+												"time": "1",
+												"ease": "easeinexpo",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
 											"id": "wait",
 											"objectClass": "System",
-											"sid": 308222643593414,
+											"sid": 229736478099443,
 											"parameters": {
-												"seconds": "2"
+												"seconds": ".5"
 											}
 										},
 										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 974506568742519,
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 728291530753834,
 											"parameters": {
-												"variable": "currentLevel",
-												"value": "1"
+												"audio-file": "ShutDoorSound",
+												"loop": "not-looping",
+												"volume": "0",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
 											}
 										},
 										{
-											"id": "restart-layout",
+											"id": "wait",
 											"objectClass": "System",
-											"sid": 242324727864060
+											"sid": 151541628233128,
+											"parameters": {
+												"seconds": "1"
+											}
 										}
 									],
-									"sid": 397902515860768
+									"sid": 397902515860768,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"callFunction": "CreateNarrative",
+													"sid": 624238277884750,
+													"parameters": [
+														"\"Game Dev Randolph:  WHAT?!?!? How in the world did you do that? That was incredible. Okay, I guess we need to crank up the difficulty. Good luck on this next round!\""
+													]
+												}
+											],
+											"sid": 769156215916009
+										}
+									]
 								}
 							]
 						}
@@ -1489,6 +1510,79 @@
 							]
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 818820616454334,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "ClickArrowNext"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "DeleteNarrative",
+							"sid": 431665225160789
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "IntroScreenBG",
+							"sid": 663493326941344,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetY",
+								"end-value": "-900",
+								"time": "1",
+								"ease": "easeinexpo",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 904150017149101,
+							"parameters": {
+								"audio-file": "metalDoorUp",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 342849777740474,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 352541104005506,
+							"parameters": {
+								"variable": "currentLevel",
+								"value": "1"
+							}
+						},
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 208606299910524
+						}
+					],
+					"sid": 477488502549602
 				}
 			],
 			"sid": 439430344792685
@@ -1689,6 +1783,26 @@
 											],
 											"actions": [
 												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 819863532236947,
+													"parameters": {
+														"audio-file": "mouseClick",
+														"loop": "not-looping",
+														"volume": "10",
+														"stereo-pan": "0",
+														"tag-optional": "\"\""
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 135227082909789,
+													"parameters": {
+														"seconds": "0.5"
+													}
+												},
+												{
 													"id": "set-eventvar-value",
 													"objectClass": "System",
 													"sid": 118889409496689,
@@ -1710,11 +1824,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 674043820645190,
+									"sid": 913908756411601,
 									"parameters": {
 										"variable": "enemiesKilled",
 										"comparison": 5,
-										"value": "40"
+										"value": "47"
 									}
 								}
 							],

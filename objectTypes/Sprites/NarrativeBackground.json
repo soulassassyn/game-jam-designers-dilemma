@@ -1,0 +1,57 @@
+{
+	"name": "NarrativeBackground",
+	"plugin-id": "Sprite",
+	"sid": 147374158785383,
+	"isGlobal": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1095,
+						"height": 313,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 137423,
+						"collisionPoly": {
+							"points": [
+								0.024657534246575342,
+								0.08626198083067092,
+								0.5,
+								0.05750798722044728,
+								0.9771689497716894,
+								0.07987220447284345,
+								0.9872146118721461,
+								0.5,
+								0.9872146118721461,
+								0.9552715654952076,
+								0.5,
+								1,
+								0.011872146118721462,
+								0.9584664536741214,
+								0.012785388127853882,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 874643788270666,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

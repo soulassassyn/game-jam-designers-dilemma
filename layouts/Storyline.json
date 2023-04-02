@@ -76,35 +76,29 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "IntroScreenBG",
+					"type": "NarrativeBackground",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "DialogBox",
+						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 17,
+					"uid": 64,
 					"instanceVariables": {},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": false
-							}
-						}
-					},
+					"behaviors": {},
 					"world": {
 						"x": 958,
 						"y": 882,
 						"width": 1911,
-						"height": 406.99999999999994,
+						"height": 407,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
 							1,
 							1,
 							1,
-							0.8500000000000001
+							0.85
 						],
 						"angle": 0,
 						"zElevation": 0

@@ -14,8 +14,8 @@
 			"actions": [
 				{
 					"id": "destroy",
-					"objectClass": "IntroScreenBG",
-					"sid": 758304230483000
+					"objectClass": "NarrativeBackground",
+					"sid": 967225911139659
 				},
 				{
 					"id": "destroy",
@@ -29,6 +29,75 @@
 				}
 			],
 			"sid": 821625188610440
+		},
+		{
+			"functionName": "CreateNarrative",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "SetText",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 569183923174431
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 520359053849071,
+					"parameters": {
+						"object-to-create": "NarrativeBackground",
+						"layer": "\"Narrative\"",
+						"x": "958",
+						"y": "882",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 370393315422213,
+					"parameters": {
+						"object-to-create": "NarrativeText",
+						"layer": "\"Narrative\"",
+						"x": "187",
+						"y": "763",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "NarrativeText",
+					"sid": 327529628715043,
+					"parameters": {
+						"text": "SetText"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 440630161773323,
+					"parameters": {
+						"object-to-create": "ClickArrowNext",
+						"layer": "\"Narrative\"",
+						"x": "1867",
+						"y": "1085",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 287914728539794
 		}
 	],
 	"sid": 156017758899495
