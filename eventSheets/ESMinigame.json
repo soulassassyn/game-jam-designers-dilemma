@@ -809,6 +809,105 @@
 							]
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Enemy",
+							"sid": 903381680198955,
+							"parameters": {
+								"object": "Turret"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 464502206520236,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Enemy",
+									"sid": 125886219913908
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Turret",
+									"sid": 629973558406036,
+									"parameters": {
+										"instance-variable": "TurretHP",
+										"value": "enemyDamage"
+									}
+								},
+								{
+									"id": "set-width",
+									"objectClass": "HPBarTurret",
+									"sid": 489745140649262,
+									"parameters": {
+										"width": "Turret.TurretHP"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 553115693995774,
+									"parameters": {
+										"variable": "enemiesKilled",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 952692931228190
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Turret",
+									"sid": 306841770170831,
+									"parameters": {
+										"instance-variable": "TurretHP",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 850514225457624,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Turret",
+											"sid": 786209323879218
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 993011984426909,
+											"parameters": {
+												"seconds": "1.0"
+											}
+										},
+										{
+											"id": "restart-layout",
+											"objectClass": "System",
+											"sid": 797490171631727
+										}
+									],
+									"sid": 993566976847469
+								}
+							]
+						}
+					]
 				}
 			],
 			"sid": 439430344792685
@@ -1175,87 +1274,87 @@
 								}
 							],
 							"sid": 622914667295091
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "pick-all",
-							"objectClass": "System",
-							"sid": 114536510589254,
-							"parameters": {
-								"object": "Turret"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 494142187759967,
-					"children": [
+						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-instance-variable",
-									"objectClass": "Turret",
-									"sid": 852571615229545,
-									"parameters": {
-										"instance-variable": "TurretHP",
-										"comparison": 3,
-										"value": "75"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "go-to-layout",
+									"id": "pick-all",
 									"objectClass": "System",
-									"sid": 188092921101770,
+									"sid": 756850227193466,
 									"parameters": {
-										"layout": "PauseMenu"
-									}
-								},
-								{
-									"id": "set-cursor-style",
-									"objectClass": "Mouse",
-									"sid": 585144543323280,
-									"parameters": {
-										"cursor-style": "normal"
-									}
-								},
-								{
-									"id": "stop",
-									"objectClass": "Audio",
-									"sid": 327739242930250,
-									"parameters": {
-										"tag": "\"minigameSong\""
+										"object": "Turret"
 									}
 								}
 							],
-							"sid": 663409018064807,
+							"actions": [],
+							"sid": 933898485422335,
 							"children": [
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "trigger-once-while-true",
-											"objectClass": "System",
-											"sid": 606791977545717
+											"id": "compare-instance-variable",
+											"objectClass": "Turret",
+											"sid": 553759225442306,
+											"parameters": {
+												"instance-variable": "TurretHP",
+												"comparison": 3,
+												"value": "75"
+											}
 										}
 									],
 									"actions": [
 										{
-											"id": "set-eventvar-value",
+											"id": "go-to-layout",
 											"objectClass": "System",
-											"sid": 300490287430438,
+											"sid": 646525785183926,
 											"parameters": {
-												"variable": "spawnTrackerWhenPaused",
-												"value": "enemySpawnTracker"
+												"layout": "PauseMenu"
+											}
+										},
+										{
+											"id": "set-cursor-style",
+											"objectClass": "Mouse",
+											"sid": 214635585714871,
+											"parameters": {
+												"cursor-style": "normal"
+											}
+										},
+										{
+											"id": "stop",
+											"objectClass": "Audio",
+											"sid": 427480719314945,
+											"parameters": {
+												"tag": "\"minigameSong\""
 											}
 										}
 									],
-									"sid": 855343700601254
+									"sid": 650399339060437,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 340894304638259
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 431951641988742,
+													"parameters": {
+														"variable": "spawnTrackerWhenPaused",
+														"value": "enemySpawnTracker"
+													}
+												}
+											],
+											"sid": 654173486890242
+										}
+									]
 								}
 							]
 						}
