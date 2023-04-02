@@ -2,6 +2,39 @@
 	"name": "StartMenu",
 	"layers": [
 		{
+			"name": "Background",
+			"overriden": 1,
+			"subLayers": [],
+			"instances": [],
+			"sid": 464614099244357,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0,
+				0,
+				0,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
 			"name": "Layer 0",
 			"overriden": 0,
 			"subLayers": [],
@@ -17,9 +50,9 @@
 						"bold": false,
 						"italic": false,
 						"color": [
-							0,
-							0,
-							0,
+							0.8196078431372549,
+							0.8196078431372549,
+							0.8196078431372549,
 							1
 						],
 						"horizontal-alignment": "center",
@@ -65,9 +98,9 @@
 						"bold": false,
 						"italic": false,
 						"color": [
-							0,
-							0,
-							0,
+							0.8196078431372549,
+							0.8196078431372549,
+							0.8196078431372549,
 							1
 						],
 						"horizontal-alignment": "center",
@@ -209,9 +242,9 @@
 						"bold": false,
 						"italic": false,
 						"color": [
-							0,
-							0,
-							0,
+							0.8392156862745098,
+							0.8392156862745098,
+							0.8392156862745098,
 							1
 						],
 						"horizontal-alignment": "center",
@@ -263,7 +296,7 @@
 				0.3686274509803922,
 				1
 			],
-			"isTransparent": false,
+			"isTransparent": true,
 			"parallaxX": 1,
 			"parallaxY": 1,
 			"scaleRate": 1,

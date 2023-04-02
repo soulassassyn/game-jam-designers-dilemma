@@ -1,0 +1,23 @@
+{
+	"name": "PauseMenuCheatText",
+	"plugin-id": "Text",
+	"sid": 327442209529129,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "State",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 972498827730811
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 146393173968114
+		}
+	],
+	"effectTypes": []
+}

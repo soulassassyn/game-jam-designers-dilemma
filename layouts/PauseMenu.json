@@ -145,50 +145,11 @@
 					}
 				},
 				{
-					"type": "StatSlider",
-					"properties": {
-						"value": 0,
-						"minimum": 0,
-						"maximum": 100,
-						"step": 1,
-						"tooltip": "",
-						"initially-visible": true,
-						"enabled": true,
-						"id": "",
-						"class": ""
-					},
-					"uid": 17,
-					"instanceVariables": {
-						"State": ""
-					},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
-					"world": {
-						"x": 2908,
-						"y": 505,
-						"width": 268,
-						"height": 35,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						]
-					}
-				},
-				{
 					"type": "CheatButton",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "cheat",
-						"initial-frame": 0,
+						"initial-frame": 1,
 						"enable-collisions": true,
 						"live-preview": false
 					},
@@ -323,146 +284,6 @@
 					}
 				},
 				{
-					"type": "StatValue",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "StatValue",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 12,
-					"instanceVariables": {},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
-					"world": {
-						"x": 3245,
-						"y": 431,
-						"width": 95,
-						"height": 66,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 1
-					}
-				},
-				{
-					"type": "StatValue",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "StatName",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 13,
-					"instanceVariables": {},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
-					"world": {
-						"x": 2775,
-						"y": 429,
-						"width": 224,
-						"height": 73,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 1
-					}
-				},
-				{
-					"type": "StatValue",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "StatValue",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 18,
-					"instanceVariables": {},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
-					"world": {
-						"x": 3246,
-						"y": 525,
-						"width": 94.48280266799878,
-						"height": 66.48280266799878,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 1
-					}
-				},
-				{
-					"type": "StatValue",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "StatName",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 19,
-					"instanceVariables": {},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
-					"world": {
-						"x": 2780,
-						"y": 523,
-						"width": 224,
-						"height": 73,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 1
-					}
-				},
-				{
 					"type": "StatValueText",
 					"properties": {
 						"text": "100",
@@ -497,9 +318,9 @@
 						}
 					},
 					"world": {
-						"x": 3246,
+						"x": 3239,
 						"y": 431,
-						"width": 70,
+						"width": 84,
 						"height": 50,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -519,7 +340,7 @@
 						"text": "StatValueText",
 						"enable-bbcode": true,
 						"font": "Minecraft",
-						"size": 21,
+						"size": 24,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -548,9 +369,9 @@
 						}
 					},
 					"world": {
-						"x": 2781,
+						"x": 2773,
 						"y": 430,
-						"width": 185,
+						"width": 241,
 						"height": 50,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -565,19 +386,19 @@
 					}
 				},
 				{
-					"type": "StatValueText",
+					"type": "PauseMenuCheatText",
 					"properties": {
-						"text": "100",
+						"text": "CHEAT",
 						"enable-bbcode": true,
 						"font": "Minecraft",
-						"size": 24,
+						"size": 48,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
 						"color": [
+							0.6823529411764706,
 							1,
-							1,
-							1,
+							0.6392156862745098,
 							1
 						],
 						"horizontal-alignment": "center",
@@ -587,7 +408,7 @@
 						"origin": "center",
 						"read-aloud": false
 					},
-					"uid": 20,
+					"uid": 12,
 					"instanceVariables": {
 						"State": ""
 					},
@@ -599,61 +420,10 @@
 						}
 					},
 					"world": {
-						"x": 3247,
-						"y": 525,
-						"width": 70,
-						"height": 50,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 2
-					}
-				},
-				{
-					"type": "StatNameText",
-					"properties": {
-						"text": "StatValueText",
-						"enable-bbcode": true,
-						"font": "Minecraft",
-						"size": 21,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "center",
-						"read-aloud": false
-					},
-					"uid": 21,
-					"instanceVariables": {
-						"State": ""
-					},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
-					"world": {
-						"x": 2782,
-						"y": 524,
-						"width": 185,
-						"height": 50,
+						"x": 2976.600996812782,
+						"y": 816.9305125522399,
+						"width": 241,
+						"height": 106,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

@@ -94,6 +94,21 @@
 						"height-type": "no",
 						"z": false
 					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "PauseMenuCheatText",
+					"sid": 309800193809563,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "PMWindow",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
 				}
 			],
 			"sid": 134674492985683,
@@ -373,6 +388,55 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 328916812211934,
+					"parameters": {
+						"object": "PauseMenuCheatText"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-font-color",
+					"objectClass": "PauseMenuCheatText",
+					"sid": 433635262609990,
+					"parameters": {
+						"color": "rgbEx(174, 255, 163)"
+					}
+				}
+			],
+			"sid": 507989688866756
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 204120493148334,
+					"parameters": {
+						"object": "PauseMenuCheatText"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-font-color",
+					"objectClass": "PauseMenuCheatText",
+					"sid": 510048816389685,
+					"parameters": {
+						"color": "rgbEx(255, 255, 255)"
+					}
+				}
+			],
+			"sid": 507682671432124
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-changing",
 					"objectClass": "StatSlider",
 					"sid": 619851808015959
@@ -428,19 +492,19 @@
 						{
 							"id": "pick-all",
 							"objectClass": "System",
-							"sid": 443837505807916,
+							"sid": 334148422112599,
 							"parameters": {
-								"object": "CheatButton"
+								"object": "PauseMenuCheatText"
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "set-animation-frame",
-							"objectClass": "CheatButton",
-							"sid": 360105037284355,
+							"id": "set-font-color",
+							"objectClass": "PauseMenuCheatText",
+							"sid": 334387655221352,
 							"parameters": {
-								"frame-number": "1"
+								"color": "rgbEx(255, 255, 255)"
 							}
 						}
 					],
@@ -1457,6 +1521,7 @@
 									"id": "create-object",
 									"objectClass": "System",
 									"sid": 373217062180198,
+									"disabled": true,
 									"parameters": {
 										"object-to-create": "StatValue",
 										"layer": "\"pauseMenu\"",
@@ -1470,6 +1535,7 @@
 									"id": "set-size",
 									"objectClass": "StatValue",
 									"sid": 259400312058467,
+									"disabled": true,
 									"parameters": {
 										"width": "224",
 										"height": "73"
@@ -1479,6 +1545,7 @@
 									"id": "pin-to-object-properties",
 									"objectClass": "StatValue",
 									"sid": 265818976993806,
+									"disabled": true,
 									"behaviorType": "Pin",
 									"parameters": {
 										"pin-to": "PMWindow",
@@ -1559,6 +1626,7 @@
 									"id": "create-object",
 									"objectClass": "System",
 									"sid": 274253917877776,
+									"disabled": true,
 									"parameters": {
 										"object-to-create": "StatValue",
 										"layer": "\"pauseMenu\"",
@@ -1572,6 +1640,7 @@
 									"id": "set-size",
 									"objectClass": "StatValue",
 									"sid": 546254925049681,
+									"disabled": true,
 									"parameters": {
 										"width": "95",
 										"height": "66"
@@ -1581,6 +1650,7 @@
 									"id": "pin-to-object-properties",
 									"objectClass": "StatValue",
 									"sid": 410173326552843,
+									"disabled": true,
 									"behaviorType": "Pin",
 									"parameters": {
 										"pin-to": "PMWindow",

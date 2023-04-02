@@ -197,7 +197,8 @@
 			"StatNameText",
 			"StatValueText",
 			"StartMenuText",
-			"Sprite"
+			"Sprite",
+			"PauseMenuCheatText"
 		],
 		"subfolders": [
 			{
