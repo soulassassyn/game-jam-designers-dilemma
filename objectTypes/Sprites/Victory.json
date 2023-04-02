@@ -1,0 +1,49 @@
+{
+	"name": "Victory",
+	"plugin-id": "Sprite",
+	"sid": 352738969235970,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 750,
+						"height": 400,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8892010,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.3333333333333333,
+								0,
+								0.3333333333333333,
+								0.625,
+								0,
+								0.625
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 939328601726375,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -659,6 +659,265 @@
 			"sid": 320330204434062
 		},
 		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "PMLevel2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 134579216671634
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "CreateMenuRow",
+							"sid": 560304028764153,
+							"parameters": [
+								"\"bulletDamage\"",
+								"bulletDamage",
+								"bulletDamageMax"
+							]
+						},
+						{
+							"callFunction": "CreateMenuRow",
+							"sid": 379074396555543,
+							"parameters": [
+								"\"enemySpeed\"",
+								"enemySpeed",
+								"enemySpeedMax"
+							]
+						},
+						{
+							"callFunction": "CreateMenuRow",
+							"sid": 936266422508068,
+							"parameters": [
+								"\"bulletSize\"",
+								"bulletSize",
+								"bulletSizeMax"
+							]
+						}
+					],
+					"sid": 229539780668851
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 317602933711096,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "CheatButton"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "CheatButton",
+							"sid": 864979265255686,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 347373597114088,
+							"parameters": {
+								"variable": "isPaused",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 717061641773457,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 491439942251000,
+									"parameters": {
+										"object": "StatSlider",
+										"expression": "StatSlider.State",
+										"comparison": 0,
+										"value": "\"bulletDamage\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 600419968527964,
+									"parameters": {
+										"variable": "bulletDamage",
+										"value": "StatSlider.Value"
+									}
+								}
+							],
+							"sid": 595517016917274
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 397136071074176,
+									"parameters": {
+										"object": "StatSlider",
+										"expression": "StatSlider.State",
+										"comparison": 0,
+										"value": "\"enemySpeed\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 608581873601965,
+									"parameters": {
+										"variable": "enemySpeed",
+										"value": "StatSlider.Value"
+									}
+								}
+							],
+							"sid": 452719074819768
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 744222055288178,
+									"parameters": {
+										"object": "StatSlider",
+										"expression": "StatSlider.State",
+										"comparison": 0,
+										"value": "\"bulletSize\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 863259441260831,
+									"parameters": {
+										"variable": "bulletSize",
+										"value": "StatSlider.Value"
+									}
+								}
+							],
+							"sid": 310533794433189
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "shake",
+									"objectClass": "Camera",
+									"sid": 916048689258615,
+									"behaviorType": "ScrollTo",
+									"parameters": {
+										"magnitude": "40",
+										"duration": "1",
+										"mode": "reducing-magnitude"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 293726982273044,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								}
+							],
+							"sid": 495373617417172,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-comparison",
+											"objectClass": "System",
+											"sid": 499761515601528,
+											"parameters": {
+												"object": "DuctTape",
+												"expression": "DuctTape.Order",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 371208541687701,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "DuctTape",
+													"sid": 133177851454740,
+													"parameters": {
+														"visibility": "visible"
+													}
+												}
+											],
+											"sid": 289202236970414
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 575995389190163,
+											"parameters": {
+												"layout": "Minigame"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 724630503368666,
+											"parameters": {
+												"variable": "enemySpawnTracker",
+												"value": "spawnTrackerWhenPaused"
+											}
+										}
+									],
+									"sid": 680358021130969
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 419711567805395
+		},
+		{
 			"functionName": "ResetMenu",
 			"functionDescription": "",
 			"functionCategory": "",

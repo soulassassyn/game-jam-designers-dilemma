@@ -165,7 +165,8 @@
 					"HPBarTurret",
 					"Monitor",
 					"MenuUX",
-					"Camera"
+					"Camera",
+					"Victory"
 				],
 				"subfolders": [],
 				"name": "Sprites"

@@ -133,6 +133,26 @@
 			"sid": 383708383589947
 		},
 		{
+			"eventType": "variable",
+			"name": "enemiesKilled",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 163326964235140
+		},
+		{
+			"eventType": "variable",
+			"name": "easyMode",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 839799224109180
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "MinigameTutorial",
@@ -146,6 +166,15 @@
 							"id": "on-created",
 							"objectClass": "Enemy",
 							"sid": 634433459246786
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 956298652494313,
+							"parameters": {
+								"variable": "easyMode"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -178,6 +207,54 @@
 						}
 					],
 					"sid": 466057728274484
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "Enemy",
+							"sid": 286569269916582
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 747156379283498,
+							"parameters": {
+								"variable": "easyMode"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle-toward-position",
+							"objectClass": "Enemy",
+							"sid": 109032190240747,
+							"parameters": {
+								"x": "Turret.X",
+								"y": "Turret.Y"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Enemy",
+							"sid": 412429300762720,
+							"parameters": {
+								"instance-variable": "EnemyHP",
+								"value": "enemyHP"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "Enemy",
+							"sid": 394903232702389,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "enemySpeed"
+							}
+						}
+					],
+					"sid": 873111221656144
 				},
 				{
 					"eventType": "variable",
@@ -238,6 +315,88 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 466198033901355,
+									"parameters": {
+										"variable": "easyMode"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 634099124223399
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "BeginSpawningEnemies",
+									"sid": 520772863973706
+								}
+							],
+							"sid": 229108891324162
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 885587713900392,
+									"parameters": {
+										"variable": "easyMode"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 737999723562448,
+									"parameters": {
+										"variable": "enemiesKilled",
+										"comparison": 0,
+										"value": "11"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 547436809648583
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 648354678248452,
+									"parameters": {
+										"seconds": "2"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 104734921047871,
+									"parameters": {
+										"variable": "easyMode",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 177380495181129
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 366865259142752,
+									"parameters": {
+										"variable": "easyMode"
+									},
+									"isInverted": true
+								},
+								{
 									"id": "trigger-once-while-true",
 									"objectClass": "System",
 									"sid": 941689562464304
@@ -292,42 +451,71 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-x",
-									"objectClass": "Enemy",
-									"sid": 106276659884500,
-									"parameters": {
-										"comparison": 5,
-										"x-co-ordinate": "engagePauseX"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "go-to-layout",
+									"id": "pick-by-comparison",
 									"objectClass": "System",
-									"sid": 438678354578320,
+									"sid": 206986293161349,
 									"parameters": {
-										"layout": "PauseMenu"
-									}
-								},
-								{
-									"id": "set-cursor-style",
-									"objectClass": "Mouse",
-									"sid": 774956610768704,
-									"parameters": {
-										"cursor-style": "normal"
-									}
-								},
-								{
-									"id": "stop",
-									"objectClass": "Audio",
-									"sid": 817061492418978,
-									"parameters": {
-										"tag": "\"minigameSong\""
+										"object": "Enemy",
+										"expression": "Enemy.State",
+										"comparison": 0,
+										"value": "\"Brain\""
 									}
 								}
 							],
-							"sid": 788511945373977
+							"actions": [],
+							"sid": 788511945373977,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 571707471577033,
+											"parameters": {
+												"variable": "easyMode"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-x",
+											"objectClass": "Enemy",
+											"sid": 955459437314251,
+											"parameters": {
+												"comparison": 5,
+												"x-co-ordinate": "engagePauseX"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 671072784122536,
+											"parameters": {
+												"layout": "PauseMenu"
+											}
+										},
+										{
+											"id": "set-cursor-style",
+											"objectClass": "Mouse",
+											"sid": 503137108797211,
+											"parameters": {
+												"cursor-style": "normal"
+											}
+										},
+										{
+											"id": "stop",
+											"objectClass": "Audio",
+											"sid": 243520495027315,
+											"parameters": {
+												"tag": "\"minigameSong\""
+											}
+										}
+									],
+									"sid": 169752997207466
+								}
+							]
 						}
 					]
 				},
@@ -400,40 +588,6 @@
 								}
 							],
 							"sid": 605127443333882
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-collision-with-another-object",
-									"objectClass": "Bullets",
-									"sid": 617048659141909,
-									"parameters": {
-										"object": "Enemy"
-									}
-								}
-							],
-							"actions": [],
-							"sid": 688741221501786,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "Enemy",
-											"sid": 991489430971474,
-											"parameters": {
-												"instance-variable": "EnemyHP",
-												"comparison": 3,
-												"value": "0"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 535797699454756
-								}
-							]
 						}
 					]
 				},
@@ -574,13 +728,22 @@
 									"actions": [
 										{
 											"id": "destroy",
-											"objectClass": "HPBarEnemy",
-											"sid": 862443002301311
+											"objectClass": "Enemy",
+											"sid": 760148806390187
 										},
 										{
 											"id": "destroy",
-											"objectClass": "Enemy",
-											"sid": 760148806390187
+											"objectClass": "HPBarEnemy",
+											"sid": 623934448612840
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 106653374157489,
+											"parameters": {
+												"variable": "enemiesKilled",
+												"value": "1"
+											}
 										}
 									],
 									"sid": 370456288942699
@@ -617,18 +780,25 @@
 											}
 										},
 										{
+											"id": "set-visible",
+											"objectClass": "Victory",
+											"sid": 736288482128971,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 997918108739744,
+											"parameters": {
+												"seconds": "2"
+											}
+										},
+										{
 											"id": "restart-layout",
 											"objectClass": "System",
 											"sid": 242324727864060
-										},
-										{
-											"id": "log",
-											"objectClass": "DEBUG",
-											"sid": 191213403063113,
-											"parameters": {
-												"type": "log",
-												"message": "\"LEVEL RESET\""
-											}
 										}
 									],
 									"sid": 397902515860768
@@ -658,19 +828,367 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
+					"eventType": "variable",
+					"name": "levelStart",
+					"type": "boolean",
+					"initialValue": "true",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 272149122059640
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 752846960773800,
+							"parameters": {
+								"variable": "currentLevel",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 675469671444682,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 138046691883630
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 349647133388629,
+									"parameters": {
+										"variable": "levelStart"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 656746963202646,
+									"parameters": {
+										"variable": "enemySpeed",
+										"value": "750"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 675825214177340,
+									"parameters": {
+										"variable": "enemySpawnRate",
+										"value": "100"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 519200130794583,
+									"parameters": {
+										"variable": "enemySpawnCount",
+										"value": "50"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 611951539861000,
+									"parameters": {
+										"variable": "enemiesKilled",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 747018025305302,
+									"parameters": {
+										"variable": "levelStart",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 694705172912079
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-all",
+									"objectClass": "System",
+									"sid": 711962095777150,
+									"parameters": {
+										"object": "Turret"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 737276279758145,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Turret",
+											"sid": 214582810144247,
+											"parameters": {
+												"instance-variable": "TurretHP",
+												"comparison": 3,
+												"value": "50"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 659277179805305,
+											"parameters": {
+												"layout": "PauseMenu"
+											}
+										},
+										{
+											"id": "set-cursor-style",
+											"objectClass": "Mouse",
+											"sid": 268647300629568,
+											"parameters": {
+												"cursor-style": "normal"
+											}
+										},
+										{
+											"id": "stop",
+											"objectClass": "Audio",
+											"sid": 560820109659384,
+											"parameters": {
+												"tag": "\"minigameSong\""
+											}
+										}
+									],
+									"sid": 580200567771844,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 947668537044524
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 118889409496689,
+													"parameters": {
+														"variable": "spawnTrackerWhenPaused",
+														"value": "enemySpawnTracker"
+													}
+												}
+											],
+											"sid": 504601964154206
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 674043820645190,
+									"parameters": {
+										"variable": "enemiesKilled",
+										"comparison": 5,
+										"value": "40"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 299395008519138,
+									"parameters": {
+										"variable": "currentLevel",
+										"value": "2"
+									}
+								},
+								{
+									"id": "stop",
+									"objectClass": "Audio",
+									"sid": 988352009266540,
+									"parameters": {
+										"tag": "\"minigameSong\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Victory",
+									"sid": 555779359391280,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 741813055976224,
+									"parameters": {
+										"seconds": "2"
+									}
+								},
+								{
+									"id": "restart-layout",
+									"objectClass": "System",
+									"sid": 500530990753944
+								}
+							],
+							"sid": 388684627866882
+						}
+					]
+				}
+			],
+			"sid": 202363477837501
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "MGLevel2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "levelStart",
+					"type": "boolean",
+					"initialValue": "true",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 845199957713702
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 595848785763283,
+							"parameters": {
+								"variable": "currentLevel",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 459841259066306,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 446961623424059
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 774814156632201,
+									"parameters": {
+										"variable": "levelStart"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 752424989219582,
+									"parameters": {
+										"variable": "enemySpeed",
+										"value": "250"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 114302703972979,
+									"parameters": {
+										"variable": "enemySpawnRate",
+										"value": "50"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 854026449081588,
+									"parameters": {
+										"variable": "enemySpawnCount",
+										"value": "250"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 910637017096090,
+									"parameters": {
+										"variable": "enemyDamage",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 943265001035956,
+									"parameters": {
+										"variable": "enemiesKilled",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 596712345617417,
+									"parameters": {
+										"variable": "levelStart",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 622914667295091
+						}
+					]
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
 							"id": "pick-all",
 							"objectClass": "System",
-							"sid": 128285297369067,
+							"sid": 114536510589254,
 							"parameters": {
 								"object": "Turret"
 							}
 						}
 					],
 					"actions": [],
-					"sid": 342222295042078,
+					"sid": 494142187759967,
 					"children": [
 						{
 							"eventType": "block",
@@ -678,11 +1196,11 @@
 								{
 									"id": "compare-instance-variable",
 									"objectClass": "Turret",
-									"sid": 784614885754212,
+									"sid": 852571615229545,
 									"parameters": {
 										"instance-variable": "TurretHP",
 										"comparison": 3,
-										"value": "50"
+										"value": "75"
 									}
 								}
 							],
@@ -690,7 +1208,7 @@
 								{
 									"id": "go-to-layout",
 									"objectClass": "System",
-									"sid": 954331206343912,
+									"sid": 188092921101770,
 									"parameters": {
 										"layout": "PauseMenu"
 									}
@@ -698,7 +1216,7 @@
 								{
 									"id": "set-cursor-style",
 									"objectClass": "Mouse",
-									"sid": 649779150194996,
+									"sid": 585144543323280,
 									"parameters": {
 										"cursor-style": "normal"
 									}
@@ -706,13 +1224,13 @@
 								{
 									"id": "stop",
 									"objectClass": "Audio",
-									"sid": 487803147479358,
+									"sid": 327739242930250,
 									"parameters": {
 										"tag": "\"minigameSong\""
 									}
 								}
 							],
-							"sid": 267076040046643,
+							"sid": 663409018064807,
 							"children": [
 								{
 									"eventType": "block",
@@ -720,28 +1238,28 @@
 										{
 											"id": "trigger-once-while-true",
 											"objectClass": "System",
-											"sid": 869228909474616
+											"sid": 606791977545717
 										}
 									],
 									"actions": [
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 633200895649127,
+											"sid": 300490287430438,
 											"parameters": {
 												"variable": "spawnTrackerWhenPaused",
 												"value": "enemySpawnTracker"
 											}
 										}
 									],
-									"sid": 992580542497149
+									"sid": 855343700601254
 								}
 							]
 						}
 					]
 				}
 			],
-			"sid": 202363477837501
+			"sid": 182145487621656
 		},
 		{
 			"eventType": "group",
@@ -864,6 +1382,14 @@
 									"parameters": {
 										"speed": "bulletSpeed"
 									}
+								},
+								{
+									"id": "set-scale",
+									"objectClass": "Bullets",
+									"sid": 709052191129289,
+									"parameters": {
+										"scale": "bulletSize"
+									}
 								}
 							],
 							"sid": 313072351506557
@@ -984,6 +1510,15 @@
 											"id": "destroy",
 											"objectClass": "Enemy",
 											"sid": 440362612657877
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 716483882751091,
+											"parameters": {
+												"variable": "enemiesKilled",
+												"value": "1"
+											}
 										}
 									],
 									"sid": 298452920980853
@@ -1090,6 +1625,15 @@
 									"parameters": {
 										"width": "Turret.TurretHP"
 									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 753240251673084,
+									"parameters": {
+										"variable": "enemiesKilled",
+										"value": "1"
+									}
 								}
 							],
 							"sid": 200444523639188
@@ -1135,95 +1679,6 @@
 										}
 									],
 									"sid": 115586281344927
-								}
-							]
-						}
-					]
-				},
-				{
-					"functionName": "BeginSpawningEnemies",
-					"functionDescription": "",
-					"functionCategory": "",
-					"functionReturnType": "none",
-					"functionCopyPicked": false,
-					"functionIsAsync": false,
-					"functionParameters": [],
-					"eventType": "function-block",
-					"conditions": [],
-					"actions": [],
-					"sid": 592253865892730,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "trigger-once-while-true",
-									"objectClass": "System",
-									"sid": 497938863306232
-								}
-							],
-							"actions": [],
-							"sid": 129583558806619,
-							"children": [
-								{
-									"eventType": "script",
-									"script": "let enemySpawnRate = runtime.globalVars.enemySpawnRate;\n\nlet runTrig = setInterval(trigger,enemySpawnRate);\n\nruntime.callFunction(\"SpawnEnemies\");\n\nfunction trigger(){\n\t\n\tif(runtime.globalVars.enemySpawnTracker < runtime.globalVars.enemySpawnCount){\n\t\truntime.globalVars.enemySpawnTracker += 1;\n\t\tconsole.log(runtime.globalVars.enemySpawnTracker)\n\t\t//we want to clear the interval to allow updated data\n\t\tclearInterval(runTrig);\n\t\truntime.callFunction(\"SpawnEnemies\");\n\t\tenemySpawnRate = runtime.globalVars.enemySpawnRate;\n\n\t\t//reset the trigger with updated timing if any\n\t\trunTrig = setInterval(trigger, enemySpawnRate);\n\t} else {\n\t\tclearInterval(runTrig);\n\t\tconsole.log('Finished Spawning');\n\t}\n\t\t\n\n}"
-								}
-							]
-						}
-					]
-				},
-				{
-					"functionName": "SpawnEnemies",
-					"functionDescription": "",
-					"functionCategory": "Enemies",
-					"functionReturnType": "none",
-					"functionCopyPicked": false,
-					"functionIsAsync": false,
-					"functionParameters": [],
-					"eventType": "function-block",
-					"conditions": [],
-					"actions": [],
-					"sid": 521627540658004,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "trigger-once-while-true",
-									"objectClass": "System",
-									"sid": 809515009590441
-								}
-							],
-							"actions": [],
-							"sid": 133762868038393,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [],
-									"actions": [
-										{
-											"id": "spawn-another-object",
-											"objectClass": "Spawner",
-											"sid": 432302118940259,
-											"parameters": {
-												"object": "Enemy",
-												"layer": "\"GameSpace\"",
-												"image-point": "floor(random(1,Spawner.ImagePointCount))",
-												"create-hierarchy": false
-											}
-										},
-										{
-											"id": "set-animation",
-											"objectClass": "Enemy",
-											"sid": 954369873829400,
-											"parameters": {
-												"animation": "\"Manta\"",
-												"from": "beginning"
-											}
-										}
-									],
-									"sid": 857744091050170
 								}
 							]
 						}
@@ -1279,6 +1734,144 @@
 								}
 							],
 							"sid": 495433398831717
+						}
+					]
+				},
+				{
+					"functionName": "BeginSpawningEnemies",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 228355827410892,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 620704459280521
+								}
+							],
+							"actions": [],
+							"sid": 443940484733905,
+							"children": [
+								{
+									"eventType": "script",
+									"script": "let enemySpawnRate = runtime.globalVars.enemySpawnRate;\n\nlet runTrig = setInterval(trigger,enemySpawnRate);\n\nruntime.callFunction(\"SpawnEnemies\");\n\nfunction trigger(){\n\t\n\tif(runtime.globalVars.enemySpawnTracker < runtime.globalVars.enemySpawnCount){\n\t\truntime.globalVars.enemySpawnTracker += 1;\n\t\tconsole.log(runtime.globalVars.enemySpawnTracker)\n\t\t//we want to clear the interval to allow updated data\n\t\tclearInterval(runTrig);\n\t\truntime.callFunction(\"SpawnEnemies\");\n\t\tenemySpawnRate = runtime.globalVars.enemySpawnRate;\n\n\t\t//reset the trigger with updated timing if any\n\t\trunTrig = setInterval(trigger, enemySpawnRate);\n\t} else {\n\t\tclearInterval(runTrig);\n\t\tconsole.log('Finished Spawning');\n\t}\n\t\t\n\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"functionName": "SpawnEnemies",
+					"functionDescription": "",
+					"functionCategory": "Enemies",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 116641863910933,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 355820419980252
+								}
+							],
+							"actions": [],
+							"sid": 953170792793211,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 230624733843149,
+											"parameters": {
+												"variable": "currentLevel",
+												"comparison": 1,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Spawner",
+											"sid": 228289106488529,
+											"parameters": {
+												"object": "Enemy",
+												"layer": "\"GameSpace\"",
+												"image-point": "floor(random(1,Spawner.ImagePointCount))",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Enemy",
+											"sid": 167605024039012,
+											"parameters": {
+												"animation": "\"Manta\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 323979521767792
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 556955999310923,
+											"parameters": {
+												"variable": "currentLevel",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Spawner",
+											"sid": 204270670368685,
+											"parameters": {
+												"object": "Enemy",
+												"layer": "\"GameSpace\"",
+												"image-point": "floor(random(1,Spawner.ImagePointCount))",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Enemy",
+											"sid": 778603752663443,
+											"parameters": {
+												"animation": "\"Stinger\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 552207204210279
+								}
+							]
 						}
 					]
 				}

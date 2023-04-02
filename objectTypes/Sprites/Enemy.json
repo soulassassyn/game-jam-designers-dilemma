@@ -123,6 +123,29 @@
 			{
 				"frames": [
 					{
+						"width": 105,
+						"height": 33,
+						"originX": 0.5047619047619047,
+						"originY": 0.45454545454545453,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4427166,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 964282714309976,
+				"name": "Stinger",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
 						"width": 113,
 						"height": 91,
 						"originX": 0.5,

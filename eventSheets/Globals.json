@@ -58,6 +58,26 @@
 			"sid": 410828229510553
 		},
 		{
+			"eventType": "variable",
+			"name": "bulletSize",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 855015183669799
+		},
+		{
+			"eventType": "variable",
+			"name": "bulletSizeMax",
+			"type": "number",
+			"initialValue": "4",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 915257102206789
+		},
+		{
 			"eventType": "comment",
 			"text": "Enemy stats"
 		},
@@ -85,7 +105,7 @@
 			"eventType": "variable",
 			"name": "enemySpeed",
 			"type": "number",
-			"initialValue": "750",
+			"initialValue": "250",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -115,7 +135,7 @@
 			"eventType": "variable",
 			"name": "enemySpawnCount",
 			"type": "number",
-			"initialValue": "50",
+			"initialValue": "10",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -135,7 +155,7 @@
 			"eventType": "variable",
 			"name": "enemySpawnRate",
 			"type": "number",
-			"initialValue": "100",
+			"initialValue": "750",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,

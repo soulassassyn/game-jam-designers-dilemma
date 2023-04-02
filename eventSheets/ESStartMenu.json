@@ -53,15 +53,6 @@
 								"instance-variable": "OriginalY",
 								"value": "Self.Y"
 							}
-						},
-						{
-							"id": "log",
-							"objectClass": "DEBUG",
-							"sid": 913362939274511,
-							"parameters": {
-								"type": "log",
-								"message": "\"SMT Loop Running\""
-							}
 						}
 					],
 					"sid": 304460592100793
