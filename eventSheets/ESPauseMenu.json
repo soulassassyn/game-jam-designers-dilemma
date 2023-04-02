@@ -1663,6 +1663,16 @@
 							"parameters": {
 								"object": "PauseText"
 							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 938335776643818
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "PauseText",
+							"sid": 167467723191314
 						}
 					],
 					"actions": [
@@ -1676,7 +1686,24 @@
 							}
 						}
 					],
-					"sid": 614734983055247
+					"sid": 614734983055247,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "MenuUX",
+									"sid": 546342239024630,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 293854829957621
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -1689,6 +1716,11 @@
 								"object": "PauseText"
 							},
 							"isInverted": true
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "PauseText",
+							"sid": 936660420223069
 						}
 					],
 					"actions": [
@@ -1718,7 +1750,24 @@
 							}
 						}
 					],
-					"sid": 431329553571686
+					"sid": 431329553571686,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "MenuUX",
+									"sid": 976896063753669,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 179942518661398
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -1739,6 +1788,14 @@
 							"id": "set-visible",
 							"objectClass": "PauseText",
 							"sid": 670703816925911,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MenuUX",
+							"sid": 838590706088500,
 							"parameters": {
 								"visibility": "invisible"
 							}

@@ -550,6 +550,7 @@
 									"id": "create-object",
 									"objectClass": "System",
 									"sid": 274780515726280,
+									"disabled": true,
 									"parameters": {
 										"object-to-create": "Enemy",
 										"layer": "\"GameSpace\"",
@@ -563,6 +564,7 @@
 									"id": "create-object",
 									"objectClass": "System",
 									"sid": 667618451488762,
+									"disabled": true,
 									"parameters": {
 										"object-to-create": "HPBarEnemy",
 										"layer": "\"GameSpace\"",

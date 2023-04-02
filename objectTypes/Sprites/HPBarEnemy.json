@@ -9,6 +9,11 @@
 			"behaviorId": "Pin",
 			"name": "Pin",
 			"sid": 400016370781205
+		},
+		{
+			"behaviorId": "Persist",
+			"name": "Persist",
+			"sid": 642799818549270
 		}
 	],
 	"effectTypes": [],
