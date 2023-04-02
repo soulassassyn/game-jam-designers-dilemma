@@ -31,6 +31,9 @@
 								"step": false,
 								"enabled": true
 							}
+						},
+						"Persist": {
+							"properties": {}
 						}
 					},
 					"world": {
@@ -147,6 +150,9 @@
 								"step": false,
 								"enabled": true
 							}
+						},
+						"Persist": {
+							"properties": {}
 						}
 					},
 					"template": {
@@ -233,6 +239,10 @@
 												true
 											]
 										]
+									},
+									{
+										"key": "Persist",
+										"state": []
 									}
 								]
 							},

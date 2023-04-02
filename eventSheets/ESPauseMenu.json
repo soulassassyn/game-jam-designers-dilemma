@@ -123,6 +123,15 @@
 							}
 						},
 						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 986701636227656,
+							"parameters": {
+								"group-name": "\"PMLevel1\"",
+								"state": "deactivated"
+							}
+						},
+						{
 							"callFunction": "ResetMenu",
 							"sid": 577818434530516
 						}
@@ -159,6 +168,33 @@
 						}
 					],
 					"sid": 108156163453026
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 471040351971309,
+							"parameters": {
+								"variable": "currentLevel",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 991765433124275,
+							"parameters": {
+								"group-name": "\"PMLevel1\"",
+								"state": "activated"
+							}
+						}
+					],
+					"sid": 505391780503736
 				}
 			]
 		},
@@ -200,6 +236,85 @@
 			"sid": 175969753559616
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-changing",
+					"objectClass": "StatSlider",
+					"sid": 619851808015959
+				}
+			],
+			"actions": [],
+			"sid": 718708068855471,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 820951413548939,
+							"parameters": {
+								"object": "StatValueText",
+								"expression": "StatValueText.State",
+								"comparison": 0,
+								"value": "StatSlider.State"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "StatValueText",
+							"sid": 840456483837409,
+							"parameters": {
+								"text": "StatSlider.Value"
+							}
+						}
+					],
+					"sid": 118013165140022
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-changed",
+					"objectClass": "StatSlider",
+					"sid": 968937172193974
+				}
+			],
+			"actions": [],
+			"sid": 176014675931239,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 443837505807916,
+							"parameters": {
+								"object": "CheatButton"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "CheatButton",
+							"sid": 360105037284355,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 440956883915281
+				}
+			]
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "PMTutorial",
@@ -232,85 +347,6 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-changing",
-							"objectClass": "StatSlider",
-							"sid": 780492473813346
-						}
-					],
-					"actions": [],
-					"sid": 725636425863149,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "pick-by-comparison",
-									"objectClass": "System",
-									"sid": 180537982188684,
-									"parameters": {
-										"object": "StatValueText",
-										"expression": "StatValueText.State",
-										"comparison": 0,
-										"value": "StatSlider.State"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-text",
-									"objectClass": "StatValueText",
-									"sid": 559447978437983,
-									"parameters": {
-										"text": "StatSlider.Value"
-									}
-								}
-							],
-							"sid": 982479499733337
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-changed",
-							"objectClass": "StatSlider",
-							"sid": 736884685665460
-						}
-					],
-					"actions": [],
-					"sid": 553609382738210,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "pick-all",
-									"objectClass": "System",
-									"sid": 239818571374511,
-									"parameters": {
-										"object": "CheatButton"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation-frame",
-									"objectClass": "CheatButton",
-									"sid": 281017169355586,
-									"parameters": {
-										"frame-number": "1"
-									}
-								}
-							],
-							"sid": 920482788631319
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
 							"id": "on-object-clicked",
 							"objectClass": "Mouse",
 							"sid": 503784320654532,
@@ -330,7 +366,17 @@
 							}
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 813639524734478,
+							"parameters": {
+								"variable": "isPaused",
+								"value": "false"
+							}
+						}
+					],
 					"sid": 643010536810210,
 					"children": [
 						{
@@ -389,6 +435,165 @@
 				}
 			],
 			"sid": 648375535363096
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "PMLevel1",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 562922902955554
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "CreateMenuRow",
+							"sid": 697912408469221,
+							"parameters": [
+								"\"bulletDamage\"",
+								"bulletDamage",
+								"bulletDamageMax"
+							]
+						},
+						{
+							"callFunction": "CreateMenuRow",
+							"sid": 762273143397328,
+							"parameters": [
+								"\"enemySpeed\"",
+								"enemySpeed",
+								"enemySpeedMax"
+							]
+						}
+					],
+					"sid": 155163155014553
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 690864605928409,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "CheatButton"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "CheatButton",
+							"sid": 876531508298218,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 830185775513066,
+							"parameters": {
+								"variable": "isPaused",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 529737325314354,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 563373977820831,
+									"parameters": {
+										"object": "StatSlider",
+										"expression": "StatSlider.State",
+										"comparison": 0,
+										"value": "\"bulletDamage\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 824558312898057,
+									"parameters": {
+										"variable": "bulletDamage",
+										"value": "StatSlider.Value"
+									}
+								}
+							],
+							"sid": 875217084372143
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 358920421937825,
+									"parameters": {
+										"object": "StatSlider",
+										"expression": "StatSlider.State",
+										"comparison": 0,
+										"value": "\"enemySpeed\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 616614982138476,
+									"parameters": {
+										"variable": "enemySpeed",
+										"value": "StatSlider.Value"
+									}
+								}
+							],
+							"sid": 589783759546020
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 842386519563851,
+									"parameters": {
+										"layout": "Minigame"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 893552157010689,
+									"parameters": {
+										"variable": "enemySpawnTracker",
+										"value": "spawnTrackerWhenPaused"
+									}
+								}
+							],
+							"sid": 411537117879493
+						}
+					]
+				}
+			],
+			"sid": 320330204434062
 		},
 		{
 			"functionName": "ResetMenu",
