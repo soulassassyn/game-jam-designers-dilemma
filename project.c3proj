@@ -282,7 +282,16 @@
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "Dark Synthwave Music - Devour.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 683642957777320,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {
