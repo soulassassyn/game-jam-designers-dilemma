@@ -103,6 +103,13 @@
 			"name": "Pin",
 			"author": "Scirra",
 			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "overlay",
+			"name": "Overlay",
+			"author": "Scirra",
+			"bundled": false
 		}
 	],
 	"uniqueId": "pncnqv9uuf6",
@@ -134,7 +141,9 @@
 					"DuctTape",
 					"HPBarEnemy",
 					"CheatButton",
-					"HPBarTurret"
+					"HPBarTurret",
+					"Monitor",
+					"MenuUX"
 				],
 				"subfolders": [],
 				"name": "Sprites"
