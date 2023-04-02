@@ -131,7 +131,9 @@
 					"Turret",
 					"Bullets",
 					"Spawner",
-					"DuctTape"
+					"DuctTape",
+					"HPBarEnemy",
+					"CheatButton"
 				],
 				"subfolders": [],
 				"name": "Sprites"

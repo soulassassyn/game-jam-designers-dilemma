@@ -56,7 +56,9 @@
 						"class": ""
 					},
 					"uid": 11,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"State": ""
+					},
 					"behaviors": {
 						"Pin": {
 							"properties": {
@@ -92,7 +94,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 894,
+						"x": 960,
 						"y": 525,
 						"width": 250,
 						"height": 250,
@@ -122,7 +124,9 @@
 						"class": ""
 					},
 					"uid": 17,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"State": ""
+					},
 					"behaviors": {
 						"Pin": {
 							"properties": {
@@ -143,6 +147,41 @@
 							1,
 							1
 						]
+					}
+				},
+				{
+					"type": "CheatButton",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "cheat",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 33,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 2975,
+						"y": 812,
+						"width": 244,
+						"height": 98,
+						"originX": 0.5040983606557377,
+						"originY": 0.5102040816326531,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
 					}
 				},
 				{
@@ -309,7 +348,9 @@
 						"read-aloud": false
 					},
 					"uid": 15,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"State": ""
+					},
 					"behaviors": {
 						"Pin": {
 							"properties": {
@@ -358,7 +399,9 @@
 						"read-aloud": false
 					},
 					"uid": 14,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"State": ""
+					},
 					"behaviors": {
 						"Pin": {
 							"properties": {
@@ -407,7 +450,9 @@
 						"read-aloud": false
 					},
 					"uid": 20,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"State": ""
+					},
 					"behaviors": {
 						"Pin": {
 							"properties": {
@@ -456,7 +501,9 @@
 						"read-aloud": false
 					},
 					"uid": 21,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"State": ""
+					},
 					"behaviors": {
 						"Pin": {
 							"properties": {

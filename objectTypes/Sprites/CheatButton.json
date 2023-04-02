@@ -1,0 +1,55 @@
+{
+	"name": "CheatButton",
+	"plugin-id": "Sprite",
+	"sid": 918853193109222,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 989365663507737
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 244,
+						"height": 98,
+						"originX": 0.5040983606557377,
+						"originY": 0.5102040816326531,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3954456,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 244,
+						"height": 98,
+						"originX": 0.5040983606557377,
+						"originY": 0.5102040816326531,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5314646,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 156381154126565,
+				"name": "cheat",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

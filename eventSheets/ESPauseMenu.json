@@ -12,6 +12,157 @@
 			"sid": 778579446701764
 		},
 		{
+			"eventType": "variable",
+			"name": "menuStartX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 145932091019765
+		},
+		{
+			"eventType": "variable",
+			"name": "menuStartY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 116455324674748
+		},
+		{
+			"eventType": "variable",
+			"name": "currentMenuItemX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 599363959160599
+		},
+		{
+			"eventType": "variable",
+			"name": "currentMenuItemY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 281433390897997
+		},
+		{
+			"eventType": "variable",
+			"name": "menuRowTracker",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 737061852284210
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 440190505702023
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 610114056762127,
+					"parameters": {
+						"variable": "menuRowTracker",
+						"value": "0"
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "CheatButton",
+					"sid": 260918474078761,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "PMWindow",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 134674492985683,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 965490775248527,
+							"parameters": {
+								"variable": "currentLevel",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 248872356120266,
+							"parameters": {
+								"group-name": "\"PMTutorial\"",
+								"state": "activated"
+							}
+						},
+						{
+							"callFunction": "ResetMenu",
+							"sid": 577818434530516
+						}
+					],
+					"sid": 545187482191017
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 982012410958969,
+							"parameters": {
+								"variable": "currentLevel",
+								"comparison": 1,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 768669147007635,
+							"parameters": {
+								"group-name": "\"PMTutorial\"",
+								"state": "deactivated"
+							}
+						},
+						{
+							"callFunction": "ResetMenu",
+							"sid": 540602256852057
+						}
+					],
+					"sid": 108156163453026
+				}
+			]
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -49,33 +200,195 @@
 			"sid": 175969753559616
 		},
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "PMTutorial",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 324009576349939
-				}
-			],
-			"actions": [
-				{
-					"callFunction": "ResetMenu",
-					"sid": 297226977312590
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 412033083140358
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "CreateMenuRow",
+							"sid": 398495388171992,
+							"parameters": [
+								"\"bulletDamage\"",
+								"bulletDamage",
+								"bulletDamageMax"
+							]
+						}
+					],
+					"sid": 351125770659184
 				},
 				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 887450260496755,
-					"parameters": {
-						"seconds": "0.2"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-changing",
+							"objectClass": "StatSlider",
+							"sid": 780492473813346
+						}
+					],
+					"actions": [],
+					"sid": 725636425863149,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 180537982188684,
+									"parameters": {
+										"object": "StatValueText",
+										"expression": "StatValueText.State",
+										"comparison": 0,
+										"value": "StatSlider.State"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "StatValueText",
+									"sid": 559447978437983,
+									"parameters": {
+										"text": "StatSlider.Value"
+									}
+								}
+							],
+							"sid": 982479499733337
+						}
+					]
 				},
 				{
-					"callFunction": "CreateMenu",
-					"sid": 260170900878271
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-changed",
+							"objectClass": "StatSlider",
+							"sid": 736884685665460
+						}
+					],
+					"actions": [],
+					"sid": 553609382738210,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-all",
+									"objectClass": "System",
+									"sid": 239818571374511,
+									"parameters": {
+										"object": "CheatButton"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "CheatButton",
+									"sid": 281017169355586,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 920482788631319
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 503784320654532,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "CheatButton"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "CheatButton",
+							"sid": 718474583109889,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 643010536810210,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 791883301074712,
+									"parameters": {
+										"object": "StatSlider",
+										"expression": "StatSlider.State",
+										"comparison": 0,
+										"value": "\"bulletDamage\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 726491247369529,
+									"parameters": {
+										"variable": "bulletDamage",
+										"value": "StatSlider.Value"
+									}
+								}
+							],
+							"sid": 976443119772550
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 320961667682576,
+									"parameters": {
+										"variable": "tutorialMode",
+										"value": "false"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 443848228618002,
+									"parameters": {
+										"layout": "Minigame"
+									}
+								}
+							],
+							"sid": 935323859086675
+						}
+					]
 				}
 			],
-			"sid": 468272965839274
+			"sid": 648375535363096
 		},
 		{
 			"functionName": "ResetMenu",
@@ -177,58 +490,40 @@
 			]
 		},
 		{
-			"functionName": "CreateMenu",
+			"functionName": "CreateMenuRow",
 			"functionDescription": "",
 			"functionCategory": "",
 			"functionReturnType": "none",
 			"functionCopyPicked": false,
 			"functionIsAsync": false,
-			"functionParameters": [],
+			"functionParameters": [
+				{
+					"name": "variableName",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 237561573899538
+				},
+				{
+					"name": "variableInitValue",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 952295317767202
+				},
+				{
+					"name": "variableMaxValue",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 893616212050099
+				}
+			],
 			"eventType": "function-block",
 			"conditions": [],
 			"actions": [],
 			"sid": 627348518066266,
 			"children": [
-				{
-					"eventType": "variable",
-					"name": "menuStartX",
-					"type": "number",
-					"initialValue": "0",
-					"comment": "",
-					"isStatic": false,
-					"isConstant": false,
-					"sid": 423745917952257
-				},
-				{
-					"eventType": "variable",
-					"name": "menuStartY",
-					"type": "number",
-					"initialValue": "0",
-					"comment": "",
-					"isStatic": false,
-					"isConstant": false,
-					"sid": 593574238309200
-				},
-				{
-					"eventType": "variable",
-					"name": "currentMenuItemX",
-					"type": "number",
-					"initialValue": "0",
-					"comment": "",
-					"isStatic": false,
-					"isConstant": false,
-					"sid": 312651262376632
-				},
-				{
-					"eventType": "variable",
-					"name": "currentMenuItemY",
-					"type": "number",
-					"initialValue": "0",
-					"comment": "",
-					"isStatic": false,
-					"isConstant": false,
-					"sid": 366974962133739
-				},
 				{
 					"eventType": "block",
 					"conditions": [
@@ -272,34 +567,27 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 985283227551686,
+							"sid": 350231939832546,
 							"parameters": {
 								"variable": "currentMenuItemY",
-								"value": "MenuStartY - 175"
+								"value": "MenuStartY - 175 + (100 * (menuRowTracker))"
 							}
 						}
 					],
 					"sid": 458430227541905,
 					"children": [
 						{
+							"eventType": "comment",
+							"text": "Stat Name box and text creation"
+						},
+						{
 							"eventType": "block",
-							"conditions": [
-								{
-									"id": "for",
-									"objectClass": "System",
-									"sid": 492004924199228,
-									"parameters": {
-										"name": "\"menuFill\"",
-										"start-index": "0",
-										"end-index": "4"
-									}
-								}
-							],
+							"conditions": [],
 							"actions": [
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 169328923424194,
+									"sid": 627579590726345,
 									"parameters": {
 										"object-to-create": "StatValue",
 										"layer": "0",
@@ -312,7 +600,7 @@
 								{
 									"id": "set-size",
 									"objectClass": "StatValue",
-									"sid": 980004484787847,
+									"sid": 259400312058467,
 									"parameters": {
 										"width": "224",
 										"height": "73"
@@ -321,7 +609,7 @@
 								{
 									"id": "pin-to-object-properties",
 									"objectClass": "StatValue",
-									"sid": 800237744144900,
+									"sid": 265818976993806,
 									"behaviorType": "Pin",
 									"parameters": {
 										"pin-to": "PMWindow",
@@ -336,7 +624,7 @@
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 562301359520402,
+									"sid": 432564327462004,
 									"parameters": {
 										"object-to-create": "StatNameText",
 										"layer": "0",
@@ -349,7 +637,7 @@
 								{
 									"id": "pin-to-object-properties",
 									"objectClass": "StatNameText",
-									"sid": 598810353537872,
+									"sid": 124306215487000,
 									"behaviorType": "Pin",
 									"parameters": {
 										"pin-to": "PMWindow",
@@ -362,18 +650,46 @@
 									}
 								},
 								{
+									"id": "set-text",
+									"objectClass": "StatNameText",
+									"sid": 183433789079645,
+									"parameters": {
+										"text": "variableName"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "StatNameText",
+									"sid": 194298140886454,
+									"parameters": {
+										"instance-variable": "State",
+										"value": "variableName"
+									}
+								},
+								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 573897972956535,
+									"sid": 488257373830617,
 									"parameters": {
 										"variable": "currentMenuItemX",
 										"value": "CurrentMenuItemX + 470"
 									}
-								},
+								}
+							],
+							"sid": 846601936900347
+						},
+						{
+							"eventType": "comment",
+							"text": "Stat Value box and text creation"
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 588311195052515,
+									"sid": 179703613832187,
 									"parameters": {
 										"object-to-create": "StatValue",
 										"layer": "0",
@@ -386,7 +702,7 @@
 								{
 									"id": "set-size",
 									"objectClass": "StatValue",
-									"sid": 632117010824073,
+									"sid": 546254925049681,
 									"parameters": {
 										"width": "95",
 										"height": "66"
@@ -395,7 +711,7 @@
 								{
 									"id": "pin-to-object-properties",
 									"objectClass": "StatValue",
-									"sid": 993858415102129,
+									"sid": 410173326552843,
 									"behaviorType": "Pin",
 									"parameters": {
 										"pin-to": "PMWindow",
@@ -410,7 +726,7 @@
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 621135435491368,
+									"sid": 393087246976437,
 									"parameters": {
 										"object-to-create": "StatValueText",
 										"layer": "0",
@@ -423,7 +739,7 @@
 								{
 									"id": "pin-to-object-properties",
 									"objectClass": "StatValueText",
-									"sid": 665543907967931,
+									"sid": 898751776319041,
 									"behaviorType": "Pin",
 									"parameters": {
 										"pin-to": "PMWindow",
@@ -436,9 +752,26 @@
 									}
 								},
 								{
+									"id": "set-text",
+									"objectClass": "StatValueText",
+									"sid": 771171682449866,
+									"parameters": {
+										"text": "variableInitValue"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "StatValueText",
+									"sid": 155878288310452,
+									"parameters": {
+										"instance-variable": "State",
+										"value": "variableName"
+									}
+								},
+								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 658521514846542,
+									"sid": 550161188533452,
 									"parameters": {
 										"variable": "currentMenuItemY",
 										"value": "CurrentMenuItemY - 10"
@@ -447,16 +780,27 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 688324520146243,
+									"sid": 572300994224923,
 									"parameters": {
 										"variable": "currentMenuItemX",
 										"value": "CurrentMenuItemX - 340"
 									}
-								},
+								}
+							],
+							"sid": 466400988719662
+						},
+						{
+							"eventType": "comment",
+							"text": "StatSlider connection"
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 462999404284171,
+									"sid": 645918114588151,
 									"parameters": {
 										"object-to-create": "StatSlider",
 										"layer": "0",
@@ -469,7 +813,7 @@
 								{
 									"id": "pin-to-object-properties",
 									"objectClass": "StatSlider",
-									"sid": 759754376297725,
+									"sid": 568851433567024,
 									"behaviorType": "Pin",
 									"parameters": {
 										"pin-to": "PMWindow",
@@ -480,36 +824,136 @@
 										"height-type": "no",
 										"z": false
 									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "StatSlider",
+									"sid": 187926578580670,
+									"parameters": {
+										"instance-variable": "State",
+										"value": "variableName"
+									}
 								}
 							],
-							"sid": 236985329734262,
+							"sid": 713656675330135,
 							"children": [
 								{
 									"eventType": "block",
-									"conditions": [],
-									"actions": [
+									"conditions": [
 										{
-											"id": "set-eventvar-value",
+											"id": "compare-two-values",
 											"objectClass": "System",
-											"sid": 518900717436128,
+											"sid": 343811646805590,
 											"parameters": {
-												"variable": "currentMenuItemX",
-												"value": "MenuStartX -210"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 921284835892601,
-											"parameters": {
-												"variable": "currentMenuItemY",
-												"value": "MenuStartY - 175 + (100 * (loopindex + 1))"
+												"first-value": "variableInitValue",
+												"comparison": 4,
+												"second-value": "variableMaxValue"
 											}
 										}
 									],
-									"sid": 891811241643928
+									"actions": [
+										{
+											"id": "set-value",
+											"objectClass": "StatSlider",
+											"sid": 381594970457031,
+											"parameters": {
+												"value": "variableInitValue"
+											}
+										},
+										{
+											"id": "set-minimum",
+											"objectClass": "StatSlider",
+											"sid": 796418623636906,
+											"parameters": {
+												"minimum": "variableMaxValue"
+											}
+										},
+										{
+											"id": "set-maximum",
+											"objectClass": "StatSlider",
+											"sid": 726972358060824,
+											"parameters": {
+												"maximum": "variableInitValue"
+											}
+										},
+										{
+											"id": "set-step",
+											"objectClass": "StatSlider",
+											"sid": 223031826237336,
+											"parameters": {
+												"step": "floor((variableInitValue - variableMaxValue) / 8)"
+											}
+										}
+									],
+									"sid": 774128576557721
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 601644125762531,
+											"parameters": {
+												"first-value": "variableInitValue",
+												"comparison": 2,
+												"second-value": "variableMaxValue"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-value",
+											"objectClass": "StatSlider",
+											"sid": 790599501190112,
+											"parameters": {
+												"value": "variableInitValue"
+											}
+										},
+										{
+											"id": "set-minimum",
+											"objectClass": "StatSlider",
+											"sid": 273947009288553,
+											"parameters": {
+												"minimum": "variableInitValue"
+											}
+										},
+										{
+											"id": "set-maximum",
+											"objectClass": "StatSlider",
+											"sid": 858054861264037,
+											"parameters": {
+												"maximum": "variableMaxValue"
+											}
+										},
+										{
+											"id": "set-step",
+											"objectClass": "StatSlider",
+											"sid": 245949847767210,
+											"parameters": {
+												"step": "floor((variableMaxValue - variableInitValue) / 8)"
+											}
+										}
+									],
+									"sid": 896448387027893
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 471663386748126,
+									"parameters": {
+										"variable": "menuRowTracker",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 413928474891521
 						}
 					]
 				}

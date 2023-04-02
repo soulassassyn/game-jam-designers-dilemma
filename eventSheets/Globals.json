@@ -39,6 +39,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "bulletDamageMax",
+			"type": "number",
+			"initialValue": "5000",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 968404933043689
+		},
+		{
+			"eventType": "variable",
 			"name": "bulletSpeed",
 			"type": "number",
 			"initialValue": "500",
@@ -80,6 +90,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 376876006522731
+		},
+		{
+			"eventType": "variable",
+			"name": "enemySpeedMax",
+			"type": "number",
+			"initialValue": "10",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 710506990633383
 		},
 		{
 			"eventType": "variable",
@@ -129,7 +149,7 @@
 			"eventType": "variable",
 			"name": "bossHP",
 			"type": "number",
-			"initialValue": "0",
+			"initialValue": "10000",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -149,7 +169,7 @@
 			"eventType": "variable",
 			"name": "bossSpeed",
 			"type": "number",
-			"initialValue": "0",
+			"initialValue": "60",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -168,6 +188,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 529581794870097
+		},
+		{
+			"eventType": "variable",
+			"name": "tutorialMode",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 611201087170663
 		}
 	],
 	"sid": 239138212706475

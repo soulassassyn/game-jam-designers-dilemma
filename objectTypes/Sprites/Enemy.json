@@ -10,6 +10,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 720549958219505
+		},
+		{
+			"name": "State",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 880507486176727
 		}
 	],
 	"behaviorTypes": [

@@ -3,7 +3,15 @@
 	"plugin-id": "Text",
 	"sid": 305033240465528,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "State",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 423353697162004
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Pin",

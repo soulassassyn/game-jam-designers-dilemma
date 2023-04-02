@@ -3,7 +3,15 @@
 	"plugin-id": "sliderbar",
 	"sid": 808276975161251,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "State",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 538153082895794
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Pin",

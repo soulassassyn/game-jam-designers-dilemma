@@ -19,26 +19,409 @@
 					],
 					"actions": [
 						{
-							"callFunction": "InitializeGame",
-							"sid": 296645187208892
-						},
-						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 395452172091609,
+							"sid": 484940242932138,
 							"parameters": {
 								"audio-file": "minigameSong",
 								"loop": "looping",
 								"volume": "0",
 								"stereo-pan": "0",
-								"tag-optional": "\"\""
+								"tag-optional": "\"minigameSong\""
 							}
 						}
 					],
-					"sid": 879136404718591
+					"sid": 879136404718591,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 638542173607318,
+									"parameters": {
+										"variable": "currentLevel",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 949303626981848,
+									"parameters": {
+										"group-name": "\"MinigameTutorial\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 634386961545561,
+									"parameters": {
+										"group-name": "\"EnemyControls\"",
+										"state": "deactivated"
+									}
+								}
+							],
+							"sid": 558805914933016
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 292033015029650,
+									"parameters": {
+										"variable": "currentLevel",
+										"comparison": 1,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 431944974894477,
+									"parameters": {
+										"group-name": "\"MinigameTutorial\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 750034887287225,
+									"parameters": {
+										"group-name": "\"EnemyControls\"",
+										"state": "activated"
+									}
+								},
+								{
+									"callFunction": "InitializeGame",
+									"sid": 909152017520316
+								}
+							],
+							"sid": 663883777873982
+						}
+					]
 				}
 			],
 			"sid": 383708383589947
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "MinigameTutorial",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "Enemy",
+							"sid": 634433459246786
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle-toward-position",
+							"objectClass": "Enemy",
+							"sid": 126677698605496,
+							"parameters": {
+								"x": "Turret.X",
+								"y": "Turret.Y"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Enemy",
+							"sid": 389300817322669,
+							"parameters": {
+								"instance-variable": "EnemyHP",
+								"value": "bossHP"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "Enemy",
+							"sid": 811974517093706,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "bossSpeed"
+							}
+						}
+					],
+					"sid": 466057728274484
+				},
+				{
+					"eventType": "variable",
+					"name": "engagePauseX",
+					"type": "number",
+					"initialValue": "500",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 377133612376413
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 927085566035416
+						}
+					],
+					"actions": [
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Mouse",
+							"sid": 539475395781303,
+							"parameters": {
+								"cursor-style": "crosshair"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Turret",
+							"sid": 983737023194306,
+							"parameters": {
+								"instance-variable": "TurretHP",
+								"value": "turretHP"
+							}
+						}
+					],
+					"sid": 116384592788933
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 859913599493215,
+							"parameters": {
+								"variable": "tutorialMode"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 567558833880059,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 941689562464304
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 944561486459974,
+									"parameters": {
+										"object-to-create": "Enemy",
+										"layer": "\"GameSpace\"",
+										"x": "0",
+										"y": "500",
+										"create-hierarchy": false,
+										"template-name": "\"Boss\""
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 619932355762762,
+									"parameters": {
+										"object-to-create": "HPBarEnemy",
+										"layer": "\"GameSpace\"",
+										"x": "Enemy.X - 100",
+										"y": "Enemy.Y - 150",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "HPBarEnemy",
+									"sid": 138360799920712,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Enemy",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								}
+							],
+							"sid": 681401148356789
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "Enemy",
+									"sid": 106276659884500,
+									"parameters": {
+										"comparison": 5,
+										"x-co-ordinate": "engagePauseX"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 438678354578320,
+									"parameters": {
+										"layout": "PauseMenu"
+									}
+								},
+								{
+									"id": "set-cursor-style",
+									"objectClass": "Mouse",
+									"sid": 774956610768704,
+									"parameters": {
+										"cursor-style": "normal"
+									}
+								},
+								{
+									"id": "stop",
+									"objectClass": "Audio",
+									"sid": 817061492418978,
+									"parameters": {
+										"tag": "\"minigameSong\""
+									}
+								}
+							],
+							"sid": 788511945373977
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 647192176021976,
+							"parameters": {
+								"variable": "tutorialMode"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 787568248063310,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 108297963793089
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 274780515726280,
+									"parameters": {
+										"object-to-create": "Enemy",
+										"layer": "\"GameSpace\"",
+										"x": "engagePauseX",
+										"y": "500",
+										"create-hierarchy": false,
+										"template-name": "\"Boss\""
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 667618451488762,
+									"parameters": {
+										"object-to-create": "HPBarEnemy",
+										"layer": "\"GameSpace\"",
+										"x": "Enemy.X - 100",
+										"y": "Enemy.Y - 150",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "HPBarEnemy",
+									"sid": 668394936143023,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Enemy",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								}
+							],
+							"sid": 605127443333882
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Enemy",
+									"sid": 407526153023401,
+									"parameters": {
+										"instance-variable": "EnemyHP",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 504736272760837,
+									"parameters": {
+										"variable": "currentLevel",
+										"value": "1"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 473751335106313,
+									"parameters": {
+										"layout": "Minigame"
+									}
+								}
+							],
+							"sid": 765911067772736
+						}
+					]
+				}
+			],
+			"sid": 439430344792685
 		},
 		{
 			"eventType": "group",
@@ -212,9 +595,44 @@
 										"instance-variable": "EnemyHP",
 										"value": "bulletDamage"
 									}
+								},
+								{
+									"id": "set-width",
+									"objectClass": "HPBarEnemy",
+									"sid": 286774805265633,
+									"parameters": {
+										"width": "((Enemy.EnemyHP - bulletDamage) / 50)"
+									}
 								}
 							],
-							"sid": 128548630911284
+							"sid": 128548630911284,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-width",
+											"objectClass": "HPBarEnemy",
+											"sid": 741453040426563,
+											"parameters": {
+												"comparison": 3,
+												"width": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-width",
+											"objectClass": "HPBarEnemy",
+											"sid": 583850970014906,
+											"parameters": {
+												"width": "1"
+											}
+										}
+									],
+									"sid": 159710521851915
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -237,6 +655,11 @@
 									"eventType": "block",
 									"conditions": [],
 									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "HPBarEnemy",
+											"sid": 551428419588613
+										},
 										{
 											"id": "destroy",
 											"objectClass": "Enemy",
@@ -461,6 +884,15 @@
 												"image-point": "floor(random(1,Spawner.ImagePointCount))",
 												"create-hierarchy": false
 											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Enemy",
+											"sid": 954369873829400,
+											"parameters": {
+												"animation": "\"Manta\"",
+												"from": "beginning"
+											}
 										}
 									],
 									"sid": 857744091050170
@@ -497,10 +929,6 @@
 							"conditions": [],
 							"actions": [
 								{
-									"callFunction": "BeginSpawningEnemies",
-									"sid": 647268851139889
-								},
-								{
 									"id": "set-cursor-style",
 									"objectClass": "Mouse",
 									"sid": 440292492857018,
@@ -516,6 +944,10 @@
 										"instance-variable": "TurretHP",
 										"value": "turretHP"
 									}
+								},
+								{
+									"callFunction": "BeginSpawningEnemies",
+									"sid": 738894946006150
 								}
 							],
 							"sid": 495433398831717
