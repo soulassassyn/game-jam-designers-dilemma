@@ -426,18 +426,6 @@
 								"ping-pong": "no",
 								"repeat-count": "1"
 							}
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 683380997304558,
-							"parameters": {
-								"audio-file": "metalDoorUp",
-								"loop": "not-looping",
-								"volume": "0",
-								"stereo-pan": "0",
-								"tag-optional": "\"\""
-							}
 						}
 					],
 					"sid": 812990439912659
@@ -1384,9 +1372,20 @@
 										{
 											"id": "wait",
 											"objectClass": "System",
-											"sid": 151541628233128,
+											"sid": 136288513284006,
 											"parameters": {
-												"seconds": "1"
+												"seconds": ".5"
+											}
+										},
+										{
+											"id": "shake",
+											"objectClass": "Camera",
+											"sid": 418427758149953,
+											"behaviorType": "ScrollTo",
+											"parameters": {
+												"magnitude": "30",
+												"duration": "0.3",
+												"mode": "reducing-magnitude"
 											}
 										}
 									],
@@ -1792,14 +1791,6 @@
 														"volume": "10",
 														"stereo-pan": "0",
 														"tag-optional": "\"\""
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 135227082909789,
-													"parameters": {
-														"seconds": "0.5"
 													}
 												},
 												{

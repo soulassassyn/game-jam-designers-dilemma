@@ -242,6 +242,25 @@
 					}
 				},
 				{
+					"id": "shake",
+					"objectClass": "Camera",
+					"sid": 480789718309703,
+					"behaviorType": "ScrollTo",
+					"parameters": {
+						"magnitude": "30",
+						"duration": "0.3",
+						"mode": "reducing-magnitude"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 258609601355193,
+					"parameters": {
+						"seconds": ".5"
+					}
+				},
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 822054245956712,

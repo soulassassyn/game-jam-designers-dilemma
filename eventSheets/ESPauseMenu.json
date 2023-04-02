@@ -514,6 +514,233 @@
 			]
 		},
 		{
+			"functionName": "PauseGlitchStart",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 498755307513781,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 989708815614969,
+							"parameters": {
+								"layer": "\"Narrative\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 671578597117811,
+							"parameters": {
+								"audio-file": "menuItemHover2",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 335299694538452,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "PauseText",
+							"sid": 681075733412424,
+							"parameters": {
+								"animation": "\"PauseGlitch\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 782603067170364,
+							"parameters": {
+								"seconds": "0.2"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "PauseText",
+							"sid": 417145523533258,
+							"parameters": {
+								"animation": "\"PauseText\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 587611412253613,
+							"parameters": {
+								"seconds": "2"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 860493037331486,
+							"parameters": {
+								"variable": "isPaused",
+								"value": "true"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 855130566710650,
+							"parameters": {
+								"audio-file": "randomError3",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 504526102566535
+				}
+			]
+		},
+		{
+			"functionName": "CheatButtonClicked",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 861256082705615,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "PMWindow",
+							"sid": 195710508772357,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 653085230348742,
+							"parameters": {
+								"variable": "isPaused",
+								"value": "false"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 849373337816842,
+							"parameters": {
+								"audio-file": "pauseMenuCheat",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PauseText",
+							"sid": 376530200499696,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "PauseText",
+							"sid": 543350398780490,
+							"parameters": {
+								"animation": "\"PauseText\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "PMWindow",
+							"sid": 744003707764197,
+							"parameters": {
+								"x": "3000",
+								"y": "3000"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "PauseText",
+							"sid": 536572378196523,
+							"parameters": {
+								"animation": "\"PauseGlitch\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 519412091159698,
+							"parameters": {
+								"seconds": "0.2"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "PauseText",
+							"sid": 581302394414151,
+							"parameters": {
+								"animation": "\"PauseText\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 584326129865898,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 334477104902636,
+							"parameters": {
+								"layer": "\"Narrative\"",
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 812588321249203
+				}
+			]
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "PMNarrative",
@@ -590,113 +817,6 @@
 						}
 					],
 					"sid": 714253441345278
-				},
-				{
-					"functionName": "PauseGlitchStart",
-					"functionDescription": "",
-					"functionCategory": "",
-					"functionReturnType": "none",
-					"functionCopyPicked": false,
-					"functionIsAsync": false,
-					"functionParameters": [],
-					"eventType": "function-block",
-					"conditions": [],
-					"actions": [
-						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 149771649701399,
-							"parameters": {
-								"layer": "\"Narrative\"",
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 503465413837435,
-							"parameters": {
-								"audio-file": "menuItemHover2",
-								"loop": "not-looping",
-								"volume": "0",
-								"stereo-pan": "0",
-								"tag-optional": "\"\""
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 484701881293633,
-							"parameters": {
-								"seconds": "0.1"
-							}
-						},
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 201812549715387,
-							"parameters": {
-								"variable": "Page",
-								"value": "1"
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "PauseText",
-							"sid": 436392001591528,
-							"parameters": {
-								"animation": "\"PauseGlitch\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 570806896169128,
-							"parameters": {
-								"seconds": "0.2"
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "PauseText",
-							"sid": 930750649876341,
-							"parameters": {
-								"animation": "\"PauseText\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 518117898198830,
-							"parameters": {
-								"seconds": "2"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 173599780173208,
-							"parameters": {
-								"variable": "isPaused",
-								"value": "true"
-							}
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 130772768112346,
-							"parameters": {
-								"audio-file": "randomError3",
-								"loop": "not-looping",
-								"volume": "0",
-								"stereo-pan": "0",
-								"tag-optional": "\"\""
-							}
-						}
-					],
-					"sid": 569214146029499
 				}
 			],
 			"sid": 366979464049038
@@ -765,111 +885,16 @@
 					],
 					"actions": [
 						{
-							"id": "set-enabled",
-							"objectClass": "PMWindow",
-							"sid": 730201538196584,
-							"behaviorType": "DragDrop",
-							"parameters": {
-								"state": "disabled"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 813639524734478,
-							"parameters": {
-								"variable": "isPaused",
-								"value": "false"
-							}
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 158861395007246,
-							"parameters": {
-								"audio-file": "pauseMenuCheat",
-								"loop": "not-looping",
-								"volume": "0",
-								"stereo-pan": "0",
-								"tag-optional": "\"\""
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "PauseText",
-							"sid": 654591896590813,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "PauseText",
-							"sid": 792465448710026,
-							"parameters": {
-								"animation": "\"PauseText\"",
-								"from": "beginning"
-							}
+							"callFunction": "CheatButtonClicked",
+							"sid": 919372331778421
 						},
 						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
-							"sid": 233351088079666,
+							"sid": 900468518453816,
 							"parameters": {
 								"variable": "Page",
 								"value": "1"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "PMWindow",
-							"sid": 837414644070138,
-							"parameters": {
-								"x": "3000",
-								"y": "3000"
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "PauseText",
-							"sid": 606199617429524,
-							"parameters": {
-								"animation": "\"PauseGlitch\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 428654362965719,
-							"parameters": {
-								"seconds": "0.2"
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "PauseText",
-							"sid": 906232700640199,
-							"parameters": {
-								"animation": "\"PauseText\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 172233236113793,
-							"parameters": {
-								"seconds": "1"
-							}
-						},
-						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 408667252337886,
-							"parameters": {
-								"layer": "\"Narrative\"",
-								"visibility": "visible"
 							}
 						}
 					],
@@ -998,119 +1023,6 @@
 							"sid": 504181191564934
 						}
 					]
-				},
-				{
-					"functionName": "CheatButtonClicked",
-					"functionDescription": "",
-					"functionCategory": "",
-					"functionReturnType": "none",
-					"functionCopyPicked": false,
-					"functionIsAsync": false,
-					"functionParameters": [],
-					"eventType": "function-block",
-					"conditions": [],
-					"actions": [
-						{
-							"id": "set-enabled",
-							"objectClass": "PMWindow",
-							"sid": 895794439796515,
-							"behaviorType": "DragDrop",
-							"parameters": {
-								"state": "disabled"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 600001138970249,
-							"parameters": {
-								"variable": "isPaused",
-								"value": "false"
-							}
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 297636442686627,
-							"parameters": {
-								"audio-file": "pauseMenuCheat",
-								"loop": "not-looping",
-								"volume": "0",
-								"stereo-pan": "0",
-								"tag-optional": "\"\""
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "PauseText",
-							"sid": 724303365713505,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "PauseText",
-							"sid": 960782718121936,
-							"parameters": {
-								"animation": "\"PauseText\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "PMWindow",
-							"sid": 453618840139399,
-							"parameters": {
-								"x": "3000",
-								"y": "3000"
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "PauseText",
-							"sid": 553358108038709,
-							"parameters": {
-								"animation": "\"PauseGlitch\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 683075126318381,
-							"parameters": {
-								"seconds": "0.2"
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "PauseText",
-							"sid": 871297882756105,
-							"parameters": {
-								"animation": "\"PauseText\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 514847023810957,
-							"parameters": {
-								"seconds": "1"
-							}
-						},
-						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 322937275820051,
-							"parameters": {
-								"layer": "\"Narrative\"",
-								"visibility": "visible"
-							}
-						}
-					],
-					"sid": 408401761988678
 				}
 			],
 			"sid": 648375535363096
@@ -1307,32 +1219,23 @@
 											"sid": 747836680287311
 										}
 									]
-								},
-								{
-									"eventType": "block",
-									"conditions": [],
-									"actions": [
-										{
-											"id": "go-to-layout",
-											"objectClass": "System",
-											"sid": 551899701996111,
-											"parameters": {
-												"layout": "Minigame"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 765490819017391,
-											"parameters": {
-												"variable": "enemySpawnTracker",
-												"value": "spawnTrackerWhenPaused"
-											}
-										}
-									],
-									"sid": 778834131762422
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "NarrativeText",
+									"sid": 670431170041772,
+									"parameters": {
+										"text": "\"Game Dev Randolph: Ok... He sounded really weird... almost like someone was making him say weird stuff. OH SHOOT?? what happened to the monitor, this is the third one this week. We really need to look into a different Manufacturer. Anyways continue.\""
+									}
+								}
+							],
+							"sid": 804672712074123
 						}
 					]
 				},
@@ -1376,6 +1279,14 @@
 							"sid": 737411668968081
 						},
 						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 345974867779766,
+							"parameters": {
+								"seconds": "0.2"
+							}
+						},
+						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
 							"sid": 850379023636026,
@@ -1386,6 +1297,64 @@
 						}
 					],
 					"sid": 505493250716272
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 504836236514037,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "ClickArrowNext"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 705251458243290,
+							"parameters": {
+								"variable": "Page",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "DeleteNarrative",
+							"sid": 303665304797229
+						}
+					],
+					"sid": 219422680017885,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 630374604661008,
+									"parameters": {
+										"layout": "Minigame"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 256972494169882,
+									"parameters": {
+										"variable": "enemySpawnTracker",
+										"value": "spawnTrackerWhenPaused"
+									}
+								}
+							],
+							"sid": 341787000668777
+						}
+					]
 				}
 			],
 			"sid": 320330204434062
