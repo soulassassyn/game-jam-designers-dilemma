@@ -711,7 +711,7 @@
 			"children": [
 				{
 					"eventType": "variable",
-					"name": "Page",
+					"name": "NPage",
 					"type": "number",
 					"initialValue": "0",
 					"comment": "",
@@ -762,11 +762,16 @@
 							}
 						},
 						{
+							"id": "is-visible",
+							"objectClass": "ClickArrowNext",
+							"sid": 485517835448137
+						},
+						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
 							"sid": 472831016396516,
 							"parameters": {
-								"variable": "Page",
+								"variable": "NPage",
 								"comparison": 0,
 								"value": "0"
 							}
@@ -814,7 +819,7 @@
 				},
 				{
 					"eventType": "variable",
-					"name": "Page",
+					"name": "TutPage",
 					"type": "number",
 					"initialValue": "0",
 					"comment": "",
@@ -855,7 +860,7 @@
 							"objectClass": "System",
 							"sid": 900468518453816,
 							"parameters": {
-								"variable": "Page",
+								"variable": "TutPage",
 								"value": "1"
 							}
 						}
@@ -921,11 +926,16 @@
 							}
 						},
 						{
+							"id": "is-visible",
+							"objectClass": "ClickArrowNext",
+							"sid": 870975825459788
+						},
+						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
 							"sid": 327395243232106,
 							"parameters": {
-								"variable": "Page",
+								"variable": "TutPage",
 								"comparison": 0,
 								"value": "1"
 							}
@@ -1196,9 +1206,9 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 870174464744749,
+									"sid": 244001115928455,
 									"parameters": {
-										"seconds": "2"
+										"seconds": "1"
 									}
 								}
 							],
@@ -1260,7 +1270,7 @@
 				},
 				{
 					"eventType": "variable",
-					"name": "Page",
+					"name": "L1Page",
 					"type": "number",
 					"initialValue": "0",
 					"comment": "",
@@ -1286,10 +1296,15 @@
 							"objectClass": "System",
 							"sid": 281414617667747,
 							"parameters": {
-								"variable": "Page",
+								"variable": "L1Page",
 								"comparison": 0,
 								"value": "0"
 							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "ClickArrowNext",
+							"sid": 138079780290666
 						}
 					],
 					"actions": [
@@ -1310,7 +1325,7 @@
 							"objectClass": "System",
 							"sid": 850379023636026,
 							"parameters": {
-								"variable": "Page",
+								"variable": "L1Page",
 								"value": "1"
 							}
 						}
@@ -1335,10 +1350,15 @@
 							"objectClass": "System",
 							"sid": 705251458243290,
 							"parameters": {
-								"variable": "Page",
+								"variable": "L1Page",
 								"comparison": 0,
 								"value": "1"
 							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "ClickArrowNext",
+							"sid": 691441946835191
 						}
 					],
 					"actions": [],
@@ -1677,7 +1697,7 @@
 				},
 				{
 					"eventType": "variable",
-					"name": "Page",
+					"name": "L2Page",
 					"type": "number",
 					"initialValue": "0",
 					"comment": "",
@@ -1703,10 +1723,15 @@
 							"objectClass": "System",
 							"sid": 807149163356437,
 							"parameters": {
-								"variable": "Page",
+								"variable": "L2Page",
 								"comparison": 0,
 								"value": "0"
 							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "ClickArrowNext",
+							"sid": 133695401933249
 						}
 					],
 					"actions": [
@@ -1727,7 +1752,7 @@
 							"objectClass": "System",
 							"sid": 410755085112974,
 							"parameters": {
-								"variable": "Page",
+								"variable": "L2Page",
 								"value": "1"
 							}
 						}
@@ -1752,10 +1777,15 @@
 							"objectClass": "System",
 							"sid": 954611541661382,
 							"parameters": {
-								"variable": "Page",
+								"variable": "L2Page",
 								"comparison": 0,
 								"value": "1"
 							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "ClickArrowNext",
+							"sid": 807909743735285
 						}
 					],
 					"actions": [],
@@ -1950,7 +1980,7 @@
 				},
 				{
 					"eventType": "variable",
-					"name": "Page",
+					"name": "L3Page",
 					"type": "number",
 					"initialValue": "0",
 					"comment": "",
@@ -1976,10 +2006,15 @@
 							"objectClass": "System",
 							"sid": 813493440091876,
 							"parameters": {
-								"variable": "Page",
+								"variable": "L3Page",
 								"comparison": 0,
 								"value": "0"
 							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "ClickArrowNext",
+							"sid": 435927164117784
 						}
 					],
 					"actions": [],
