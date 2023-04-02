@@ -10,17 +10,7 @@
 					"sid": 556438754184232
 				}
 			],
-			"actions": [
-				{
-					"id": "log",
-					"objectClass": "DEBUG",
-					"sid": 954669542509921,
-					"parameters": {
-						"type": "log",
-						"message": "\"Layout Loaded\""
-					}
-				}
-			],
+			"actions": [],
 			"sid": 618638055364980,
 			"children": [
 				{

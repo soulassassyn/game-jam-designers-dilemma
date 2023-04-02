@@ -78,6 +78,16 @@
 			"sid": 915257102206789
 		},
 		{
+			"eventType": "variable",
+			"name": "bulletPierce",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 791623136978712
+		},
+		{
 			"eventType": "comment",
 			"text": "Enemy stats"
 		},
@@ -179,7 +189,7 @@
 			"eventType": "variable",
 			"name": "bossDamage",
 			"type": "number",
-			"initialValue": "0",
+			"initialValue": "25",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,

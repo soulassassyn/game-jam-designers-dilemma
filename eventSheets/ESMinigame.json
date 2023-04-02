@@ -126,6 +126,55 @@
 								}
 							],
 							"sid": 663883777873982
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 394406531123940,
+									"parameters": {
+										"variable": "currentLevel",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 591496015309474,
+									"parameters": {
+										"group-name": "\"MinigameTutorial\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 779387449354029,
+									"parameters": {
+										"group-name": "\"EnemyControls\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 793775070796760,
+									"parameters": {
+										"group-name": "\"BulletControls\"",
+										"state": "activated"
+									}
+								},
+								{
+									"callFunction": "InitializeGame",
+									"sid": 528260949956159
+								}
+							],
+							"sid": 805503665786941
 						}
 					]
 				}
@@ -627,6 +676,36 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-animation-finished",
+							"objectClass": "Explosions",
+							"sid": 381589036924004,
+							"parameters": {
+								"animation": "\"smallExplosion\""
+							}
+						},
+						{
+							"id": "on-animation-finished",
+							"objectClass": "Explosions",
+							"sid": 712425483694805,
+							"parameters": {
+								"animation": "\"largeExplosion\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Explosions",
+							"sid": 202878438223206
+						}
+					],
+					"sid": 850983449087714,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "on-collision-with-another-object",
 							"objectClass": "Bullets",
 							"sid": 155949812300300,
@@ -651,6 +730,51 @@
 					],
 					"sid": 503219663560820,
 					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Bullets",
+									"sid": 496473228830841,
+									"parameters": {
+										"object": "Particles",
+										"layer": "\"GameSpace\"",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								}
+							],
+							"sid": 841287700365629
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Bullets",
+									"sid": 550530084637743,
+									"parameters": {
+										"object": "Explosions",
+										"layer": "\"GameSpace\"",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Explosions",
+									"sid": 277733908625194,
+									"parameters": {
+										"animation": "\"largeExplosion\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 500890664669953
+						},
 						{
 							"eventType": "block",
 							"conditions": [],
@@ -1003,10 +1127,28 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
+									"sid": 338278121965374,
+									"parameters": {
+										"variable": "enemySpawnTracker",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
 									"sid": 611951539861000,
 									"parameters": {
 										"variable": "enemiesKilled",
 										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 393124108283877,
+									"parameters": {
+										"variable": "bulletDamage",
+										"value": "50"
 									}
 								},
 								{
@@ -1119,6 +1261,11 @@
 								}
 							],
 							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Enemy",
+									"sid": 925002079724388
+								},
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
@@ -1247,6 +1394,15 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
+									"sid": 536572819603439,
+									"parameters": {
+										"variable": "enemySpawnTracker",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
 									"sid": 910637017096090,
 									"parameters": {
 										"variable": "enemyDamage",
@@ -1260,6 +1416,15 @@
 									"parameters": {
 										"variable": "enemiesKilled",
 										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 591147256787128,
+									"parameters": {
+										"variable": "bulletDamage",
+										"value": "50"
 									}
 								},
 								{
@@ -1356,11 +1521,390 @@
 									]
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 836011230703968,
+									"parameters": {
+										"variable": "enemiesKilled",
+										"comparison": 5,
+										"value": "175"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Enemy",
+									"sid": 945796528652448
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 921239754033915,
+									"parameters": {
+										"variable": "currentLevel",
+										"value": "3"
+									}
+								},
+								{
+									"id": "stop",
+									"objectClass": "Audio",
+									"sid": 542682939938512,
+									"parameters": {
+										"tag": "\"minigameSong\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Victory",
+									"sid": 679677305621151,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 130798827693780,
+									"parameters": {
+										"seconds": "2"
+									}
+								},
+								{
+									"id": "restart-layout",
+									"objectClass": "System",
+									"sid": 471841310704978
+								}
+							],
+							"sid": 756974106468476
 						}
 					]
 				}
 			],
 			"sid": 182145487621656
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "MGLevel3",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "levelStart",
+					"type": "boolean",
+					"initialValue": "true",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 982966574678650
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 686302690165779,
+							"parameters": {
+								"variable": "currentLevel",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 237808774020721,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 465976411143565
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 989178524917360,
+									"parameters": {
+										"variable": "levelStart"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 431295915676800,
+									"parameters": {
+										"variable": "enemySpeed",
+										"value": "250"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 320313794329271,
+									"parameters": {
+										"variable": "enemySpawnRate",
+										"value": "450"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 397729023928977,
+									"parameters": {
+										"variable": "enemySpawnCount",
+										"value": "10"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 300787144394302,
+									"parameters": {
+										"variable": "enemySpawnTracker",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 849913133514914,
+									"parameters": {
+										"variable": "enemyDamage",
+										"value": "25"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 751148020402727,
+									"parameters": {
+										"variable": "enemiesKilled",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 441562487064412,
+									"parameters": {
+										"variable": "bulletDamage",
+										"value": "100"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 492630394142129,
+									"parameters": {
+										"variable": "levelStart",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 246969643771818
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-all",
+									"objectClass": "System",
+									"sid": 279219509872000,
+									"parameters": {
+										"object": "Turret"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 532432226524158,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Turret",
+											"sid": 812229671538726,
+											"parameters": {
+												"instance-variable": "TurretHP",
+												"comparison": 3,
+												"value": "50"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 381242350391100,
+											"parameters": {
+												"layout": "PauseMenu"
+											}
+										},
+										{
+											"id": "set-cursor-style",
+											"objectClass": "Mouse",
+											"sid": 599886261970362,
+											"parameters": {
+												"cursor-style": "normal"
+											}
+										},
+										{
+											"id": "stop",
+											"objectClass": "Audio",
+											"sid": 416362946946238,
+											"parameters": {
+												"tag": "\"minigameSong\""
+											}
+										}
+									],
+									"sid": 970264829446421,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 149263123101327
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 405687020418684,
+													"parameters": {
+														"variable": "spawnTrackerWhenPaused",
+														"value": "enemySpawnTracker"
+													}
+												}
+											],
+											"sid": 939135847550507
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "Enemy",
+									"sid": 352646659691770
+								}
+							],
+							"actions": [],
+							"sid": 105409894032153,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-angle-toward-position",
+											"objectClass": "Enemy",
+											"sid": 324220781418499,
+											"parameters": {
+												"x": "Turret.X",
+												"y": "Turret.Y"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Enemy",
+											"sid": 265313053356793,
+											"parameters": {
+												"instance-variable": "EnemyHP",
+												"value": "bossHP"
+											}
+										},
+										{
+											"id": "set-speed",
+											"objectClass": "Enemy",
+											"sid": 409995263868696,
+											"behaviorType": "Bullet",
+											"parameters": {
+												"speed": "bossSpeed"
+											}
+										}
+									],
+									"sid": 953935651706370
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Enemy",
+									"sid": 819595518371958,
+									"parameters": {
+										"object": "Turret"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 929381798175918,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Enemy",
+											"sid": 293421199581184
+										},
+										{
+											"id": "subtract-from-instvar",
+											"objectClass": "Turret",
+											"sid": 553254418475981,
+											"parameters": {
+												"instance-variable": "TurretHP",
+												"value": "enemyDamage"
+											}
+										},
+										{
+											"id": "set-width",
+											"objectClass": "HPBarTurret",
+											"sid": 969961049502321,
+											"parameters": {
+												"width": "Turret.TurretHP"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 871310267307527,
+											"parameters": {
+												"variable": "enemiesKilled",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 840193893366059
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 353320889086741
 		},
 		{
 			"eventType": "group",
@@ -1395,6 +1939,37 @@
 							}
 						},
 						{
+							"id": "spawn-another-object",
+							"objectClass": "Turret",
+							"sid": 664929423081486,
+							"parameters": {
+								"object": "Particles2",
+								"layer": "\"GameSpace\"",
+								"image-point": "1",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Turret",
+							"sid": 357227070386181,
+							"parameters": {
+								"object": "Explosions",
+								"layer": "\"GameSpace\"",
+								"image-point": "1",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Explosions",
+							"sid": 971371911952610,
+							"parameters": {
+								"animation": "\"smallExplosion\"",
+								"from": "beginning"
+							}
+						},
+						{
 							"id": "play",
 							"objectClass": "Audio",
 							"sid": 160131773608079,
@@ -1404,6 +1979,17 @@
 								"volume": "0",
 								"stereo-pan": "0",
 								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "shake",
+							"objectClass": "Camera",
+							"sid": 342068616362663,
+							"behaviorType": "ScrollTo",
+							"parameters": {
+								"magnitude": "3",
+								"duration": "0.05",
+								"mode": "reducing-magnitude"
 							}
 						}
 					],
@@ -1501,6 +2087,36 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-animation-finished",
+							"objectClass": "Explosions",
+							"sid": 369038062312298,
+							"parameters": {
+								"animation": "\"smallExplosion\""
+							}
+						},
+						{
+							"id": "on-animation-finished",
+							"objectClass": "Explosions",
+							"sid": 258643135271851,
+							"parameters": {
+								"animation": "\"largeExplosion\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Explosions",
+							"sid": 992847307135788
+						}
+					],
+					"sid": 242788705718508,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "on-collision-with-another-object",
 							"objectClass": "Bullets",
 							"sid": 902485579181393,
@@ -1530,10 +2146,72 @@
 							"conditions": [],
 							"actions": [
 								{
+									"id": "spawn-another-object",
+									"objectClass": "Bullets",
+									"sid": 678301106293081,
+									"parameters": {
+										"object": "Particles",
+										"layer": "\"GameSpace\"",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								}
+							],
+							"sid": 454483600515544
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Bullets",
+									"sid": 169449958821095,
+									"parameters": {
+										"object": "Explosions",
+										"layer": "\"GameSpace\"",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Explosions",
+									"sid": 960741894398970,
+									"parameters": {
+										"animation": "\"largeExplosion\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 548673940597959
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 812696656413946,
+									"parameters": {
+										"variable": "bulletPierce"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
 									"id": "destroy",
 									"objectClass": "Bullets",
-									"sid": 386427037364375
-								},
+									"sid": 612970273109989
+								}
+							],
+							"sid": 142368202036816
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
 								{
 									"id": "subtract-from-instvar",
 									"objectClass": "Enemy",
@@ -1902,11 +2580,21 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 230624733843149,
+											"sid": 707476347744507,
 											"parameters": {
 												"variable": "currentLevel",
-												"comparison": 1,
-												"value": "2"
+												"comparison": 0,
+												"value": "0"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 839235258868235,
+											"parameters": {
+												"variable": "currentLevel",
+												"comparison": 0,
+												"value": "1"
 											}
 										}
 									],
@@ -1932,7 +2620,8 @@
 											}
 										}
 									],
-									"sid": 323979521767792
+									"sid": 323979521767792,
+									"isOrBlock": true
 								},
 								{
 									"eventType": "block",
@@ -1971,6 +2660,52 @@
 										}
 									],
 									"sid": 552207204210279
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 800807740915514,
+											"parameters": {
+												"variable": "currentLevel",
+												"comparison": 0,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Spawner",
+											"sid": 746499178918947,
+											"parameters": {
+												"object": "Enemy",
+												"layer": "\"GameSpace\"",
+												"image-point": "floor(random(1,Spawner.ImagePointCount))",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Enemy",
+											"sid": 239692235404363,
+											"parameters": {
+												"animation": "\"Brain\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-scale",
+											"objectClass": "Enemy",
+											"sid": 923456966016594,
+											"parameters": {
+												"scale": "2"
+											}
+										}
+									],
+									"sid": 175818533379773
 								}
 							]
 						}

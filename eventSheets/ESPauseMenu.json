@@ -141,6 +141,15 @@
 							}
 						},
 						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 492909235212117,
+							"parameters": {
+								"group-name": "\"PMLevel3\"",
+								"state": "deactivated"
+							}
+						},
+						{
 							"callFunction": "ResetMenu",
 							"sid": 577818434530516
 						}
@@ -186,6 +195,15 @@
 							"sid": 383449282408206,
 							"parameters": {
 								"group-name": "\"PMLevel2\"",
+								"state": "deactivated"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 782812319490402,
+							"parameters": {
+								"group-name": "\"PMLevel3\"",
 								"state": "deactivated"
 							}
 						},
@@ -239,11 +257,78 @@
 							}
 						},
 						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 223558311917205,
+							"parameters": {
+								"group-name": "\"PMLevel3\"",
+								"state": "deactivated"
+							}
+						},
+						{
 							"callFunction": "ResetMenu",
 							"sid": 887910957006802
 						}
 					],
 					"sid": 674026349588454
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 213277640223842,
+							"parameters": {
+								"variable": "currentLevel",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 422213847129431,
+							"parameters": {
+								"group-name": "\"PMTutorial\"",
+								"state": "deactivated"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 758110164290664,
+							"parameters": {
+								"group-name": "\"PMLevel1\"",
+								"state": "deactivated"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 379048657701717,
+							"parameters": {
+								"group-name": "\"PMLevel2\"",
+								"state": "deactivated"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 326178941024137,
+							"parameters": {
+								"group-name": "\"PMLevel3\"",
+								"state": "activated"
+							}
+						},
+						{
+							"callFunction": "ResetMenu",
+							"sid": 142622837387535
+						}
+					],
+					"sid": 474779413758472
 				}
 			]
 		},
@@ -965,6 +1050,15 @@
 													"parameters": {
 														"visibility": "visible"
 													}
+												},
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 261897210180780,
+													"parameters": {
+														"variable": "bulletPierce",
+														"value": "true"
+													}
 												}
 											],
 											"sid": 289202236970414
@@ -1001,6 +1095,169 @@
 				}
 			],
 			"sid": 419711567805395
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "PMLevel3",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 459975856951340
+						}
+					],
+					"actions": [],
+					"sid": 965549899326136,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-all",
+									"objectClass": "System",
+									"sid": 804466598381124,
+									"parameters": {
+										"object": "CheatButton"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "CheatButton",
+									"sid": 132274553672252,
+									"parameters": {
+										"animation": "\"cthulu\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "unpin",
+									"objectClass": "CheatButton",
+									"sid": 206465073080195,
+									"behaviorType": "Pin"
+								},
+								{
+									"id": "set-position",
+									"objectClass": "CheatButton",
+									"sid": 919988716458085,
+									"parameters": {
+										"x": "PMWindow.X",
+										"y": "PMWindow.Y"
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "CheatButton",
+									"sid": 744096587170819,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "PMWindow",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								}
+							],
+							"sid": 626833628208081
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 642223038086967,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "CheatButton"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "CheatButton",
+							"sid": 887936915008902,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 620772411466361,
+							"parameters": {
+								"variable": "isPaused",
+								"value": "false"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 433531208312302,
+							"parameters": {
+								"audio-file": "pauseMenuCheat",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 314378296947715,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "shake",
+									"objectClass": "Camera",
+									"sid": 250220575480485,
+									"behaviorType": "ScrollTo",
+									"parameters": {
+										"magnitude": "75",
+										"duration": "3",
+										"mode": "reducing-magnitude"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 233978642969711,
+									"parameters": {
+										"seconds": "3"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 502847588935670,
+									"parameters": {
+										"layout": "EndGame"
+									}
+								}
+							],
+							"sid": 412866596031000
+						}
+					]
+				}
+			],
+			"sid": 774114199279353
 		},
 		{
 			"functionName": "ResetMenu",

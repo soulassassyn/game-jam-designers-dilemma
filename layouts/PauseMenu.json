@@ -1020,7 +1020,7 @@
 	"effectTypes": [],
 	"width": 3840,
 	"height": 2160,
-	"unboundedScrolling": false,
+	"unboundedScrolling": true,
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "orthographic",

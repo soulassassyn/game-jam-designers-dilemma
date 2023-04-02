@@ -120,13 +120,6 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Sin",
-			"name": "Sine",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
 			"id": "Tween",
 			"name": "Tween",
 			"author": "Scirra",
@@ -161,7 +154,8 @@
 			"StatSlider",
 			"StatNameText",
 			"StatValueText",
-			"StartMenuText"
+			"StartMenuText",
+			"Sprite"
 		],
 		"subfolders": [
 			{
@@ -183,7 +177,8 @@
 					"Victory",
 					"BackGroundArt",
 					"Explosions",
-					"Particles"
+					"Particles",
+					"Particles2"
 				],
 				"subfolders": [],
 				"name": "Sprites"
@@ -202,7 +197,8 @@
 			"Minigame",
 			"Assets",
 			"StartMenu",
-			"MainGame"
+			"MainGame",
+			"EndGame"
 		],
 		"subfolders": []
 	},
@@ -211,7 +207,8 @@
 			"ESPauseMenu",
 			"ESMinigame",
 			"Globals",
-			"ESStartMenu"
+			"ESStartMenu",
+			"ESEndGame"
 		],
 		"subfolders": []
 	},
