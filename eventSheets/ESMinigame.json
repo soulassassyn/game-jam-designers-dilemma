@@ -2,6 +2,16 @@
 	"name": "ESMinigame",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "Narrative",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 509048154405086
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Misc",
@@ -31,7 +41,102 @@
 							}
 						}
 					],
-					"sid": 879136404718591,
+					"sid": 879136404718591
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 560830039241909,
+							"parameters": {
+								"variable": "Narrative"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 707145086318775,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 728184511095548,
+									"parameters": {
+										"group-name": "\"MGNarrative\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 877890990224539,
+									"parameters": {
+										"group-name": "\"MinigameTutorial\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 105408985183749,
+									"parameters": {
+										"group-name": "\"EnemyControls\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 758901891560697,
+									"parameters": {
+										"group-name": "\"BulletControls\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 292166764476918,
+									"parameters": {
+										"group-name": "\"PlayerControls\"",
+										"state": "deactivated"
+									}
+								}
+							],
+							"sid": 453840877532560
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 474797409621691,
+							"parameters": {
+								"variable": "Narrative"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 932580304699411,
+							"parameters": {
+								"group-name": "\"PlayerControls\"",
+								"state": "activated"
+							}
+						}
+					],
+					"sid": 105752954513174,
 					"children": [
 						{
 							"eventType": "block",
@@ -39,7 +144,7 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 638542173607318,
+									"sid": 411901257630335,
 									"parameters": {
 										"variable": "currentLevel",
 										"comparison": 0,
@@ -51,7 +156,16 @@
 								{
 									"id": "set-group-active",
 									"objectClass": "System",
-									"sid": 949303626981848,
+									"sid": 182226023395914,
+									"parameters": {
+										"group-name": "\"MGNarrative\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 957262018371826,
 									"parameters": {
 										"group-name": "\"MinigameTutorial\"",
 										"state": "activated"
@@ -60,7 +174,7 @@
 								{
 									"id": "set-group-active",
 									"objectClass": "System",
-									"sid": 634386961545561,
+									"sid": 874880356831034,
 									"parameters": {
 										"group-name": "\"EnemyControls\"",
 										"state": "deactivated"
@@ -69,14 +183,14 @@
 								{
 									"id": "set-group-active",
 									"objectClass": "System",
-									"sid": 159234481166916,
+									"sid": 574879872930187,
 									"parameters": {
 										"group-name": "\"BulletControls\"",
 										"state": "deactivated"
 									}
 								}
 							],
-							"sid": 558805914933016
+							"sid": 250608577808365
 						},
 						{
 							"eventType": "block",
@@ -84,7 +198,7 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 292033015029650,
+									"sid": 763674432732311,
 									"parameters": {
 										"variable": "currentLevel",
 										"comparison": 1,
@@ -96,7 +210,16 @@
 								{
 									"id": "set-group-active",
 									"objectClass": "System",
-									"sid": 431944974894477,
+									"sid": 892082130246248,
+									"parameters": {
+										"group-name": "\"MGNarrative\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 613640033499158,
 									"parameters": {
 										"group-name": "\"MinigameTutorial\"",
 										"state": "deactivated"
@@ -105,7 +228,7 @@
 								{
 									"id": "set-group-active",
 									"objectClass": "System",
-									"sid": 750034887287225,
+									"sid": 562532805113739,
 									"parameters": {
 										"group-name": "\"EnemyControls\"",
 										"state": "activated"
@@ -114,7 +237,7 @@
 								{
 									"id": "set-group-active",
 									"objectClass": "System",
-									"sid": 434714219220726,
+									"sid": 887978531086229,
 									"parameters": {
 										"group-name": "\"BulletControls\"",
 										"state": "activated"
@@ -122,10 +245,10 @@
 								},
 								{
 									"callFunction": "InitializeGame",
-									"sid": 909152017520316
+									"sid": 528999928615830
 								}
 							],
-							"sid": 663883777873982
+							"sid": 941075030117587
 						},
 						{
 							"eventType": "block",
@@ -133,7 +256,7 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 394406531123940,
+									"sid": 506643850660904,
 									"parameters": {
 										"variable": "currentLevel",
 										"comparison": 0,
@@ -145,7 +268,16 @@
 								{
 									"id": "set-group-active",
 									"objectClass": "System",
-									"sid": 591496015309474,
+									"sid": 206343538672084,
+									"parameters": {
+										"group-name": "\"MGNarrative\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 679581394604776,
 									"parameters": {
 										"group-name": "\"MinigameTutorial\"",
 										"state": "deactivated"
@@ -154,7 +286,7 @@
 								{
 									"id": "set-group-active",
 									"objectClass": "System",
-									"sid": 779387449354029,
+									"sid": 162234145025555,
 									"parameters": {
 										"group-name": "\"EnemyControls\"",
 										"state": "deactivated"
@@ -163,7 +295,7 @@
 								{
 									"id": "set-group-active",
 									"objectClass": "System",
-									"sid": 793775070796760,
+									"sid": 553648044179345,
 									"parameters": {
 										"group-name": "\"BulletControls\"",
 										"state": "activated"
@@ -171,15 +303,208 @@
 								},
 								{
 									"callFunction": "InitializeGame",
-									"sid": 528260949956159
+									"sid": 118728100449558
 								}
 							],
-							"sid": 805503665786941
+							"sid": 426357360109396
 						}
 					]
 				}
 			],
 			"sid": 383708383589947
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "MGNarrative",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "Page",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 831406704842304
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 843050328473406,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "ClickArrowNext"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 918234249549329,
+							"parameters": {
+								"variable": "Page",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "NarrativeText",
+							"sid": 597942688565921,
+							"parameters": {
+								"text": "\"The game is called Cthulu’s Prison, and you are playing a young explorer who happen’s to be trapped in ... well Cthulu’s Prison! haha\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 458828567966931,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 446628828028087,
+							"parameters": {
+								"variable": "Page",
+								"value": "1"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "IntroScreenBG",
+							"sid": 388780047509098,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetY",
+								"end-value": "-900",
+								"time": "1",
+								"ease": "easeinexpo",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 812990439912659
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 920169136965366,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "ClickArrowNext"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 651700268091767,
+							"parameters": {
+								"variable": "Page",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "NarrativeText",
+							"sid": 466363837535238,
+							"parameters": {
+								"text": "\"You are in small vessel with small canons. We are trying to make a game that is very very hard to beat! y’know games from the boomer generation. So try your best, we are really looking for TOP NOTCH players to truly test our game.\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 739648733592904,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 592210558649615,
+							"parameters": {
+								"variable": "Page",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 960892260786341
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 911616645854462,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "ClickArrowNext"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 515227249888844,
+							"parameters": {
+								"variable": "Page",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 973420775623026,
+							"parameters": {
+								"variable": "Page",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 626714469413852,
+							"parameters": {
+								"variable": "Narrative",
+								"value": "false"
+							}
+						},
+						{
+							"callFunction": "DeleteNarrative",
+							"sid": 522119791114145
+						}
+					],
+					"sid": 286935489429494
+				}
+			],
+			"sid": 202152917798245
 		},
 		{
 			"eventType": "variable",
@@ -189,7 +514,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 163326964235140
+			"sid": 198798527146229
 		},
 		{
 			"eventType": "variable",
@@ -199,7 +524,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 839799224109180
+			"sid": 490259778079006
 		},
 		{
 			"eventType": "group",
@@ -560,6 +885,15 @@
 											"parameters": {
 												"tag": "\"minigameSong\""
 											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 335760041842779,
+											"parameters": {
+												"variable": "Narrative",
+												"value": "true"
+											}
 										}
 									],
 									"sid": 169752997207466
@@ -917,15 +1251,6 @@
 									],
 									"actions": [
 										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 452178430553862,
-											"parameters": {
-												"variable": "currentLevel",
-												"value": "1"
-											}
-										},
-										{
 											"id": "stop",
 											"objectClass": "Audio",
 											"sid": 669225048917478,
@@ -944,9 +1269,18 @@
 										{
 											"id": "wait",
 											"objectClass": "System",
-											"sid": 997918108739744,
+											"sid": 308222643593414,
 											"parameters": {
 												"seconds": "2"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 974506568742519,
+											"parameters": {
+												"variable": "currentLevel",
+												"value": "1"
 											}
 										},
 										{

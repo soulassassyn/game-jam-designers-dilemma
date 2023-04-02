@@ -2,7 +2,7 @@
 	"name": "IntroScreenBG",
 	"plugin-id": "Sprite",
 	"sid": 941200652645746,
-	"isGlobal": false,
+	"isGlobal": true,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{

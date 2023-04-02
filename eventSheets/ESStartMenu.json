@@ -151,6 +151,40 @@
 			],
 			"actions": [
 				{
+					"id": "tween-one-property",
+					"objectClass": "IntroScreenBG",
+					"sid": 847100881267824,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetY",
+						"end-value": "200",
+						"time": "1",
+						"ease": "easeinexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 843965981145773,
+					"parameters": {
+						"variable": "Narrative",
+						"value": "true"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 664623556171246,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 822054245956712,

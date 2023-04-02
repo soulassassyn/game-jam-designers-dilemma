@@ -1,0 +1,35 @@
+{
+	"name": "ESStoryline",
+	"events": [
+		{
+			"functionName": "DeleteNarrative",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "IntroScreenBG",
+					"sid": 758304230483000
+				},
+				{
+					"id": "destroy",
+					"objectClass": "NarrativeText",
+					"sid": 910359120458780
+				},
+				{
+					"id": "destroy",
+					"objectClass": "ClickArrowNext",
+					"sid": 800975701211724
+				}
+			],
+			"sid": 821625188610440
+		}
+	],
+	"sid": 156017758899495
+}

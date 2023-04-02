@@ -14,6 +14,10 @@
 			"includeSheet": "ESStartMenu"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "ESStoryline"
+		},
+		{
 			"eventType": "comment",
 			"text": "Player stats"
 		},
