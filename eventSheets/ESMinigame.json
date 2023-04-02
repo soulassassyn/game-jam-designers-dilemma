@@ -1015,7 +1015,17 @@
 							"isInverted": true
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 152674798254377,
+							"parameters": {
+								"layer": "\"Narrative\"",
+								"visibility": "invisible"
+							}
+						}
+					],
 					"sid": 787568248063310,
 					"children": [
 						{
@@ -1398,9 +1408,27 @@
 												{
 													"callFunction": "CreateNarrative",
 													"sid": 624238277884750,
+													"disabled": true,
 													"parameters": [
 														"\"Game Dev Randolph:  WHAT?!?!? How in the world did you do that? That was incredible. Okay, I guess we need to crank up the difficulty. Good luck on this next round!\""
 													]
+												},
+												{
+													"id": "set-layer-visible",
+													"objectClass": "System",
+													"sid": 177678346846640,
+													"parameters": {
+														"layer": "\"Narrative\"",
+														"visibility": "visible"
+													}
+												},
+												{
+													"id": "set-text",
+													"objectClass": "NarrativeText",
+													"sid": 960935456683548,
+													"parameters": {
+														"text": "\"Game Dev Randolph:  WHAT?!?!? How in the world did you do that? That was incredible. Okay, I guess we need to crank up the difficulty. Good luck on this next round!\""
+													}
 												}
 											],
 											"sid": 769156215916009

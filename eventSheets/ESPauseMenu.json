@@ -983,8 +983,13 @@
 							}
 						},
 						{
-							"callFunction": "DeleteNarrative",
-							"sid": 350344261643379
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 560956376160236,
+							"parameters": {
+								"layer": "\"Narrative\"",
+								"visibility": "invisible"
+							}
 						}
 					],
 					"sid": 808683435863594,
@@ -1063,11 +1068,12 @@
 							]
 						},
 						{
-							"callFunction": "CreateNarrative",
-							"sid": 704138737133167,
-							"parameters": [
-								"\"ugggghh.. sorry, seriously. It’s my boss, I have no idea why he keeps calling me every second. I have to take this. You're about to get crushed though!\""
-							]
+							"id": "set-text",
+							"objectClass": "NarrativeText",
+							"sid": 930694415637678,
+							"parameters": {
+								"text": "\"ugggghh.. sorry, seriously. It’s my boss, I have no idea why he keeps calling me every second. I have to take this. You're about to get crushed though!\""
+							}
 						}
 					],
 					"sid": 155163155014553
