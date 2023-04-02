@@ -152,7 +152,8 @@
 			"PauseMenu",
 			"Minigame",
 			"Assets",
-			"StartMenu"
+			"StartMenu",
+			"MainGame"
 		],
 		"subfolders": []
 	},
