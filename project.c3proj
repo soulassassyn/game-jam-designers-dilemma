@@ -166,7 +166,8 @@
 					"Monitor",
 					"MenuUX",
 					"Camera",
-					"Victory"
+					"Victory",
+					"BackGroundArt"
 				],
 				"subfolders": [],
 				"name": "Sprites"

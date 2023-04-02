@@ -2,8 +2,8 @@
 	"name": "Minigame",
 	"layers": [
 		{
-			"name": "BG_Art",
-			"overriden": 0,
+			"name": "Background",
+			"overriden": 1,
 			"subLayers": [],
 			"instances": [],
 			"sid": 716035404176417,
@@ -17,12 +17,12 @@
 				1
 			],
 			"backgroundColor": [
-				0.3686274509803922,
-				0.3686274509803922,
-				0.3686274509803922,
+				0.06274509803921569,
+				0.4588235294117647,
+				0.39215686274509803,
 				1
 			],
-			"isTransparent": true,
+			"isTransparent": false,
 			"parallaxX": 1,
 			"parallaxY": 1,
 			"scaleRate": 1,
@@ -44,7 +44,7 @@
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Turret01",
-						"initial-frame": 0,
+						"initial-frame": 1,
 						"enable-collisions": true,
 						"live-preview": false
 					},
@@ -56,10 +56,10 @@
 					"world": {
 						"x": 960,
 						"y": 540,
-						"width": 87,
-						"height": 80,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 298,
+						"height": 243,
+						"originX": 0.42953020134228187,
+						"originY": 0.49794238683127573,
 						"color": [
 							1,
 							1,
@@ -87,7 +87,7 @@
 				0.3686274509803922,
 				1
 			],
-			"isTransparent": false,
+			"isTransparent": true,
 			"parallaxX": 1,
 			"parallaxY": 1,
 			"scaleRate": 1,

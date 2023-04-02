@@ -5,7 +5,37 @@
 			"name": "Background",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [],
+			"instances": [
+				{
+					"type": "BackGroundArt",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Deeps",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 46,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 960,
+						"y": 544,
+						"width": 1920,
+						"height": 1080,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
 			"sid": 967879036938987,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -32,7 +62,7 @@
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
-			"global": false
+			"global": true
 		},
 		{
 			"name": "Menus",
