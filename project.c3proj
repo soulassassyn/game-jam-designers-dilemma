@@ -225,7 +225,8 @@
 					"Particles",
 					"Particles2",
 					"IntroScreenBG",
-					"Warp"
+					"Warp",
+					"GlassCrack"
 				],
 				"subfolders": [],
 				"name": "Sprites"

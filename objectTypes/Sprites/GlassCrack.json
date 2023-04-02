@@ -1,0 +1,127 @@
+{
+	"name": "GlassCrack",
+	"plugin-id": "Sprite",
+	"sid": 972141253388209,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1920,
+						"height": 1080,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 213249,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 1920,
+						"height": 1080,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3444589,
+						"collisionPoly": {
+							"points": [
+								0.0453125,
+								0.08055555555555556,
+								0.5,
+								0.7953703703703704,
+								0.5458333333333333,
+								0.8074074074074075,
+								0.5,
+								0.9981481481481481,
+								0.0890625,
+								0.8416666666666667
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 1920,
+						"height": 1080,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8931003,
+						"collisionPoly": {
+							"points": [
+								0.04479166666666667,
+								0.07962962962962963,
+								0.5,
+								0,
+								0.96875,
+								0.05555555555555555,
+								0.9989583333333333,
+								0.5,
+								0.9958333333333333,
+								0.9925925925925926,
+								0.5,
+								0.9981481481481481,
+								0.04479166666666667,
+								0.9203703703703704,
+								0.04479166666666667,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 1920,
+						"height": 1080,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8906883,
+						"collisionPoly": {
+							"points": [
+								0.04479166666666667,
+								0.07962962962962963,
+								0.5,
+								0,
+								0.9989583333333333,
+								0.001851851851851852,
+								0.9989583333333333,
+								0.5,
+								0.9989583333333333,
+								0.9981481481481481,
+								0.5,
+								0.9981481481481481,
+								0.04479166666666667,
+								0.9203703703703704,
+								0.04479166666666667,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 733293913548375,
+				"name": "GlassCrack",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}
