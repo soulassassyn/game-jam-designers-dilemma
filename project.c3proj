@@ -43,6 +43,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "PlatformInfo",
 			"name": "Platform info",
 			"author": "Scirra",
@@ -113,6 +120,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Tween",
 			"name": "Tween",
 			"author": "Scirra",
@@ -167,7 +181,9 @@
 					"MenuUX",
 					"Camera",
 					"Victory",
-					"BackGroundArt"
+					"BackGroundArt",
+					"Explosions",
+					"Particles"
 				],
 				"subfolders": [],
 				"name": "Sprites"
