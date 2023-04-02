@@ -24,6 +24,11 @@
 			"behaviorId": "Bullet",
 			"name": "Bullet",
 			"sid": 510703472526986
+		},
+		{
+			"behaviorId": "Persist",
+			"name": "Persist",
+			"sid": 466122822282333
 		}
 	],
 	"effectTypes": [],

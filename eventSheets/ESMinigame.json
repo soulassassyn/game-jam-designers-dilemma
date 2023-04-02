@@ -641,6 +641,109 @@
 			"sid": 439430344792685
 		},
 		{
+			"eventType": "variable",
+			"name": "spawnTrackerWhenPaused",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 831731824195351
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "MGLevel1",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 128285297369067,
+							"parameters": {
+								"object": "Turret"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 342222295042078,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Turret",
+									"sid": 784614885754212,
+									"parameters": {
+										"instance-variable": "TurretHP",
+										"comparison": 3,
+										"value": "50"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 954331206343912,
+									"parameters": {
+										"layout": "PauseMenu"
+									}
+								},
+								{
+									"id": "set-cursor-style",
+									"objectClass": "Mouse",
+									"sid": 649779150194996,
+									"parameters": {
+										"cursor-style": "normal"
+									}
+								},
+								{
+									"id": "stop",
+									"objectClass": "Audio",
+									"sid": 487803147479358,
+									"parameters": {
+										"tag": "\"minigameSong\""
+									}
+								}
+							],
+							"sid": 267076040046643,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 869228909474616
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 633200895649127,
+											"parameters": {
+												"variable": "spawnTrackerWhenPaused",
+												"value": "enemySpawnTracker"
+											}
+										}
+									],
+									"sid": 992580542497149
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 202363477837501
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "PlayerControls",
@@ -978,6 +1081,14 @@
 									"parameters": {
 										"instance-variable": "TurretHP",
 										"value": "enemyDamage"
+									}
+								},
+								{
+									"id": "set-width",
+									"objectClass": "HPBarTurret",
+									"sid": 756786838077161,
+									"parameters": {
+										"width": "Turret.TurretHP"
 									}
 								}
 							],
