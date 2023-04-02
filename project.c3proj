@@ -106,6 +106,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Persist",
 			"name": "Persist",
 			"author": "Scirra",
@@ -134,8 +141,36 @@
 		},
 		{
 			"type": "effect",
+			"id": "bulge",
+			"name": "Bulge",
+			"author": "Brad Larson",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "dodge",
+			"name": "Dodge",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
 			"id": "overlay",
 			"name": "Overlay",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "radialpixellatemask",
+			"name": "Radial pixellate mask",
+			"author": "Brad Larson",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "warpradial",
+			"name": "Warp radial",
 			"author": "Scirra",
 			"bundled": false
 		}
@@ -178,7 +213,9 @@
 					"BackGroundArt",
 					"Explosions",
 					"Particles",
-					"Particles2"
+					"Particles2",
+					"IntroScreenBG",
+					"Warp"
 				],
 				"subfolders": [],
 				"name": "Sprites"

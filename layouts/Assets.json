@@ -604,6 +604,113 @@
 						"zElevation": 0,
 						"blendMode": "additive"
 					}
+				},
+				{
+					"type": "IntroScreenBG",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "IntroScreen",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 59,
+					"instanceVariables": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": false
+							}
+						}
+					},
+					"world": {
+						"x": 3042,
+						"y": 984,
+						"width": 2010,
+						"height": 1788,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Warp",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Warp01",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 60,
+					"instanceVariables": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 1,
+								"destroy": true,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"effects": {
+						"RadialPixellateMask": {
+							"isEnabled": true,
+							"parameters": {
+								"size": 1
+							}
+						},
+						"Bulge": {
+							"isEnabled": true,
+							"parameters": {
+								"radius": 0.42099999999999993,
+								"scale": 0.9499999999999998
+							}
+						},
+						"Dodge": {
+							"isEnabled": true,
+							"parameters": {}
+						},
+						"WarpRadial": {
+							"isEnabled": true,
+							"parameters": {
+								"frequency": -2,
+								"amplitude": 0.7410000000000005,
+								"speed": 4
+							}
+						}
+					},
+					"world": {
+						"x": 1765,
+						"y": 591,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 340841461454713,
