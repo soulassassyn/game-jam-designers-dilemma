@@ -1,0 +1,77 @@
+{
+	"name": "Warp",
+	"plugin-id": "Sprite",
+	"sid": 769018246473417,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 629392633562009
+		},
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 274049389881039
+		}
+	],
+	"effectTypes": [
+		{
+			"effectId": "radialpixellatemask",
+			"name": "RadialPixellateMask"
+		},
+		{
+			"effectId": "bulge",
+			"name": "Bulge"
+		},
+		{
+			"effectId": "dodge",
+			"name": "Dodge"
+		},
+		{
+			"effectId": "warpradial",
+			"name": "WarpRadial"
+		}
+	],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4771293,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5580455,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 240049634729533,
+				"name": "Warp01",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}

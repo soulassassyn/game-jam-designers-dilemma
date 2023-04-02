@@ -1,0 +1,106 @@
+{
+	"name": "IntroScreenBG",
+	"plugin-id": "Sprite",
+	"sid": 941200652645746,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 115620246713470
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 2010,
+						"height": 1788,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4312861,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								1,
+								0,
+								1,
+								0.5,
+								0.9900497512437811,
+								0.9888143176733781,
+								0.5,
+								0.9960850111856824,
+								0.010945273631840797,
+								0.9876957494407159,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 389005823875720,
+				"name": "IntroScreen",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 1095,
+						"height": 313,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8378986,
+						"collisionPoly": {
+							"points": [
+								0.024657534246575342,
+								0.08626198083067092,
+								0.5,
+								0.05750798722044728,
+								0.9771689497716894,
+								0.07987220447284345,
+								0.9872146118721461,
+								0.5,
+								0.9872146118721461,
+								0.9552715654952076,
+								0.5,
+								1,
+								0.011872146118721462,
+								0.9584664536741214,
+								0.012785388127853882,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 307795990374121,
+				"name": "DialogBox",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}
