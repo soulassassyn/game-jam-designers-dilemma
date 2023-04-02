@@ -65,6 +65,15 @@
 										"group-name": "\"EnemyControls\"",
 										"state": "deactivated"
 									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 159234481166916,
+									"parameters": {
+										"group-name": "\"BulletControls\"",
+										"state": "deactivated"
+									}
 								}
 							],
 							"sid": 558805914933016
@@ -99,6 +108,15 @@
 									"sid": 750034887287225,
 									"parameters": {
 										"group-name": "\"EnemyControls\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 434714219220726,
+									"parameters": {
+										"group-name": "\"BulletControls\"",
 										"state": "activated"
 									}
 								},
@@ -387,9 +405,159 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Bullets",
+									"sid": 617048659141909,
+									"parameters": {
+										"object": "Enemy"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 688741221501786,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Enemy",
+											"sid": 991489430971474,
+											"parameters": {
+												"instance-variable": "EnemyHP",
+												"comparison": 3,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 535797699454756
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "Bullets",
+							"sid": 357260610032155
+						}
+					],
+					"actions": [],
+					"sid": 845125946785881,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-speed",
+									"objectClass": "Bullets",
+									"sid": 873420447689528,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"speed": "bulletSpeed"
+									}
+								}
+							],
+							"sid": 867806085053647
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Bullets",
+							"sid": 155949812300300,
+							"parameters": {
+								"object": "Enemy"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 583671119033903,
+							"parameters": {
+								"audio-file": "hitHurt",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 503219663560820,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Bullets",
+									"sid": 879308089434795
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Enemy",
+									"sid": 885638229538508,
+									"parameters": {
+										"instance-variable": "EnemyHP",
+										"value": "bulletDamage"
+									}
+								},
+								{
+									"id": "set-width",
+									"objectClass": "HPBarEnemy",
+									"sid": 483819167512416,
+									"parameters": {
+										"width": "((Enemy.EnemyHP - bulletDamage) / 50)"
+									}
+								}
+							],
+							"sid": 736891940496004,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-width",
+											"objectClass": "HPBarEnemy",
+											"sid": 621988734216432,
+											"parameters": {
+												"comparison": 3,
+												"width": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-width",
+											"objectClass": "HPBarEnemy",
+											"sid": 614125393891499,
+											"parameters": {
+												"width": "1"
+											}
+										}
+									],
+									"sid": 763016168464212
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
 									"id": "compare-instance-variable",
 									"objectClass": "Enemy",
-									"sid": 407526153023401,
+									"sid": 380745504224790,
 									"parameters": {
 										"instance-variable": "EnemyHP",
 										"comparison": 3,
@@ -397,26 +565,75 @@
 									}
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 844290228525625,
+							"children": [
 								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 504736272760837,
-									"parameters": {
-										"variable": "currentLevel",
-										"value": "1"
-									}
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "HPBarEnemy",
+											"sid": 862443002301311
+										},
+										{
+											"id": "destroy",
+											"objectClass": "Enemy",
+											"sid": 760148806390187
+										}
+									],
+									"sid": 370456288942699
 								},
 								{
-									"id": "go-to-layout",
-									"objectClass": "System",
-									"sid": 473751335106313,
-									"parameters": {
-										"layout": "Minigame"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 927915232045700,
+											"parameters": {
+												"variable": "tutorialMode"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 452178430553862,
+											"parameters": {
+												"variable": "currentLevel",
+												"value": "1"
+											}
+										},
+										{
+											"id": "stop",
+											"objectClass": "Audio",
+											"sid": 669225048917478,
+											"parameters": {
+												"tag": "\"minigameSong\""
+											}
+										},
+										{
+											"id": "restart-layout",
+											"objectClass": "System",
+											"sid": 242324727864060
+										},
+										{
+											"id": "log",
+											"objectClass": "DEBUG",
+											"sid": 191213403063113,
+											"parameters": {
+												"type": "log",
+												"message": "\"LEVEL RESET\""
+											}
+										}
+									],
+									"sid": 397902515860768
 								}
-							],
-							"sid": 765911067772736
+							]
 						}
 					]
 				}
