@@ -551,9 +551,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "NarrativeText",
-							"sid": 874667354012887,
+							"sid": 368417581111594,
 							"parameters": {
-								"text": "\"OH hang on! So sorry I've got to take this. BRB, sit tight, you can continue playing when I get back. That boss looks tough though, I don't know if you're going to be able to kill it!\""
+								"text": "\"Game Dev Randolph:  OH hang on! So sorry I've got to take this call. BRB, sit tight, you can continue playing when I get back. That boss looks tough though, I don't know if you're going to be able to kill it!\""
 							}
 						}
 					],
@@ -585,6 +585,18 @@
 					],
 					"actions": [
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 980948133048831,
+							"parameters": {
+								"audio-file": "menuItemHover2",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "wait",
 							"objectClass": "System",
 							"sid": 796796846140462,
@@ -599,6 +611,40 @@
 							"parameters": {
 								"variable": "Page",
 								"value": "1"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "PauseText",
+							"sid": 435061895942622,
+							"parameters": {
+								"animation": "\"PauseGlitch\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 205090238269820,
+							"parameters": {
+								"seconds": "0.2"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "PauseText",
+							"sid": 358031050157451,
+							"parameters": {
+								"animation": "\"PauseText\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 394597765322267,
+							"parameters": {
+								"seconds": "2"
 							}
 						},
 						{
@@ -838,6 +884,18 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 443832651646747,
+							"parameters": {
+								"audio-file": "menuItemHover2",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
 						{
 							"callFunction": "DeleteNarrative",
 							"sid": 350344261643379

@@ -358,11 +358,23 @@
 					],
 					"actions": [
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 631668258333788,
+							"parameters": {
+								"audio-file": "menuItemHover2",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "set-text",
 							"objectClass": "NarrativeText",
-							"sid": 597942688565921,
+							"sid": 283722094534460,
 							"parameters": {
-								"text": "\"The game is called Cthulu’s Prison, and you are playing a young explorer who happen’s to be trapped in ... well Cthulu’s Prison! haha\""
+								"text": "\"Game Dev Randolph: Welcome to Cthulu’s Prison! Your goal is to destroy the montsers and escape.\""
 							}
 						},
 						{
@@ -398,6 +410,18 @@
 								"ping-pong": "no",
 								"repeat-count": "1"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 683380997304558,
+							"parameters": {
+								"audio-file": "metalDoorUp",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 812990439912659
@@ -428,11 +452,23 @@
 					],
 					"actions": [
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 210103851858023,
+							"parameters": {
+								"audio-file": "menuItemHover2",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "set-text",
 							"objectClass": "NarrativeText",
-							"sid": 466363837535238,
+							"sid": 101610523812433,
 							"parameters": {
-								"text": "\"You are in small vessel with small canons. We are trying to make a game that is very very hard to beat! y’know games from the boomer generation. So try your best, we are really looking for TOP NOTCH players to truly test our game.\""
+								"text": "\"Game Dev Randolph:  You are in a small turret. Point and shoot. We want our game to be very hard to beat! Nintendo hard. So try your best! But whatever you do, DON'T CHEAT!\""
 							}
 						},
 						{
@@ -480,6 +516,18 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 479806617554602,
+							"parameters": {
+								"audio-file": "menuItemHover2",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
 						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
@@ -868,42 +916,83 @@
 											}
 										}
 									],
-									"actions": [
+									"actions": [],
+									"sid": 169752997207466,
+									"children": [
 										{
-											"id": "go-to-layout",
-											"objectClass": "System",
-											"sid": 671072784122536,
-											"parameters": {
-												"layout": "PauseMenu"
-											}
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 595668954126653
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 175359714255374,
+													"parameters": {
+														"audio-file": "mouseClick",
+														"loop": "not-looping",
+														"volume": "10",
+														"stereo-pan": "0",
+														"tag-optional": "\"\""
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 514171159272268,
+													"parameters": {
+														"seconds": "0.5"
+													}
+												}
+											],
+											"sid": 883656859882251
 										},
 										{
-											"id": "set-cursor-style",
-											"objectClass": "Mouse",
-											"sid": 503137108797211,
-											"parameters": {
-												"cursor-style": "normal"
-											}
-										},
-										{
-											"id": "stop",
-											"objectClass": "Audio",
-											"sid": 243520495027315,
-											"parameters": {
-												"tag": "\"minigameSong\""
-											}
-										},
-										{
-											"id": "set-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 335760041842779,
-											"parameters": {
-												"variable": "Narrative",
-												"value": "true"
-											}
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "go-to-layout",
+													"objectClass": "System",
+													"sid": 581225981471441,
+													"parameters": {
+														"layout": "PauseMenu"
+													}
+												},
+												{
+													"id": "set-cursor-style",
+													"objectClass": "Mouse",
+													"sid": 625206312063171,
+													"parameters": {
+														"cursor-style": "normal"
+													}
+												},
+												{
+													"id": "stop",
+													"objectClass": "Audio",
+													"sid": 223518515994903,
+													"parameters": {
+														"tag": "\"minigameSong\""
+													}
+												},
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 528520849329005,
+													"parameters": {
+														"variable": "Narrative",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 981140337799453
 										}
-									],
-									"sid": 169752997207466
+									]
 								}
 							]
 						}

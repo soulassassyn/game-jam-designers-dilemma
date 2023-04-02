@@ -76,6 +76,31 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 622416287003083
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 980994146399534,
+							"parameters": {
+								"audio-file": "menuItemHover2",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 754551902633042
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
 							"sid": 900519562153842,
@@ -150,6 +175,18 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 771961421950920,
+					"parameters": {
+						"audio-file": "menuItemClick2",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
 				{
 					"id": "tween-one-property",
 					"objectClass": "IntroScreenBG",

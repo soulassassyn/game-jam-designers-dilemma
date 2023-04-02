@@ -400,6 +400,54 @@
 					"file-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "menuItemClick.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 450554600599119,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "menuItemHover.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 350542452314350,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "menuItemClick2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 658786297727669,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "menuItemHover2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 335634427391074,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "metalDoorUp.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 824868774013600,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "mouseClick.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 563138785621859,
+					"file-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []

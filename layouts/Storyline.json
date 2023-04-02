@@ -104,7 +104,7 @@
 							1,
 							1,
 							1,
-							0.75
+							0.8500000000000001
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -113,7 +113,7 @@
 				{
 					"type": "NarrativeText",
 					"properties": {
-						"text": "Game Dev - Thank you for participating in our alpha play test! Ok let me give you a quick overview and we’ll get you right in to play! ",
+						"text": "Game Dev Randolph: Thank you for participating in our alpha play test! Ok let me give you a quick overview and we’ll get you right in to play! ",
 						"enable-bbcode": true,
 						"font": "Arial Rounded MT",
 						"size": 42,
@@ -137,9 +137,9 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 142,
+						"x": 187,
 						"y": 763,
-						"width": 1623,
+						"width": 1529,
 						"height": 298,
 						"originX": 0,
 						"originY": 0,
