@@ -1,0 +1,85 @@
+{
+	"name": "ESCthulu",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 567725386426738
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 159021315309566,
+					"parameters": {
+						"audio-file": "Dark Music for Summoning Cthulhu - The Wicked Ones",
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 954759980147574
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-ended",
+					"objectClass": "Video",
+					"sid": 388318119905457
+				}
+			],
+			"actions": [],
+			"sid": 115312001217250,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 552391964770526
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Credits",
+							"sid": 118157154456793,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "Credits",
+							"sid": 312862690813035,
+							"behaviorType": "Fade"
+						},
+						{
+							"id": "set-looping",
+							"objectClass": "Video",
+							"sid": 578644298914064,
+							"parameters": {
+								"mode": "looping"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Video",
+							"sid": 905812859246340
+						}
+					],
+					"sid": 748881041083517
+				}
+			]
+		}
+	],
+	"sid": 680112165358016
+}
