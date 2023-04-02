@@ -371,6 +371,22 @@
 					"file-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "Impact.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 412863686201128,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "ShutDoorSound.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 700302068373274,
+					"file-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []
@@ -381,6 +397,14 @@
 					"name": "Dark Synthwave Music - Devour.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 683642957777320,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Dark Music for Summoning Cthulhu - The Wicked Ones.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 480990442728091,
 					"file-info": {
 						"purpose": "none"
 					}
