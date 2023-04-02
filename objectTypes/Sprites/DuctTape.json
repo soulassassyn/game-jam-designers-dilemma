@@ -2,7 +2,7 @@
 	"name": "DuctTape",
 	"plugin-id": "Sprite",
 	"sid": 780352820604020,
-	"isGlobal": false,
+	"isGlobal": true,
 	"instanceVariables": [
 		{
 			"name": "Order",

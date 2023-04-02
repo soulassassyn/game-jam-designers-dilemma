@@ -573,11 +573,11 @@
 								{
 									"id": "shake",
 									"objectClass": "Camera",
-									"sid": 466425174141273,
+									"sid": 299843329888554,
 									"behaviorType": "ScrollTo",
 									"parameters": {
-										"magnitude": "20",
-										"duration": "0.4",
+										"magnitude": "40",
+										"duration": "1",
 										"mode": "reducing-magnitude"
 									}
 								},
@@ -588,26 +588,70 @@
 									"parameters": {
 										"seconds": "1.0"
 									}
-								},
-								{
-									"id": "go-to-layout",
-									"objectClass": "System",
-									"sid": 842386519563851,
-									"parameters": {
-										"layout": "Minigame"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 893552157010689,
-									"parameters": {
-										"variable": "enemySpawnTracker",
-										"value": "spawnTrackerWhenPaused"
-									}
 								}
 							],
-							"sid": 411537117879493
+							"sid": 411537117879493,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-comparison",
+											"objectClass": "System",
+											"sid": 108318234073764,
+											"parameters": {
+												"object": "DuctTape",
+												"expression": "DuctTape.Order",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 352730205028138,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "DuctTape",
+													"sid": 861812271187751,
+													"parameters": {
+														"visibility": "visible"
+													}
+												}
+											],
+											"sid": 747836680287311
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 551899701996111,
+											"parameters": {
+												"layout": "Minigame"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 765490819017391,
+											"parameters": {
+												"variable": "enemySpawnTracker",
+												"value": "spawnTrackerWhenPaused"
+											}
+										}
+									],
+									"sid": 778834131762422
+								}
+							]
 						}
 					]
 				}

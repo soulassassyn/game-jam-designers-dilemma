@@ -638,10 +638,10 @@
 				{
 					"type": "DuctTape",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "DuctTapeSmall",
 						"initial-frame": 0,
-						"enable-collisions": true,
+						"enable-collisions": false,
 						"live-preview": false
 					},
 					"uid": 43,
@@ -650,8 +650,8 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 178,
-						"y": 421,
+						"x": 245,
+						"y": 398,
 						"width": 1053.5210140642698,
 						"height": 326.38502041073457,
 						"originX": 0.5,
@@ -669,10 +669,10 @@
 				{
 					"type": "DuctTape",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "DuctTapeSmall",
 						"initial-frame": 0,
-						"enable-collisions": true,
+						"enable-collisions": false,
 						"live-preview": false
 					},
 					"uid": 48,
@@ -681,8 +681,8 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 1537,
-						"y": 890,
+						"x": 1604,
+						"y": 867,
 						"width": 1052.675668957011,
 						"height": 448.46108162230433,
 						"originX": 0.5,
@@ -700,20 +700,20 @@
 				{
 					"type": "DuctTape",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "DuctTape",
 						"initial-frame": 0,
-						"enable-collisions": true,
+						"enable-collisions": false,
 						"live-preview": false
 					},
-					"uid": 52,
+					"uid": 49,
 					"instanceVariables": {
 						"Order": 3
 					},
 					"behaviors": {},
 					"world": {
-						"x": 534,
-						"y": 346,
+						"x": 601,
+						"y": 323,
 						"width": 1851.9857723577236,
 						"height": 307.71454626069743,
 						"originX": 0.5,
@@ -731,20 +731,20 @@
 				{
 					"type": "DuctTape",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "DuctTape",
 						"initial-frame": 0,
-						"enable-collisions": true,
+						"enable-collisions": false,
 						"live-preview": false
 					},
-					"uid": 49,
+					"uid": 50,
 					"instanceVariables": {
 						"Order": 1
 					},
 					"behaviors": {},
 					"world": {
-						"x": 617,
-						"y": 933,
+						"x": 684,
+						"y": 910,
 						"width": 1851.9857723577236,
 						"height": 307.71454626069743,
 						"originX": 0.5,
@@ -762,10 +762,10 @@
 				{
 					"type": "DuctTape",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "DuctTapeSmall",
 						"initial-frame": 0,
-						"enable-collisions": true,
+						"enable-collisions": false,
 						"live-preview": false
 					},
 					"uid": 51,
@@ -774,8 +774,8 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 417,
-						"y": 994,
+						"x": 484,
+						"y": 971,
 						"width": 1053.5210140642698,
 						"height": 423.34517674702124,
 						"originX": 0.5,
@@ -793,20 +793,20 @@
 				{
 					"type": "DuctTape",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "DuctTapeSmall",
 						"initial-frame": 0,
-						"enable-collisions": true,
+						"enable-collisions": false,
 						"live-preview": false
 					},
-					"uid": 50,
+					"uid": 52,
 					"instanceVariables": {
 						"Order": 2
 					},
 					"behaviors": {},
 					"world": {
-						"x": 1539,
-						"y": 285,
+						"x": 1606,
+						"y": 262,
 						"width": 974,
 						"height": 298.00000000000006,
 						"originX": 0.5,
