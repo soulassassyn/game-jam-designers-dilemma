@@ -153,37 +153,6 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 982012410958969,
-							"parameters": {
-								"variable": "currentLevel",
-								"comparison": 1,
-								"value": "0"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-group-active",
-							"objectClass": "System",
-							"sid": 768669147007635,
-							"parameters": {
-								"group-name": "\"PMTutorial\"",
-								"state": "deactivated"
-							}
-						},
-						{
-							"callFunction": "ResetMenu",
-							"sid": 540602256852057
-						}
-					],
-					"sid": 108156163453026
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
 							"sid": 471040351971309,
 							"parameters": {
 								"variable": "currentLevel",
@@ -196,11 +165,33 @@
 						{
 							"id": "set-group-active",
 							"objectClass": "System",
+							"sid": 426056581247982,
+							"parameters": {
+								"group-name": "\"PMTutorial\"",
+								"state": "deactivated"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
 							"sid": 991765433124275,
 							"parameters": {
 								"group-name": "\"PMLevel1\"",
 								"state": "activated"
 							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 383449282408206,
+							"parameters": {
+								"group-name": "\"PMLevel2\"",
+								"state": "deactivated"
+							}
+						},
+						{
+							"callFunction": "ResetMenu",
+							"sid": 181322990054773
 						}
 					],
 					"sid": 505391780503736
@@ -223,11 +214,33 @@
 						{
 							"id": "set-group-active",
 							"objectClass": "System",
+							"sid": 361279377735927,
+							"parameters": {
+								"group-name": "\"PMTutorial\"",
+								"state": "deactivated"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 233038622896562,
+							"parameters": {
+								"group-name": "\"PMLevel1\"",
+								"state": "deactivated"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
 							"sid": 801745511258935,
 							"parameters": {
 								"group-name": "\"PMLevel2\"",
 								"state": "activated"
 							}
+						},
+						{
+							"callFunction": "ResetMenu",
+							"sid": 887910957006802
 						}
 					],
 					"sid": 674026349588454
