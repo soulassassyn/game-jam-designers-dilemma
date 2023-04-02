@@ -1163,10 +1163,10 @@
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 627579590726345,
+									"sid": 373217062180198,
 									"parameters": {
 										"object-to-create": "StatValue",
-										"layer": "0",
+										"layer": "\"pauseMenu\"",
 										"x": "CurrentMenuItemX",
 										"y": "CurrentMenuItemY",
 										"create-hierarchy": false,
@@ -1200,10 +1200,10 @@
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 432564327462004,
+									"sid": 531874746884453,
 									"parameters": {
 										"object-to-create": "StatNameText",
-										"layer": "0",
+										"layer": "\"pauseMenu\"",
 										"x": "CurrentMenuItemX",
 										"y": "CurrentMenuItemY",
 										"create-hierarchy": false,
@@ -1265,10 +1265,10 @@
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 179703613832187,
+									"sid": 274253917877776,
 									"parameters": {
 										"object-to-create": "StatValue",
-										"layer": "0",
+										"layer": "\"pauseMenu\"",
 										"x": "CurrentMenuItemX",
 										"y": "CurrentMenuItemY",
 										"create-hierarchy": false,
@@ -1302,10 +1302,10 @@
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 393087246976437,
+									"sid": 183182990137581,
 									"parameters": {
 										"object-to-create": "StatValueText",
-										"layer": "0",
+										"layer": "\"pauseMenu\"",
 										"x": "CurrentMenuItemX",
 										"y": "CurrentMenuItemY",
 										"create-hierarchy": false,
@@ -1376,10 +1376,10 @@
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 645918114588151,
+									"sid": 499584692533956,
 									"parameters": {
 										"object-to-create": "StatSlider",
-										"layer": "0",
+										"layer": "\"pauseMenu\"",
 										"x": "CurrentMenuItemX",
 										"y": "CurrentMenuItemY",
 										"create-hierarchy": false,
@@ -1603,9 +1603,9 @@
 						{
 							"id": "set-animation-speed",
 							"objectClass": "PauseText",
-							"sid": 331416209137808,
+							"sid": 509766939734513,
 							"parameters": {
-								"speed": "6"
+								"speed": "24"
 							}
 						},
 						{
