@@ -179,9 +179,29 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 664623556171246,
+					"sid": 118037998397007,
 					"parameters": {
-						"seconds": "1.0"
+						"seconds": ".5"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 611814068608704,
+					"parameters": {
+						"audio-file": "ShutDoorSound",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 716838914796218,
+					"parameters": {
+						"seconds": ".5"
 					}
 				},
 				{

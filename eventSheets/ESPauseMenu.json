@@ -946,6 +946,15 @@
 					],
 					"actions": [
 						{
+							"id": "set-enabled",
+							"objectClass": "PMWindow",
+							"sid": 857273603103896,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
 							"sid": 830185775513066,

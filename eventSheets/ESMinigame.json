@@ -1065,9 +1065,9 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 583671119033903,
+							"sid": 158596479291448,
 							"parameters": {
-								"audio-file": "hitHurt",
+								"audio-file": "Impact",
 								"loop": "not-looping",
 								"volume": "0",
 								"stereo-pan": "0",
@@ -1267,8 +1267,8 @@
 										},
 										{
 											"id": "set-visible",
-											"objectClass": "Victory",
-											"sid": 736288482128971,
+											"objectClass": "VictoryText",
+											"sid": 666682923380729,
 											"parameters": {
 												"visibility": "visible"
 											}
@@ -1654,8 +1654,8 @@
 								},
 								{
 									"id": "set-visible",
-									"objectClass": "Victory",
-									"sid": 555779359391280,
+									"objectClass": "VictoryText",
+									"sid": 977105446707795,
 									"parameters": {
 										"visibility": "visible"
 									}
@@ -1930,8 +1930,8 @@
 								},
 								{
 									"id": "set-visible",
-									"objectClass": "Victory",
-									"sid": 679677305621151,
+									"objectClass": "VictoryText",
+									"sid": 319546223825000,
 									"parameters": {
 										"visibility": "visible"
 									}
@@ -2487,9 +2487,9 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 487791193079873,
+							"sid": 564684161189743,
 							"parameters": {
-								"audio-file": "hitHurt",
+								"audio-file": "Impact",
 								"loop": "not-looping",
 								"volume": "0",
 								"stereo-pan": "0",

@@ -200,7 +200,7 @@
 			"Sprite",
 			"PauseMenuCheatText",
 			"NarrativeText",
-			"ClickArrowNext"
+			"VictoryText"
 		],
 		"subfolders": [
 			{
@@ -226,7 +226,8 @@
 					"Particles2",
 					"IntroScreenBG",
 					"Warp",
-					"GlassCrack"
+					"GlassCrack",
+					"ClickArrowNext"
 				],
 				"subfolders": [],
 				"name": "Sprites"
