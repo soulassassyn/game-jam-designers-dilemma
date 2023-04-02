@@ -424,6 +424,18 @@
 								"variable": "isPaused",
 								"value": "false"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 158861395007246,
+							"parameters": {
+								"audio-file": "pauseMenuCheat",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 643010536810210,
@@ -554,6 +566,18 @@
 							"parameters": {
 								"variable": "isPaused",
 								"value": "false"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 886616594191253,
+							"parameters": {
+								"audio-file": "pauseMenuCheat",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -785,6 +809,18 @@
 							"parameters": {
 								"variable": "isPaused",
 								"value": "false"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 995099263237762,
+							"parameters": {
+								"audio-file": "pauseMenuCheat",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -1684,6 +1720,18 @@
 								"animation": "\"SecretHighlight\"",
 								"from": "beginning"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 169133557626253,
+							"parameters": {
+								"audio-file": "pauseMenuHover",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 614734983055247,
@@ -1798,6 +1846,18 @@
 							"sid": 838590706088500,
 							"parameters": {
 								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 663469972052118,
+							"parameters": {
+								"audio-file": "pauseClick",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],

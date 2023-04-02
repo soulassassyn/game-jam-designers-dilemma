@@ -21,10 +21,9 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 484940242932138,
-							"disabled": true,
+							"sid": 951307469159899,
 							"parameters": {
-								"audio-file": "minigameSong",
+								"audio-file": "Dark Synthwave Music - Devour",
 								"loop": "looping",
 								"volume": "0",
 								"stereo-pan": "0",
@@ -1398,11 +1397,11 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 532179228287817,
+							"sid": 160131773608079,
 							"parameters": {
-								"audio-file": "laserShoot",
+								"audio-file": "bulletShoot",
 								"loop": "not-looping",
-								"volume": "-10",
+								"volume": "0",
 								"stereo-pan": "0",
 								"tag-optional": "\"\""
 							}

@@ -277,6 +277,38 @@
 					"file-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "pauseClick.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 415122337180003,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "pauseMenuHover.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 873792653763788,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "bulletShoot.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 789704450010663,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "pauseMenuCheat.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 551128404604059,
+					"file-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []
