@@ -210,7 +210,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 35,
+					"uid": 41,
 					"instanceVariables": {},
 					"behaviors": {
 						"Pin": {

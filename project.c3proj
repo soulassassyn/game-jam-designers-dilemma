@@ -112,6 +112,20 @@
 			"bundled": false
 		},
 		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "effect",
 			"id": "overlay",
 			"name": "Overlay",
@@ -150,7 +164,8 @@
 					"CheatButton",
 					"HPBarTurret",
 					"Monitor",
-					"MenuUX"
+					"MenuUX",
+					"Camera"
 				],
 				"subfolders": [],
 				"name": "Sprites"
