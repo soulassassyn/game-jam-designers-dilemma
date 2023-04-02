@@ -132,6 +132,15 @@
 							}
 						},
 						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 625775139635597,
+							"parameters": {
+								"group-name": "\"PMLevel2\"",
+								"state": "deactivated"
+							}
+						},
+						{
 							"callFunction": "ResetMenu",
 							"sid": 577818434530516
 						}
@@ -195,6 +204,33 @@
 						}
 					],
 					"sid": 505391780503736
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 734442300303879,
+							"parameters": {
+								"variable": "currentLevel",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 801745511258935,
+							"parameters": {
+								"group-name": "\"PMLevel2\"",
+								"state": "activated"
+							}
+						}
+					],
+					"sid": 674026349588454
 				}
 			]
 		},
