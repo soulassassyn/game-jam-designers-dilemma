@@ -669,6 +669,12 @@
 								}
 							],
 							"sid": 867806085053647
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [],
+							"sid": 721673941294540
 						}
 					]
 				},
@@ -743,6 +749,28 @@
 										"layer": "\"GameSpace\"",
 										"image-point": "0",
 										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Bullets",
+									"sid": 211792760597202,
+									"parameters": {
+										"object": "Warp",
+										"layer": "\"GameSpace\"",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "shake",
+									"objectClass": "Camera",
+									"sid": 271850603602180,
+									"behaviorType": "ScrollTo",
+									"parameters": {
+										"magnitude": "10",
+										"duration": "0.1",
+										"mode": "reducing-magnitude"
 									}
 								}
 							],
@@ -1980,17 +2008,6 @@
 								"stereo-pan": "0",
 								"tag-optional": "\"\""
 							}
-						},
-						{
-							"id": "shake",
-							"objectClass": "Camera",
-							"sid": 342068616362663,
-							"behaviorType": "ScrollTo",
-							"parameters": {
-								"magnitude": "3",
-								"duration": "0.05",
-								"mode": "reducing-magnitude"
-							}
 						}
 					],
 					"sid": 273037701393155
@@ -2155,9 +2172,37 @@
 										"image-point": "0",
 										"create-hierarchy": false
 									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Bullets",
+									"sid": 410073614287905,
+									"parameters": {
+										"object": "Warp",
+										"layer": "\"GameSpace\"",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "shake",
+									"objectClass": "Camera",
+									"sid": 271850603602180,
+									"behaviorType": "ScrollTo",
+									"parameters": {
+										"magnitude": "10",
+										"duration": "0.1",
+										"mode": "reducing-magnitude"
+									}
 								}
 							],
 							"sid": 454483600515544
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [],
+							"sid": 992354249728669
 						},
 						{
 							"eventType": "block",

@@ -9,7 +9,7 @@
 				{
 					"type": "StartMenuText",
 					"properties": {
-						"text": "Designer's Dilemma",
+						"text": "C'THULU'S PRISON",
 						"enable-bbcode": true,
 						"font": "Minecraft",
 						"size": 100,
@@ -186,6 +186,54 @@
 						"y": 818,
 						"width": 198,
 						"height": 74,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "StartMenuText",
+					"properties": {
+						"text": "v.31.51.937",
+						"enable-bbcode": true,
+						"font": "Minecraft",
+						"size": 17,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 61,
+					"instanceVariables": {
+						"State": "Title",
+						"OriginalX": 0,
+						"OriginalY": 0,
+						"MenuItem": false
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1149,
+						"y": 530,
+						"width": 156,
+						"height": 43,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

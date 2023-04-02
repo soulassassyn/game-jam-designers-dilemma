@@ -467,15 +467,15 @@
 					"properties": {
 						"text": "100",
 						"enable-bbcode": true,
-						"font": "Arial",
+						"font": "Minecraft",
 						"size": 24,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
 						"color": [
-							0,
-							0,
-							0,
+							1,
+							1,
+							1,
 							1
 						],
 						"horizontal-alignment": "center",
@@ -518,15 +518,15 @@
 					"properties": {
 						"text": "StatValueText",
 						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 16,
+						"font": "Minecraft",
+						"size": 21,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
 						"color": [
-							0,
-							0,
-							0,
+							1,
+							1,
+							1,
 							1
 						],
 						"horizontal-alignment": "center",
@@ -569,15 +569,15 @@
 					"properties": {
 						"text": "100",
 						"enable-bbcode": true,
-						"font": "Arial",
+						"font": "Minecraft",
 						"size": 24,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
 						"color": [
-							0,
-							0,
-							0,
+							1,
+							1,
+							1,
 							1
 						],
 						"horizontal-alignment": "center",
@@ -620,15 +620,15 @@
 					"properties": {
 						"text": "StatValueText",
 						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 16,
+						"font": "Minecraft",
+						"size": 21,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
 						"color": [
-							0,
-							0,
-							0,
+							1,
+							1,
+							1,
 							1
 						],
 						"horizontal-alignment": "center",

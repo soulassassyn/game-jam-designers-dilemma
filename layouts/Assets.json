@@ -624,8 +624,8 @@
 						}
 					},
 					"world": {
-						"x": 3042,
-						"y": 984,
+						"x": 2896,
+						"y": 987,
 						"width": 2010,
 						"height": 1788,
 						"originX": 0.5,
@@ -661,8 +661,22 @@
 							"properties": {
 								"fade-in-time": 0,
 								"wait-time": 0,
-								"fade-out-time": 1,
+								"fade-out-time": 0.5,
 								"destroy": true,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine": {
+							"properties": {
+								"movement": "size",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 75,
+								"magnitude-random": 0,
 								"enabled": true,
 								"live-preview": false
 							}
@@ -696,8 +710,8 @@
 						}
 					},
 					"world": {
-						"x": 1765,
-						"y": 591,
+						"x": 414,
+						"y": 579,
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,
