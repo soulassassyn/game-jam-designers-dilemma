@@ -106,13 +106,33 @@
 								"step": false,
 								"enabled": true
 							}
+						},
+						"Sine": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 15,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 100,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": true
+							}
+						}
+					},
+					"effects": {
+						"Overlay": {
+							"isEnabled": false,
+							"parameters": {}
 						}
 					},
 					"world": {
-						"x": 507,
-						"y": 206,
-						"width": 24,
-						"height": 20,
+						"x": 864,
+						"y": 205,
+						"width": 29,
+						"height": 27,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -122,7 +142,8 @@
 							1
 						],
 						"angle": 0,
-						"zElevation": 0
+						"zElevation": 0,
+						"blendMode": "additive"
 					}
 				},
 				{
@@ -474,6 +495,82 @@
 						],
 						"angle": 0,
 						"zElevation": 0
+					}
+				},
+				{
+					"type": "Explosions",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 2",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 54,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 645,
+						"y": 206,
+						"width": 128,
+						"height": 128,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0,
+						"blendMode": "additive"
+					}
+				},
+				{
+					"type": "Particles",
+					"properties": {
+						"rate": 255,
+						"spray-cone": 360,
+						"type": "one-shot",
+						"object": -1,
+						"live-preview": false,
+						"speed": 255,
+						"size": 1,
+						"opacity": 100,
+						"grow-rate": 1,
+						"x-randomiser": 55,
+						"y-randomiser": 55,
+						"initial-speed-randomiser": 55,
+						"size-randomiser": 2,
+						"grow-rate-randomiser": 1,
+						"acceleration": -155,
+						"gravity": 0,
+						"angle-randomiser": 25,
+						"life-speed-randomiser": 800,
+						"opacity-randomiser": 55,
+						"destroy-mode": "particle-stopped",
+						"timeout": 1
+					},
+					"uid": 55,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 597,
+						"y": 369,
+						"width": 100,
+						"height": 100,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0,
+						"blendMode": "additive"
 					}
 				}
 			],
