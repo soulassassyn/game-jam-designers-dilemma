@@ -41,272 +41,274 @@
 							}
 						}
 					],
-					"sid": 879136404718591
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 560830039241909,
-							"parameters": {
-								"variable": "Narrative"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 707145086318775,
+					"sid": 879136404718591,
 					"children": [
 						{
 							"eventType": "block",
-							"conditions": [],
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 953558063104259,
+									"parameters": {
+										"variable": "Narrative"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 165300962627156,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 293059811606603,
+											"parameters": {
+												"group-name": "\"MGNarrative\"",
+												"state": "activated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 756149708003674,
+											"parameters": {
+												"group-name": "\"MinigameTutorial\"",
+												"state": "deactivated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 259808862713278,
+											"parameters": {
+												"group-name": "\"EnemyControls\"",
+												"state": "deactivated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 325551006900635,
+											"parameters": {
+												"group-name": "\"BulletControls\"",
+												"state": "deactivated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 903310695663430,
+											"parameters": {
+												"group-name": "\"PlayerControls\"",
+												"state": "deactivated"
+											}
+										}
+									],
+									"sid": 781877072389469
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 722575571880929,
+									"parameters": {
+										"variable": "Narrative"
+									},
+									"isInverted": true
+								}
+							],
 							"actions": [
 								{
 									"id": "set-group-active",
 									"objectClass": "System",
-									"sid": 728184511095548,
-									"parameters": {
-										"group-name": "\"MGNarrative\"",
-										"state": "activated"
-									}
-								},
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 877890990224539,
-									"parameters": {
-										"group-name": "\"MinigameTutorial\"",
-										"state": "deactivated"
-									}
-								},
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 105408985183749,
-									"parameters": {
-										"group-name": "\"EnemyControls\"",
-										"state": "deactivated"
-									}
-								},
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 758901891560697,
-									"parameters": {
-										"group-name": "\"BulletControls\"",
-										"state": "deactivated"
-									}
-								},
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 292166764476918,
+									"sid": 804458535594829,
 									"parameters": {
 										"group-name": "\"PlayerControls\"",
-										"state": "deactivated"
-									}
-								}
-							],
-							"sid": 453840877532560
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 474797409621691,
-							"parameters": {
-								"variable": "Narrative"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "set-group-active",
-							"objectClass": "System",
-							"sid": 932580304699411,
-							"parameters": {
-								"group-name": "\"PlayerControls\"",
-								"state": "activated"
-							}
-						}
-					],
-					"sid": 105752954513174,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 411901257630335,
-									"parameters": {
-										"variable": "currentLevel",
-										"comparison": 0,
-										"value": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 182226023395914,
-									"parameters": {
-										"group-name": "\"MGNarrative\"",
-										"state": "deactivated"
-									}
-								},
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 957262018371826,
-									"parameters": {
-										"group-name": "\"MinigameTutorial\"",
 										"state": "activated"
 									}
-								},
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 874880356831034,
-									"parameters": {
-										"group-name": "\"EnemyControls\"",
-										"state": "deactivated"
-									}
-								},
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 574879872930187,
-									"parameters": {
-										"group-name": "\"BulletControls\"",
-										"state": "deactivated"
-									}
 								}
 							],
-							"sid": 250608577808365
-						},
-						{
-							"eventType": "block",
-							"conditions": [
+							"sid": 969832713987841,
+							"children": [
 								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 763674432732311,
-									"parameters": {
-										"variable": "currentLevel",
-										"comparison": 1,
-										"value": "0"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 821948594773635,
+											"parameters": {
+												"variable": "currentLevel",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 581605996439107,
+											"parameters": {
+												"group-name": "\"MGNarrative\"",
+												"state": "deactivated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 661288137865035,
+											"parameters": {
+												"group-name": "\"MinigameTutorial\"",
+												"state": "activated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 826710320779480,
+											"parameters": {
+												"group-name": "\"EnemyControls\"",
+												"state": "deactivated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 786549075287772,
+											"parameters": {
+												"group-name": "\"BulletControls\"",
+												"state": "deactivated"
+											}
+										}
+									],
+									"sid": 164141092112274
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 435728430256148,
+											"parameters": {
+												"variable": "currentLevel",
+												"comparison": 1,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 987890394510843,
+											"parameters": {
+												"group-name": "\"MGNarrative\"",
+												"state": "deactivated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 766242060119729,
+											"parameters": {
+												"group-name": "\"MinigameTutorial\"",
+												"state": "deactivated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 302571553193338,
+											"parameters": {
+												"group-name": "\"EnemyControls\"",
+												"state": "activated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 347928060133579,
+											"parameters": {
+												"group-name": "\"BulletControls\"",
+												"state": "activated"
+											}
+										},
+										{
+											"callFunction": "InitializeGame",
+											"sid": 480846358505256
+										}
+									],
+									"sid": 557132215895450
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 181587225874173,
+											"parameters": {
+												"variable": "currentLevel",
+												"comparison": 0,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 234606944077108,
+											"parameters": {
+												"group-name": "\"MGNarrative\"",
+												"state": "deactivated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 432157161637002,
+											"parameters": {
+												"group-name": "\"MinigameTutorial\"",
+												"state": "deactivated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 238334665601871,
+											"parameters": {
+												"group-name": "\"EnemyControls\"",
+												"state": "deactivated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 498516115800620,
+											"parameters": {
+												"group-name": "\"BulletControls\"",
+												"state": "activated"
+											}
+										},
+										{
+											"callFunction": "InitializeGame",
+											"sid": 577623425102072
+										}
+									],
+									"sid": 746594975360911
 								}
-							],
-							"actions": [
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 892082130246248,
-									"parameters": {
-										"group-name": "\"MGNarrative\"",
-										"state": "deactivated"
-									}
-								},
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 613640033499158,
-									"parameters": {
-										"group-name": "\"MinigameTutorial\"",
-										"state": "deactivated"
-									}
-								},
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 562532805113739,
-									"parameters": {
-										"group-name": "\"EnemyControls\"",
-										"state": "activated"
-									}
-								},
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 887978531086229,
-									"parameters": {
-										"group-name": "\"BulletControls\"",
-										"state": "activated"
-									}
-								},
-								{
-									"callFunction": "InitializeGame",
-									"sid": 528999928615830
-								}
-							],
-							"sid": 941075030117587
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 506643850660904,
-									"parameters": {
-										"variable": "currentLevel",
-										"comparison": 0,
-										"value": "3"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 206343538672084,
-									"parameters": {
-										"group-name": "\"MGNarrative\"",
-										"state": "deactivated"
-									}
-								},
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 679581394604776,
-									"parameters": {
-										"group-name": "\"MinigameTutorial\"",
-										"state": "deactivated"
-									}
-								},
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 162234145025555,
-									"parameters": {
-										"group-name": "\"EnemyControls\"",
-										"state": "deactivated"
-									}
-								},
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 553648044179345,
-									"parameters": {
-										"group-name": "\"BulletControls\"",
-										"state": "activated"
-									}
-								},
-								{
-									"callFunction": "InitializeGame",
-									"sid": 118728100449558
-								}
-							],
-							"sid": 426357360109396
+							]
 						}
 					]
 				}
@@ -499,6 +501,11 @@
 						{
 							"callFunction": "DeleteNarrative",
 							"sid": 522119791114145
+						},
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 160205034586997
 						}
 					],
 					"sid": 286935489429494
