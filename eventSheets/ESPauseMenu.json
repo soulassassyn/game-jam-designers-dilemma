@@ -1188,10 +1188,10 @@
 						{
 							"id": "compare-animation-frame",
 							"objectClass": "CheatButton",
-							"sid": 887936915008902,
+							"sid": 614101406752617,
 							"parameters": {
 								"comparison": 0,
-								"number": "1"
+								"number": "0"
 							}
 						}
 					],
